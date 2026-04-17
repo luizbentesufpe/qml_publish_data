@@ -1,0 +1,6 @@
+scenario_tag,seed,nq_requested,best_nq,best_proxy_rl,final_auc_nested
+bn_s3_hard_budget,0,4,4,0.9786201695935026,0.9906426374493575
+bn_s3_hard_budget,1,4,4,0.9961821645803132,1.0
+bn_s3_hard_budget,2,4,4,0.9887261779225247,0.9999898571892243
+bn_s3_hard_budget,3,4,4,0.9957280180496801,1.0
+bn_s3_hard_budget,4,4,4,0.9210881981617726,0.9980830087633885

@@ -1,0 +1,6 @@
+scenario_tag,seed,nq_requested,best_nq,best_proxy_rl,final_auc_nested
+cc_s2_plus_thr_soft_youden,0,4,4,0.9999999874396778,1.0
+cc_s2_plus_thr_soft_youden,1,4,4,0.9999999874396778,1.0
+cc_s2_plus_thr_soft_youden,2,4,4,0.9999999874396778,1.0
+cc_s2_plus_thr_soft_youden,3,4,4,0.9999999874396778,1.0
+cc_s2_plus_thr_soft_youden,4,4,4,0.9999999874396778,1.0

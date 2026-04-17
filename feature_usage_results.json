@@ -1,0 +1,239 @@
+{
+  "Cross/Circle": {
+    "feature_names": [
+      "f0",
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8"
+    ],
+    "key_features": [
+      4,
+      0
+    ],
+    "usage": {
+      "cc_s0_baseline_minimum": {
+        "counts": [
+          10,
+          6,
+          8,
+          7,
+          12,
+          5,
+          11,
+          13,
+          9
+        ],
+        "freq": [
+          0.1235,
+          0.0741,
+          0.0988,
+          0.0864,
+          0.1481,
+          0.0617,
+          0.1358,
+          0.1605,
+          0.1111
+        ],
+        "total_enc": 81,
+        "total_seeds": 6
+      },
+      "cc_s1_plus_enc_parametric": {
+        "counts": [
+          7,
+          12,
+          4,
+          2,
+          15,
+          9,
+          6,
+          7,
+          4
+        ],
+        "freq": [
+          0.1061,
+          0.1818,
+          0.0606,
+          0.0303,
+          0.2273,
+          0.1364,
+          0.0909,
+          0.1061,
+          0.0606
+        ],
+        "total_enc": 66,
+        "total_seeds": 6
+      }
+    }
+  },
+  "Make Moons": {
+    "feature_names": [
+      "x0",
+      "x1"
+    ],
+    "key_features": [
+      0,
+      1
+    ],
+    "usage": {
+      "mm_s0_baseline": {
+        "counts": [
+          30,
+          15
+        ],
+        "freq": [
+          0.6667,
+          0.3333
+        ],
+        "total_enc": 45,
+        "total_seeds": 5
+      },
+      "mm_s1_enc_param": {
+        "counts": [
+          21,
+          12
+        ],
+        "freq": [
+          0.6364,
+          0.3636
+        ],
+        "total_enc": 33,
+        "total_seeds": 5
+      },
+      "mm_s2_thr_soft_youden": {
+        "counts": [
+          17,
+          17
+        ],
+        "freq": [
+          0.5,
+          0.5
+        ],
+        "total_enc": 34,
+        "total_seeds": 5
+      },
+      "mm_s3_hard_budget": {
+        "counts": [
+          12,
+          8
+        ],
+        "freq": [
+          0.6,
+          0.4
+        ],
+        "total_enc": 20,
+        "total_seeds": 5
+      },
+      "mm_s4_focal": {
+        "counts": [
+          9,
+          11
+        ],
+        "freq": [
+          0.45,
+          0.55
+        ],
+        "total_enc": 20,
+        "total_seeds": 5
+      }
+    }
+  },
+  "Banknote": {
+    "feature_names": [
+      "variance",
+      "skewness",
+      "curtosis",
+      "entropy"
+    ],
+    "key_features": [
+      0,
+      2
+    ],
+    "usage": {
+      "bn_s0_baseline": {
+        "counts": [
+          10,
+          19,
+          18,
+          10
+        ],
+        "freq": [
+          0.1754,
+          0.3333,
+          0.3158,
+          0.1754
+        ],
+        "total_enc": 57,
+        "total_seeds": 5
+      },
+      "bn_s1_enc_param": {
+        "counts": [
+          14,
+          14,
+          15,
+          7
+        ],
+        "freq": [
+          0.28,
+          0.28,
+          0.3,
+          0.14
+        ],
+        "total_enc": 50,
+        "total_seeds": 5
+      },
+      "bn_s2_thr_soft_youden": {
+        "counts": [
+          15,
+          11,
+          13,
+          7
+        ],
+        "freq": [
+          0.3261,
+          0.2391,
+          0.2826,
+          0.1522
+        ],
+        "total_enc": 46,
+        "total_seeds": 5
+      },
+      "bn_s3_hard_budget": {
+        "counts": [
+          10,
+          11,
+          9,
+          7
+        ],
+        "freq": [
+          0.2703,
+          0.2973,
+          0.2432,
+          0.1892
+        ],
+        "total_enc": 37,
+        "total_seeds": 5
+      },
+      "bn_s4_focal": {
+        "counts": [
+          6,
+          14,
+          10,
+          3
+        ],
+        "freq": [
+          0.1818,
+          0.4242,
+          0.303,
+          0.0909
+        ],
+        "total_enc": 33,
+        "total_seeds": 5
+      }
+    }
+  }
+}
