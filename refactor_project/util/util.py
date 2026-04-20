@@ -208,7 +208,7 @@ def _plot_alpha_bar_moons(
         edgecolor="black",
         linewidth=0.8,
     )
-    ax.axhline(0.5, color="gray", linestyle="--", linewidth=1.0, label="init (α=0.5)")
+    ax.axhline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
     ax.set_ylim(0.0, max(alpha_mean.max() * 1.3, 0.8))
     ax.set_title("α médio (entre seeds)", fontsize=11)
     ax.set_xlabel("Feature")
@@ -285,7 +285,7 @@ def _plot_alpha_bar_banknote(
         edgecolor="black",
         linewidth=0.8,
     )
-    ax.axhline(0.5, color="gray", linestyle="--", linewidth=1.0, label="init (α=0.5)")
+    ax.axhline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
     ax.set_xticks(x_pos)
     ax.set_xticklabels(feature_names, rotation=15, ha="right", fontsize=9)
     ax.set_ylim(0.0, max(float(alpha_mean.max()) * 1.35, 0.8))
@@ -324,7 +324,168 @@ def _plot_alpha_bar_banknote(
     plt.close(fig)
     print(f"[OK] Barplot α salvo: {out_path}")
 
-
+def _plot_alpha_bar_breast_cancer(
+    alpha_per_seed: List[Optional[np.ndarray]],
+    out_path: str,
+    title: str = "α convergido — Breast Cancer Wisconsin",
+    feature_names: List[str] = None,
+) -> None:
+    """
+    Barplot do α convergido com suporte a qualquer número de features.
+    
+    Layout:
+      - Painel esquerdo : α médio com barra de erro (std entre seeds)
+                          Linha tracejada em α=0.5 (valor de inicialização)
+      - Painel direito  : std(α) entre seeds por feature
+    
+    Salva PNG em out_path.
+    
+    Parâmetros
+    ----------
+    alpha_per_seed : List[Optional[np.ndarray]]
+        Lista de arrays α para cada seed. Cada array tem shape (n_features,).
+    out_path : str
+        Caminho para salvar a figura PNG.
+    title : str
+        Título da figura.
+    feature_names : List[str], optional
+        Nomes das features. Se None, usa FEATURE_NAMES ou gera automaticamente.
+    """
+    # Extrai arrays α de cada seed
+    arrays = [
+        np.asarray(a, dtype=np.float32).flatten()
+        for a in alpha_per_seed
+        if a is not None
+    ]
+ 
+    if not arrays:
+        print("[WARN] Nenhum α disponível para barplot Breast Cancer.")
+        return
+ 
+    # Determina número de features a partir dos dados
+    n_features = len(arrays[0])
+    
+    # Extrai apenas n_features de cada array (em caso de mismatch)
+    arrays = [a[:n_features] for a in arrays]
+    
+    # Ajusta feature_names se necessário
+    if feature_names is None:
+        if n_features <= len(FEATURE_NAMES):
+            feature_names = FEATURE_NAMES[:n_features]
+        else:
+            feature_names = [f"f{i}" for i in range(n_features)]
+    elif len(feature_names) != n_features:
+        feature_names = [f"f{i}" for i in range(n_features)]
+    
+    stacked = np.stack(arrays, axis=0)  # (n_seeds, n_features)
+    alpha_mean = stacked.mean(axis=0)  # (n_features,)
+    alpha_std = stacked.std(axis=0)  # (n_features,)
+ 
+    # Paleta de cores: começa com 9, repete se necessário
+    base_colors = [
+        "#4C72B0",  # blue
+        "#DD8452",  # orange
+        "#55A868",  # green
+        "#C44E52",  # red
+        "#8172B3",  # purple
+        "#937860",  # brown
+        "#DA8BC3",  # pink
+        "#8C6D31",  # olive
+        "#466592",  # dark blue
+    ]
+    
+    # Repete paleta se tiver mais features que cores
+    colors = [base_colors[i % len(base_colors)] for i in range(n_features)]
+    
+    # Paleta de cores claras
+    base_light_colors = [
+        "#9ecae1",  # light blue
+        "#fdae6b",  # light orange
+        "#a1d99b",  # light green
+        "#fc9272",  # light red
+        "#c7b9d4",  # light purple
+        "#c8b8a0",  # light brown
+        "#f1b9d9",  # light pink
+        "#d4c0a0",  # light olive
+        "#a8c2e1",  # light dark blue
+    ]
+    
+    light_colors = [base_light_colors[i % len(base_light_colors)] for i in range(n_features)]
+ 
+    x_pos = np.arange(n_features)
+    
+    # Ajusta figsize baseado no número de features
+    figwidth = max(12, 2 * n_features)
+    fig, axes = plt.subplots(1, 2, figsize=(figwidth, 5))
+    fig.suptitle(title, fontsize=13, fontweight="bold")
+ 
+    # ── painel esquerdo: α médio ──────────────────────────────────────
+    ax = axes[0]
+    bars = ax.bar(
+        x_pos,
+        alpha_mean,
+        color=colors,
+        yerr=alpha_std,
+        capsize=6,
+        edgecolor="black",
+        linewidth=0.8,
+    )
+    ax.axhline(
+        1.0,
+        color="gray",
+        linestyle="--",
+        linewidth=1.0,
+        label="init (α=1.0)",
+    )
+    ax.set_xticks(x_pos)
+    ax.set_xticklabels(feature_names, rotation=45, ha="right", fontsize=9)
+    ax.set_ylim(0.0, max(float(alpha_mean.max()) * 1.35, 0.8))
+    ax.set_title("α médio (entre seeds)", fontsize=11)
+    ax.set_ylabel("α convergido", fontsize=10)
+    ax.legend(fontsize=9)
+    ax.grid(axis="y", alpha=0.3, linestyle=":")
+ 
+    # Adiciona valores nas barras
+    for bar, m, s in zip(bars, alpha_mean, alpha_std):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2.0,
+            float(m) + float(s) + 0.02,
+            f"{m:.3f}±{s:.3f}",
+            ha="center",
+            va="bottom",
+            fontsize=8,
+        )
+ 
+    # ── painel direito: std entre seeds ───────────────────────────────
+    ax2 = axes[1]
+    ax2.bar(
+        x_pos,
+        alpha_std,
+        color=light_colors,
+        edgecolor="black",
+        linewidth=0.8,
+    )
+    ax2.set_xticks(x_pos)
+    ax2.set_xticklabels(feature_names, rotation=45, ha="right", fontsize=9)
+    ax2.set_title("std(α) entre seeds", fontsize=11)
+    ax2.set_ylabel("std(α)", fontsize=10)
+    ax2.grid(axis="y", alpha=0.3, linestyle=":")
+ 
+    # Adiciona valores de std
+    for i, s in enumerate(alpha_std):
+        ax2.text(
+            i,
+            float(s) + 0.003,
+            f"{s:.3f}",
+            ha="center",
+            va="bottom",
+            fontsize=8,
+        )
+ 
+    plt.tight_layout()
+    plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[OK] Barplot α salvo: {out_path}")
 class RunningStd:
     def __init__(self):
         self.n = 0

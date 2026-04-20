@@ -1,23 +1,23 @@
 """
-main_make_moons.py  (refatorado)
-================================
-Ablation S0→S4 no dataset Make Moons (sklearn).
-Mesmo padrão estrutural do main_cross_circle.py refatorado:
+main_breast_cancer.py  (refatorado)
+===================================
+Ablation S0→S4 no dataset Breast Cancer Wisconsin (UCI).
+Mesmo padrão estrutural do main_banknote.py refatorado:
 
   - Scenarios importados de refactor_project.config.build_ablations
-  - Worker por seed em run_one_make_moons._run_one_seed_make_moons
+  - Worker por seed em run_one_breast_cancer._run_one_seed_breast_cancer
   - Paralelismo via joblib.Parallel + loky
   - Flag DEBUG para rodar com ConfigDebug (episódios mínimos)
-  - Output em publication_out_make_moons/  (normal)
-              ou debug_out_make_moons/      (DEBUG=True)
+  - Output em publication_out_breast_cancer/  (normal)
+              ou debug_out_breast_cancer/      (DEBUG=True)
 
 Dataset:
-  sklearn.datasets.make_moons — 2 features, fronteira não-linear
-  400 amostras, noise=0.15, normalizado para [0,1]²
+  UCI — Breast Cancer Wisconsin (9 features, 569 amostras)
+  https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin
 
 Uso:
-    python main_make_moons.py            # publicação
-    python main_make_moons.py --debug    # debug rápido
+    python main_breast_cancer.py            # publicação
+    python main_breast_cancer.py --debug    # debug rápido
 """
 
 # ── stdlib ────────────────────────────────────────────────────────────
@@ -31,8 +31,8 @@ from typing import Any, Dict, List, Optional
 # ── terceiros ─────────────────────────────────────────────────────────
 import matplotlib
 
-from refactor_project.config.ablation.make_moon import MAKE_MOONS_SCENARIOS
-from refactor_project.main.runner.run_one_moons import _run_one_seed_make_moons
+from refactor_project.config.ablation.breast_cancer import BREAST_CANCER_SCENARIOS
+from refactor_project.data.breast_cancer import create_breast_cancer_dataset
 
 matplotlib.use("Agg")
 import numpy as np
@@ -44,13 +44,20 @@ from refactor_project.config.config import Config
 from refactor_project.config.config_debug import ConfigDebug
 from refactor_project.config.util import apply_overrides, scenario_tag
 
+# ── dataset — validação inicial ───────────────────────────────────────
+# ── projeto — runner isolado por seed ────────────────────────────────
+from refactor_project.main.runner.run_one_breast_cancer import (
+    FEATURE_NAMES,
+    _run_one_seed_breast_cancer,
+)
+
 # ── projeto — utilitários ─────────────────────────────────────────────
 from refactor_project.model.math.ci import mean_ci_bootstrap, mean_ci_t
 from refactor_project.model.math.cost import pareto_front
 from refactor_project.util.util import (
     Logger,
     _pearson,
-    _plot_alpha_bar_moons,
+    _plot_alpha_bar_breast_cancer,
     _spearman,
     dump_run_metadata,
 )
@@ -60,11 +67,11 @@ from refactor_project.util.util import (
 # ══════════════════════════════════════════════════════════════════════
 
 
-def main_make_moons(DEBUG: bool = False) -> None:
+def main_breast_cancer(DEBUG: bool = False, data_dir: str = "data") -> None:
     """
-    Ablation S0→S4 no dataset Make Moons.
+    Ablation S0→S4 no dataset Breast Cancer Wisconsin.
 
-    Protocolo idêntico ao main_cross_circle():
+    Protocolo idêntico ao main_banknote():
       - 5 seeds × 5 cenários  (1 seed em DEBUG)
       - 4 qubits fixos
       - 80/20 holdout estratificado
@@ -72,23 +79,19 @@ def main_make_moons(DEBUG: bool = False) -> None:
       - Paralelismo via joblib.Parallel (n_jobs = n_seeds × n_qubits)
     """
     print(f"\n{'=' * 68}")
-    print("  ABLATION — Make Moons (Two Moons, 2 features)")
+    print("  ABLATION — Breast Cancer Wisconsin (UCI, 9 features)")
     mode_str = "DEBUG" if DEBUG else "PUBLICAÇÃO"
     print(f"  Modo: {mode_str}")
-
-
-
-
-
+    print(f"{'=' * 68}\n")
 
     # ── config base ───────────────────────────────────────────────────
     if DEBUG:
         cfg0 = ConfigDebug()
-        root_out = Path("debug_out_make_moons")
+        root_out = Path("debug_out_breast_cancer")
         SEEDS = [0]
     else:
         cfg0 = Config()
-        root_out = Path("publication_out_make_moons")
+        root_out = Path("publication_out_breast_cancer")
         SEEDS = [0, 1, 2, 3, 4]
 
     root_out.mkdir(parents=True, exist_ok=True)
@@ -97,10 +100,23 @@ def main_make_moons(DEBUG: bool = False) -> None:
     PERCENT_SEARCH = int(cfg0.percent_search)
     PERCENT_EVAL = int(cfg0.percent_eval)
 
-    scenarios = MAKE_MOONS_SCENARIOS
+    # ── valida dataset antes de iniciar ──────────────────────────────
+    print("[INFO] Verificando dataset Breast Cancer Wisconsin ...")
+    X_chk, Y_chk = create_breast_cancer_dataset(seed=0, data_dir=data_dir)
+    n_pos = int((Y_chk.flatten() > 0.5).sum())
+    n_neg = int(len(Y_chk) - n_pos)
+    print(
+        f"[INFO] OK: {len(X_chk)} amostras | "
+        f"malignant={n_pos} benign={n_neg} | "
+        f"balance={n_pos / len(Y_chk):.2%} | "
+        f"features={X_chk.shape[1]}"
+    )
+
+    scenarios = BREAST_CANCER_SCENARIOS
     all_scenarios_results: List[Dict[str, Any]] = []
 
     # ── loop de cenários ─────────────────────────────────────────────
+
     for sc in scenarios:
         sc_name = str(sc["name"])
         sc_over = dict(sc.get("overrides", {}))
@@ -127,11 +143,15 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 "semantics_flag": sc_sem,
                 "notes": sc_note,
                 "overrides": sc_over,
-                "dataset": "make_moons",
+                "dataset": "breast_cancer_wisconsin",
+                "feature_names": FEATURE_NAMES,
                 "percent_search": PERCENT_SEARCH,
                 "percent_eval": PERCENT_EVAL,
                 "seeds": SEEDS,
                 "qubits_list": QUBITS_LIST,
+                "n_samples_total": 569,
+                "n_malignant": 357,
+                "n_benign": 212,
             },
         )
 
@@ -162,7 +182,7 @@ def main_make_moons(DEBUG: bool = False) -> None:
             backend="loky",
             verbose=10,
         )(
-            delayed(_run_one_seed_make_moons)(
+            delayed(_run_one_seed_breast_cancer)(
                 seed=seed,
                 nq=nq,
                 sc_name=sc_name,
@@ -171,6 +191,7 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 sc_dir=sc_dir,
                 PERCENT_SEARCH=PERCENT_SEARCH,
                 PERCENT_EVAL=PERCENT_EVAL,
+                data_dir=data_dir,
             )
             for seed in SEEDS
             for nq in QUBITS_LIST
@@ -268,7 +289,7 @@ def main_make_moons(DEBUG: bool = False) -> None:
 
             if alpha_per_seed:
                 bar_path = sc_dir / f"alpha_bar_{sc_tag_}.png"
-                _plot_alpha_bar_moons(
+                _plot_alpha_bar_breast_cancer(
                     alpha_per_seed=alpha_per_seed,
                     out_path=str(bar_path),
                     title=(
@@ -307,7 +328,8 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 "overrides": sc_over,
                 "semantics_flag": sc_sem,
                 "notes": sc_note,
-                "dataset": "make_moons",
+                "dataset": "breast_cancer_wisconsin",
+                "feature_names": FEATURE_NAMES,
             },
             "meta": {
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -326,7 +348,7 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 "ci95": [float(perf_lo), float(perf_hi)],
                 "per_seed": [float(x) for x in perf_list],
             },
-            "baselines": {},
+            "baselines": {},  # preenchido abaixo se disponível
             "pareto_front": pf,
             "runs": scenario_runs,
         }
@@ -388,12 +410,13 @@ def main_make_moons(DEBUG: bool = False) -> None:
             }
         )
     
-    #Ending scenarios loop
+    #End of loop de cenários
+
     # ── Índice agregado ───────────────────────────────────────────────
     agg = {
         "meta": {
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "dataset": "make_moons",
+            "dataset": "breast_cancer_wisconsin",
             "n_scenarios": len(all_scenarios_results),
         },
         "scenarios": all_scenarios_results,
@@ -401,3 +424,25 @@ def main_make_moons(DEBUG: bool = False) -> None:
     agg_path = root_out / "ALL_SCENARIOS_INDEX.json"
     agg_path.write_text(json.dumps(agg, indent=2), encoding="utf-8")
     print(f"[OK] Saved aggregate index: {agg_path}")
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Ablation study on Breast Cancer Wisconsin dataset"
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Run in DEBUG mode (minimal episodes, 1 seed)",
+    )
+    parser.add_argument(
+        "--data-dir",
+        type=str,
+        default="data",
+        help="Directory containing wdbc.data (default: data/)",
+    )
+    args = parser.parse_args()
+
+    main_breast_cancer(DEBUG=args.debug, data_dir=args.data_dir)

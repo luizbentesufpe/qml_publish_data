@@ -97,8 +97,7 @@ def main_banknote(DEBUG: bool = False, data_dir: str = "data") -> None:
 
     root_out.mkdir(parents=True, exist_ok=True)
 
-    QUBITS_LIST = [4]
-    nq = QUBITS_LIST[0]
+    QUBITS_LIST = [4, 6]
     PERCENT_SEARCH = int(cfg0.percent_search)
     PERCENT_EVAL = int(cfg0.percent_eval)
 
@@ -192,6 +191,7 @@ def main_banknote(DEBUG: bool = False, data_dir: str = "data") -> None:
                 data_dir=data_dir,
             )
             for seed in SEEDS
+            for nq in QUBITS_LIST
         )
 
         # ── Agrega resultados dos workers ─────────────────────────────

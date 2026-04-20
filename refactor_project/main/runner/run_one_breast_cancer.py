@@ -1,20 +1,10 @@
-"""
-refactor_project/main/runner/run_one_make_moons.py
-==================================================
-Worker isolado por (seed × nq) para o dataset Make Moons.
-Chamado em paralelo por main_make_moons.py via joblib.Parallel.
-
-Não importa nada de main_make_moons.py — auto-contido por design,
-para ser serializável pelo backend loky.
-"""
-
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import numpy as np
 import torch
 
-from refactor_project.data.moons import load_make_moons_pool
+from refactor_project.data.breast_cancer import load_breast_cancer_pool
 from refactor_project.data.util import (
     _make_search_splits_from_train_all,
     nested_cv_eval_fixed_arch,
@@ -27,8 +17,14 @@ from refactor_project.model.math.cost import measure_cost_from_arch
 from refactor_project.model.util.util import make_cfg_for_qubits
 from refactor_project.util.util import Logger, dump_run_metadata, set_seeds
 
+#: Nomes semânticos das 9 features — usados nos JSONs e gráficos
+FEATURE_NAMES: List[str] = [
+    "radius", "texture", "perimeter", "area", "smoothness",
+    "compactness", "concavity", "concave_points", "symmetry"
+]
 
-def _run_one_seed_make_moons(
+
+def _run_one_seed_breast_cancer(
     seed: int,
     nq: int,
     sc_name: str,
@@ -37,10 +33,11 @@ def _run_one_seed_make_moons(
     sc_dir: Path,
     PERCENT_SEARCH: int,
     PERCENT_EVAL: int,
+    data_dir: str = "data",
 ) -> Dict[str, Any]:
     """
     Executa um run completo (search → nested CV → holdout) para
-    uma combinação (seed, nq) do dataset Make Moons.
+    uma combinação (seed, nq) do dataset Breast Cancer Wisconsin.
 
     Retorna um dict com todos os resultados — sem side-effects
     além de escrever logs e enc_params_final.pt no diretório
@@ -56,15 +53,10 @@ def _run_one_seed_make_moons(
     sc_dir        : diretório raiz do cenário
     PERCENT_SEARCH: percentual de dados para o stage SEARCH
     PERCENT_EVAL  : percentual de dados para o stage FINAL
+    data_dir      : diretório onde o CSV do Breast Cancer está (ou será baixado)
     """
     # DEVICE forçado para CPU: PennyLane não é multi-GPU-safe em subprocessos
-    if torch.cuda.is_available():
-        n_gpus = torch.cuda.device_count()
-        gpu_id = (seed * len(str(nq)) + nq) % n_gpus
-        DEVICE = f"cuda:{gpu_id}"
-        torch.cuda.set_device(gpu_id)
-    else:
-        DEVICE = "cpu"
+    DEVICE = "cpu"
     set_seeds(seed)  # crítico: deve ser a primeira chamada dentro do worker
 
     # Logger isolado por (nq × seed) — sem colisão de paths entre workers
@@ -77,10 +69,11 @@ def _run_one_seed_make_moons(
     noise_logger = Logger(noise_dir / "logs")
 
     # ── Dados completos (PERCENT_EVAL) → holdout ──────────────────────────
-    X_full, Y_full = load_make_moons_pool(
+    X_full, Y_full = load_breast_cancer_pool(
         cfg_base,
         percent_total=int(PERCENT_EVAL),
         seed=int(seed),
+        data_dir=data_dir,
     )
     tr_idx, ho_idx = split_holdout(
         X_full,
@@ -99,12 +92,12 @@ def _run_one_seed_make_moons(
         seed=int(seed),
         val_frac=float(getattr(cfg_base, "val_frac_search", 0.40)),
     )
-    in_dim = int(XtrS.shape[1])  # 2 para Make Moons
+    in_dim = int(XtrS.shape[1])  # 9 para Breast Cancer Wisconsin
 
     # ── Config por nq ─────────────────────────────────────────────────────
     cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
 
-    # Make Moons: 2 features — desativa feature bank dinâmico
+    # Breast Cancer: 9 features — desativa feature bank dinâmico
     cfg_nq.use_patch_bank = False
     cfg_nq.feature_bank_update = "none"
     cfg_nq.feature_bank_size = in_dim
@@ -134,10 +127,14 @@ def _run_one_seed_make_moons(
             "scenario": sc_name,
             "seed": seed,
             "n_qubits": int(nq),
-            "dataset": "make_moons",
+            "dataset": "breast_cancer_wisconsin",
             "in_dim": in_dim,
+            "feature_names": FEATURE_NAMES,
             "percent_search": PERCENT_SEARCH,
             "percent_eval": PERCENT_EVAL,
+            "n_samples_total": 569,
+            "n_malignant": 357,
+            "n_benign": 212,
         },
     )
 
@@ -180,6 +177,7 @@ def _run_one_seed_make_moons(
         noise=False,
     )
 
+
     # ── Final holdout ─────────────────────────────────────────────────────
     auc_with_noise, sens_with_noise, thr_with_noise = train_final_model_end2end(
         arch_mat,
@@ -193,6 +191,7 @@ def _run_one_seed_make_moons(
         device=DEVICE,
         noise=True,
     )
+
 
     # ── Lê α/β do logger isolado por seed (sem colisão entre workers) ─────
     _alpha_final: Optional[List[float]] = None
@@ -240,11 +239,11 @@ def _run_one_seed_make_moons(
             "auc": float(auc_ho),
             "sens@thr*": float(sens_ho),
         },
-        "holdout_noisy": {  # ← adiciona
-            "thr_star": float(thr_with_noise),
-            "auc": float(auc_with_noise),
+        "holdout_noisy": {           # ← adiciona
+            "thr_star":  float(thr_with_noise),
+            "auc":       float(auc_with_noise),
             "sens@thr*": float(sens_with_noise),
-            "noise_p": float(getattr(cfg_nq, "noise_p", 0.01)),
+            "noise_p":   float(getattr(cfg_nq, "noise_p", 0.01)),
         },
         "perf": float(perf),
         "cost": float(cost),
@@ -258,5 +257,6 @@ def _run_one_seed_make_moons(
             "alpha": _alpha_final,
             "beta": _beta_final,
             "mode": str(getattr(cfg_nq, "enc_affine_mode", "per_feature")),
+            "feature_names": FEATURE_NAMES,
         },
     }

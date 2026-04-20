@@ -26,6 +26,7 @@ def train_final_model_end2end(
     cfg: Config,
     logger: Logger,
     device: torch.device | str,
+    noise: bool = False,
 ):
     # FINAL phase: strict/clinical threshold constraints
     try:
@@ -49,6 +50,8 @@ def train_final_model_end2end(
         enc_beta_max=float(cfg.enc_beta_max),
         use_batched_qnode=bool(cfg.use_batched_qnode),
         vqc_theta_init_std=float(cfg.vqc_theta_init_std),
+        noise=noise,
+        noise_p=cfg.noise_p,
     ).to(DEVICE)
 
     if bool(cfg.freeze_enc_params):
@@ -241,6 +244,10 @@ def train_final_model_end2end(
                 _enc["thr_star"] = float(thr_star)
                 _enc["auc_te"] = float(auc_te)
                 _enc["sens_te"] = float(sens_te)
+                if hasattr(model, "theta"):
+                    _enc["theta"] = model.theta.detach().cpu().numpy()
+                _enc["head_weight"] = model.head.weight.detach().cpu().numpy()
+                _enc["head_bias"] = model.head.bias.detach().cpu().numpy()
 
             _pt_path = Path(str(logger.log_dir)) / "enc_params_final.pt"
             torch.save(_enc, str(_pt_path))
