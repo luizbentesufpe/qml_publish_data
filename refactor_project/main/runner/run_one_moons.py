@@ -25,6 +25,7 @@ from refactor_project.model.arch_search import run_arch_search_end2end
 from refactor_project.model.arch_train import train_final_model_end2end
 from refactor_project.model.math.cost import measure_cost_from_arch
 from refactor_project.model.util.util import make_cfg_for_qubits
+from refactor_project.util.checkpoint_util import load_checkpoint, save_checkpoint
 from refactor_project.util.util import Logger, dump_run_metadata, set_seeds
 
 
@@ -58,6 +59,9 @@ def _run_one_seed_make_moons(
     PERCENT_EVAL  : percentual de dados para o stage FINAL
     """
     # DEVICE forçado para CPU: PennyLane não é multi-GPU-safe em subprocessos
+    cached = load_checkpoint(sc_dir, nq, seed)
+    if cached is not None:
+        return cached
     if torch.cuda.is_available():
         n_gpus = torch.cuda.device_count()
         gpu_id = (seed * len(str(nq)) + nq) % n_gpus
@@ -228,7 +232,7 @@ def _run_one_seed_make_moons(
     cost = float(cost_obj["cost"])
     perf = 0.5 * (nested["auc_mean"] + nested["sens_mean"])
 
-    return {
+    result = {
         "seed": int(seed),
         "nq": int(nq),
         "best_nq": int(best_nq),
@@ -260,3 +264,5 @@ def _run_one_seed_make_moons(
             "mode": str(getattr(cfg_nq, "enc_affine_mode", "per_feature")),
         },
     }
+    save_checkpoint(sc_dir, nq, seed, result)
+    return result
