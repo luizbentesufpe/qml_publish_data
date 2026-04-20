@@ -37,8 +37,8 @@ class Config:
     thr_policy_fpr_mult: float = 1.0
     thr_policy_youden_spec_mult: float = 1.5
     thr_policy_youden_sens_mult: float = 1.5
-    search_inner_train_batches_vqc: int = 32
-    search_inner_train_batches_head: int = 12
+    search_inner_train_batches_vqc: int = 128
+    search_inner_train_batches_head: int = 16
     thr_min: float = 0.05
     thr_max: float = 0.95
     wd_vqc: float = 1e-4
@@ -78,9 +78,9 @@ class Config:
     feature_bank_min_size: int = 3
 
     norm_per_feature: bool = True
-    inner_train_subset_size: int = 240
+    inner_train_subset_size: int = 2048
     thr_init: float = 0.5
-    batch_size: int = 64
+    batch_size: int = 32
     patch_size: int = 4
     patch_stride: int = 4
     cost_measure_samples: int = 16
