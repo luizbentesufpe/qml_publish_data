@@ -8,6 +8,7 @@ from typing import Any, Dict, List, Optional
 
 # ── terceiros ─────────────────────────────────────────────────────────
 import matplotlib
+import torch
 
 from refactor_project.config.ablation.cross_circle import CROSS_CIRCLE_SCENARIOS
 from refactor_project.main.runner.run_one_cross_circle import _run_one_seed_cross_circle
@@ -124,14 +125,10 @@ def main_cross_circle(DEBUG: bool = False) -> None:
                 )
 
         # ── Paralelismo: n_jobs = seeds × qubits ─────────────────────
-        N_JOBS = min(
-            len(SEEDS) * len(QUBITS_LIST),
-            multiprocessing.cpu_count(),
-        )
-        print(f"[parallel] {len(SEEDS)} seeds × {len(QUBITS_LIST)} qubits → n_jobs={N_JOBS}")
+        n_gpus = torch.cuda.device_count() 
 
         raw_results = Parallel(
-            n_jobs=N_JOBS,
+            n_jobs=n_gpus,
             backend="loky",
             verbose=10,
         )(

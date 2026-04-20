@@ -30,6 +30,7 @@ from typing import Any, Dict, List, Optional
 
 # ── terceiros ─────────────────────────────────────────────────────────
 import matplotlib
+import torch
 
 from refactor_project.config.ablation.bank_note import BANKNOTE_SCENARIOS
 
@@ -168,14 +169,10 @@ def main_banknote(DEBUG: bool = False, data_dir: str = "data") -> None:
                 )
 
         # ── Paralelismo: n_jobs = seeds × qubits ─────────────────────
-        N_JOBS = min(
-            len(SEEDS) * len(QUBITS_LIST),
-            multiprocessing.cpu_count(),
-        )
-        print(f"[parallel] {len(SEEDS)} seeds × {len(QUBITS_LIST)} qubits → n_jobs={N_JOBS}")
+        n_gpus = torch.cuda.device_count()  
 
         raw_results = Parallel(
-            n_jobs=N_JOBS,
+            n_jobs=n_gpus,
             backend="loky",
             verbose=10,
         )(

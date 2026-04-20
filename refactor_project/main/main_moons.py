@@ -30,6 +30,7 @@ from typing import Any, Dict, List, Optional
 
 # ── terceiros ─────────────────────────────────────────────────────────
 import matplotlib
+import torch
 
 from refactor_project.config.ablation.make_moon import MAKE_MOONS_SCENARIOS
 from refactor_project.main.runner.run_one_moons import _run_one_seed_make_moons
@@ -37,7 +38,6 @@ from refactor_project.main.runner.run_one_moons import _run_one_seed_make_moons
 matplotlib.use("Agg")
 import numpy as np
 from sklearn.calibration import Parallel, delayed
-from torch import multiprocessing
 
 # ── projeto — config ──────────────────────────────────────────────────
 from refactor_project.config.config import Config
@@ -75,11 +75,6 @@ def main_make_moons(DEBUG: bool = False) -> None:
     print("  ABLATION — Make Moons (Two Moons, 2 features)")
     mode_str = "DEBUG" if DEBUG else "PUBLICAÇÃO"
     print(f"  Modo: {mode_str}")
-
-
-
-
-
 
     # ── config base ───────────────────────────────────────────────────
     if DEBUG:
@@ -151,14 +146,10 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 )
 
         # ── Paralelismo: n_jobs = seeds × qubits ─────────────────────
-        N_JOBS = min(
-            len(SEEDS) * len(QUBITS_LIST),
-            multiprocessing.cpu_count(),
-        )
-        print(f"[parallel] {len(SEEDS)} seeds × {len(QUBITS_LIST)} qubits → n_jobs={N_JOBS}")
+        n_gpus = torch.cuda.device_count()
 
         raw_results = Parallel(
-            n_jobs=N_JOBS,
+            n_jobs=n_gpus,
             backend="loky",
             verbose=10,
         )(
@@ -387,8 +378,8 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 "results_file": str(out_path),
             }
         )
-    
-    #Ending scenarios loop
+
+    # Ending scenarios loop
     # ── Índice agregado ───────────────────────────────────────────────
     agg = {
         "meta": {
