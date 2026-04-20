@@ -58,7 +58,7 @@ class ConfigDebug:
     thr_policy_youden_sens_mult: float = 1.5
 
     # ── Search phase training ─────────────────────────────────────────────────
-    search_inner_train_batches_vqc: int = 32  # original: 128
+    search_inner_train_batches_vqc: int = 128  # original: 128
     search_inner_train_batches_head: int = 12  # original: 16
     search_terminal_diff_method: str = "adjoint"
     search_inner_epochs_classif: int = 2  # original: 6
@@ -144,8 +144,8 @@ class ConfigDebug:
     norm_tanh: bool = False
 
     # ── Batch / data sizes ────────────────────────────────────────────────────
-    inner_train_subset_size: int = 240  # original: 2048
-    batch_size: int = 64  # original: 32
+    inner_train_subset_size: int = 2048  # original: 2048
+    batch_size: int = 32  # original: 32
     patch_size: int = 4
     patch_stride: int = 4
     cost_measure_samples: int = 4  # original: 16
