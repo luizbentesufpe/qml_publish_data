@@ -26,7 +26,13 @@ def _run_one_seed_cross_circle(
     PERCENT_SEARCH: int,
     PERCENT_EVAL: int,
 ) -> dict:
-    DEVICE = "cpu"  # forçado: PennyLane não é multi-GPU-safe em subprocessos
+    if torch.cuda.is_available():
+        n_gpus = torch.cuda.device_count()
+        gpu_id = (seed * len(str(nq)) + nq) % n_gpus
+        DEVICE = f"cuda:{gpu_id}"
+        torch.cuda.set_device(gpu_id)
+    else:
+        DEVICE = "cpu"
     set_seeds(seed)  # crítico: dentro do worker
 
     # Logger isolado por (seed × nq) — sem colisão de paths
