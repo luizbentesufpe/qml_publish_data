@@ -1,211 +1,10 @@
 {
   "meta": {
-    "timestamp": "2026-03-22 06:06:52",
+    "timestamp": "2026-04-29 22:46:23",
     "dataset": "make_moons",
-    "n_scenarios": 5
+    "n_scenarios": 2
   },
   "scenarios": [
-    {
-      "scenario": {
-        "name": "mm_s0_baseline",
-        "tag": "mm_s0_baseline",
-        "overrides": {
-          "use_patch_bank": false,
-          "patch_bank_compact_features": false,
-          "feature_bank_update": "none",
-          "feature_bank_decay_enabled": false,
-          "enc_affine_mode": "per_feature",
-          "enc_alpha_init": 1.0,
-          "enc_beta_init": 0.0,
-          "enc_beta_max": 1.0,
-          "feature_bank_size": 2,
-          "feature_bank_min_size": 2,
-          "feature_bank_schedule": [
-            2
-          ],
-          "CNOT_budget": 4,
-          "ENC_budget": 4,
-          "ROT_budget": 8,
-          "freeze_enc_params": true,
-          "use_focal": false,
-          "hard_block_budget": false,
-          "thr_mode": "hard",
-          "thr_policy": "youden"
-        },
-        "semantics_flag": "strong",
-        "notes": "Baseline m\u00ednimo: enc fixo (\u03b1=1.0 congelado), BCE, sem hard budget, thr hard. Equivalente ao cc_s0 \u2014 refer\u00eancia sem nenhum componente proposto."
-      },
-      "summary": {
-        "rlqcv_perf_ci95": {
-          "mean": 0.8927525721995877,
-          "ci95": [
-            0.8599897155966932,
-            0.9236358881724966
-          ],
-          "per_seed": [
-            0.8316829942556773,
-            0.9403251893165268,
-            0.8795626052063692,
-            0.8868550822093006,
-            0.9253369900100646
-          ]
-        },
-        "baselines": {},
-        "pareto_front": [
-          {
-            "seed": 4,
-            "n_qubits": 4,
-            "cost": 5.8,
-            "perf": 0.9253369900100646
-          },
-          {
-            "seed": 1,
-            "n_qubits": 4,
-            "cost": 25.0,
-            "perf": 0.9403251893165268
-          }
-        ]
-      },
-      "results_file": "publication_out_make_moons/mm_s0_baseline/results_mm_s0_baseline.json"
-    },
-    {
-      "scenario": {
-        "name": "mm_s1_enc_param",
-        "tag": "mm_s1_enc_param",
-        "overrides": {
-          "use_patch_bank": false,
-          "patch_bank_compact_features": false,
-          "feature_bank_update": "none",
-          "feature_bank_decay_enabled": false,
-          "enc_affine_mode": "per_feature",
-          "enc_alpha_init": 0.5,
-          "enc_beta_init": 0.0,
-          "enc_beta_max": 1.0,
-          "feature_bank_size": 2,
-          "feature_bank_min_size": 2,
-          "feature_bank_schedule": [
-            2
-          ],
-          "CNOT_budget": 4,
-          "ENC_budget": 4,
-          "ROT_budget": 8,
-          "freeze_enc_params": false,
-          "use_focal": false,
-          "hard_block_budget": false,
-          "thr_mode": "hard",
-          "thr_policy": "youden"
-        },
-        "semantics_flag": "strong",
-        "notes": "S0 + encoding parametrizado (\u03b1/\u03b2 trein\u00e1veis end-to-end). Ganho esperado maior que Cross/Circle: fronteira n\u00e3o-linear exige feature weighting adaptativo."
-      },
-      "summary": {
-        "rlqcv_perf_ci95": {
-          "mean": 0.9152072922572507,
-          "ci95": [
-            0.8889181159324746,
-            0.9429028827094568
-          ],
-          "per_seed": [
-            0.9317043102197962,
-            0.966405381292055,
-            0.8835939594513227,
-            0.9112629598864321,
-            0.8830698504366477
-          ]
-        },
-        "baselines": {},
-        "pareto_front": [
-          {
-            "seed": 4,
-            "n_qubits": 4,
-            "cost": 3.8,
-            "perf": 0.8830698504366477
-          },
-          {
-            "seed": 0,
-            "n_qubits": 4,
-            "cost": 14.8,
-            "perf": 0.9317043102197962
-          },
-          {
-            "seed": 1,
-            "n_qubits": 4,
-            "cost": 22.2,
-            "perf": 0.966405381292055
-          }
-        ]
-      },
-      "results_file": "publication_out_make_moons/mm_s1_enc_param/results_mm_s1_enc_param.json"
-    },
-    {
-      "scenario": {
-        "name": "mm_s2_thr_soft_youden",
-        "tag": "mm_s2_thr_soft_youden",
-        "overrides": {
-          "use_patch_bank": false,
-          "patch_bank_compact_features": false,
-          "feature_bank_update": "none",
-          "feature_bank_decay_enabled": false,
-          "enc_affine_mode": "per_feature",
-          "enc_alpha_init": 0.5,
-          "enc_beta_init": 0.0,
-          "enc_beta_max": 1.0,
-          "feature_bank_size": 2,
-          "feature_bank_min_size": 2,
-          "feature_bank_schedule": [
-            2
-          ],
-          "CNOT_budget": 4,
-          "ENC_budget": 4,
-          "ROT_budget": 8,
-          "freeze_enc_params": false,
-          "use_focal": false,
-          "hard_block_budget": false,
-          "thr_mode": "soft",
-          "thr_policy": "youden"
-        },
-        "semantics_flag": "strong",
-        "notes": "S1 + threshold soft Youden J. Elimina colapso all-positive \u2014 mais cr\u00edtico em Moons que em Cross/Circle porque as classes t\u00eam overlap real na regi\u00e3o de noise."
-      },
-      "summary": {
-        "rlqcv_perf_ci95": {
-          "mean": 0.8235161232194578,
-          "ci95": [
-            0.7276703189483538,
-            0.9058757345217533
-          ],
-          "per_seed": [
-            0.679167270985237,
-            0.9397560310993325,
-            0.8978075322266612,
-            0.8542515459567791,
-            0.7465982358292789
-          ]
-        },
-        "baselines": {},
-        "pareto_front": [
-          {
-            "seed": 0,
-            "n_qubits": 4,
-            "cost": 4.8,
-            "perf": 0.679167270985237
-          },
-          {
-            "seed": 4,
-            "n_qubits": 4,
-            "cost": 6.8,
-            "perf": 0.7465982358292789
-          },
-          {
-            "seed": 1,
-            "n_qubits": 4,
-            "cost": 16.8,
-            "perf": 0.9397560310993325
-          }
-        ]
-      },
-      "results_file": "publication_out_make_moons/mm_s2_thr_soft_youden/results_mm_s2_thr_soft_youden.json"
-    },
     {
       "scenario": {
         "name": "mm_s3_hard_budget",
@@ -238,32 +37,38 @@
       },
       "summary": {
         "rlqcv_perf_ci95": {
-          "mean": 0.8927222463949651,
+          "mean": 0.9130438317752901,
           "ci95": [
-            0.8514374706081421,
-            0.9171807384992683
+            0.89801387954942,
+            0.9280351076126561
           ],
           "per_seed": [
-            0.8145829762359963,
-            0.9220440031820121,
-            0.9067701260059158,
-            0.9175171077093469,
-            0.9026970188415543
+            0.9116738965142905,
+            0.9234438247432196,
+            0.8849838921631967,
+            0.9358070839321581,
+            0.9093104615235861
           ]
         },
         "baselines": {},
         "pareto_front": [
           {
-            "seed": 3,
+            "seed": 4,
             "n_qubits": 4,
-            "cost": 9.8,
-            "perf": 0.9175171077093469
+            "cost": 3.8,
+            "perf": 0.7454027838209635
           },
           {
             "seed": 1,
+            "n_qubits": 6,
+            "cost": 14.2,
+            "perf": 0.9234438247432196
+          },
+          {
+            "seed": 3,
             "n_qubits": 4,
-            "cost": 15.0,
-            "perf": 0.9220440031820121
+            "cost": 17.0,
+            "perf": 0.9358070839321581
           }
         ]
       },
@@ -301,32 +106,38 @@
       },
       "summary": {
         "rlqcv_perf_ci95": {
-          "mean": 0.8793079123979801,
+          "mean": 0.9071700750234036,
           "ci95": [
-            0.8227283115558895,
-            0.9229559418799362
+            0.8936379538432462,
+            0.9198468162300191
           ],
           "per_seed": [
-            0.9228592838715064,
-            0.9399274378211129,
-            0.8720020305103966,
-            0.8945134466375716,
-            0.7672373631493129
+            0.9066108056555429,
+            0.9304352412219982,
+            0.8846927204883772,
+            0.8983030734543729,
+            0.915808534296727
           ]
         },
         "baselines": {},
         "pareto_front": [
           {
-            "seed": 0,
-            "n_qubits": 4,
-            "cost": 8.8,
-            "perf": 0.9228592838715064
+            "seed": 3,
+            "n_qubits": 6,
+            "cost": 10.0,
+            "perf": 0.8615956647284522
+          },
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 13.2,
+            "perf": 0.9179148592047608
           },
           {
             "seed": 1,
             "n_qubits": 4,
             "cost": 16.8,
-            "perf": 0.9399274378211129
+            "perf": 0.9304352412219982
           }
         ]
       },

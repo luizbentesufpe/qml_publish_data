@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "timestamp": "2026-05-01 01:10:46",
+    "dataset": "cross_circle",
+    "n_scenarios": 2
+  },
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "cc_s3_plus_hard_budget",
+        "tag": "cc_s3_plus_hard_budget",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "freeze_enc_params": false,
+          "use_focal": false,
+          "hard_block_budget": true,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S2 + hard budget blocking. Sweet-spot: reward \u2192 -0.34, budget penalty \u2192 0.0."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 10.2,
+            "perf": 1.0
+          }
+        ]
+      },
+      "results_file": "publication_out_cross_circle/cc_s3_plus_hard_budget/results_cc_s3_plus_hard_budget.json"
+    },
+    {
+      "scenario": {
+        "name": "cc_s4_plus_focal",
+        "tag": "cc_s4_plus_focal",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "freeze_enc_params": false,
+          "use_focal": true,
+          "hard_block_budget": true,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S3 + focal loss. FULL: todos os componentes \u2014 refer\u00eancia final Cross/Circle. Neutro em dados balanceados (50/50)."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 0,
+            "n_qubits": 6,
+            "cost": 10.2,
+            "perf": 1.0
+          }
+        ]
+      },
+      "results_file": "publication_out_cross_circle/cc_s4_plus_focal/results_cc_s4_plus_focal.json"
+    }
+  ]
+}

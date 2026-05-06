@@ -1,0 +1,489 @@
+{
+  "meta": {
+    "timestamp": "2026-05-01 23:41:37",
+    "dataset": "banknote_authentication",
+    "n_scenarios": 5
+  },
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "bn_s0_baseline",
+        "tag": "bn_s0_baseline",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 1.0,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 4,
+          "feature_bank_min_size": 4,
+          "feature_bank_schedule": [
+            4
+          ],
+          "CNOT_budget": 3,
+          "ENC_budget": 8,
+          "ROT_budget": 12,
+          "freeze_enc_params": true,
+          "use_focal": false,
+          "hard_block_budget": false,
+          "thr_mode": "hard",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "Baseline m\u00ednimo: enc fixo (\u03b1=1.0 congelado), BCE, sem hard budget, thr hard. Equivalente a cc_s0 / mm_s0 \u2014 refer\u00eancia para ablation."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9071248222978812,
+          "ci95": [
+            0.8864227418755558,
+            0.9277563681000535
+          ],
+          "per_seed": [
+            0.922071548372035,
+            0.8748904679678803,
+            0.9224242214727989,
+            0.9361072611416994,
+            0.8801306125349916
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 3,
+            "n_qubits": 4,
+            "cost": 6.0,
+            "perf": 0.8735303638111267
+          },
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 9.0,
+            "perf": 0.8748904679678803
+          },
+          {
+            "seed": 2,
+            "n_qubits": 4,
+            "cost": 9.8,
+            "perf": 0.9224242214727989
+          },
+          {
+            "seed": 3,
+            "n_qubits": 6,
+            "cost": 12.2,
+            "perf": 0.9361072611416994
+          }
+        ]
+      },
+      "results": [
+        {
+          "seed": 0,
+          "perf": 0.922071548372035,
+          "cost": 6.0
+        },
+        {
+          "seed": 1,
+          "perf": 0.8748904679678803,
+          "cost": 6.0
+        },
+        {
+          "seed": 2,
+          "perf": 0.9224242214727989,
+          "cost": 6.0
+        },
+        {
+          "seed": 3,
+          "perf": 0.9361072611416994,
+          "cost": 6.0
+        },
+        {
+          "seed": 4,
+          "perf": 0.8801306125349916,
+          "cost": 6.0
+        }
+      ],
+      "results_file": "publication_out_banknote/bn_s0_baseline/results_bn_s0_baseline.json"
+    },
+    {
+      "scenario": {
+        "name": "bn_s1_enc_param",
+        "tag": "bn_s1_enc_param",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 4,
+          "feature_bank_min_size": 4,
+          "feature_bank_schedule": [
+            4
+          ],
+          "CNOT_budget": 3,
+          "ENC_budget": 8,
+          "ROT_budget": 12,
+          "freeze_enc_params": false,
+          "use_focal": false,
+          "hard_block_budget": false,
+          "thr_mode": "hard",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S0 + encoding parametrizado (\u03b1/\u03b2 trein\u00e1veis end-to-end). Ganho esperado menor que Moons (AUC baseline ~0.998) mas \u03b1 convergido mais rico: 4 features com import\u00e2ncias distintas (variance, skewness, curtosis, entropy)."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9987736884599168,
+          "ci95": [
+            0.9973141616361687,
+            0.999962441647417
+          ],
+          "per_seed": [
+            0.9962572870591728,
+            0.9998122082370853,
+            1.0,
+            0.9977989470033256,
+            1.0
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 0,
+            "n_qubits": 4,
+            "cost": 7.8,
+            "perf": 0.9962572870591728
+          },
+          {
+            "seed": 2,
+            "n_qubits": 4,
+            "cost": 10.8,
+            "perf": 0.9978750653779005
+          },
+          {
+            "seed": 4,
+            "n_qubits": 6,
+            "cost": 16.2,
+            "perf": 0.9989350048685492
+          },
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 17.2,
+            "perf": 0.9998122082370853
+          },
+          {
+            "seed": 4,
+            "n_qubits": 4,
+            "cost": 18.8,
+            "perf": 1.0
+          }
+        ]
+      },
+      "results": [
+        {
+          "seed": 0,
+          "perf": 0.9962572870591728,
+          "cost": 7.8
+        },
+        {
+          "seed": 1,
+          "perf": 0.9998122082370853,
+          "cost": 7.8
+        },
+        {
+          "seed": 2,
+          "perf": 1.0,
+          "cost": 7.8
+        },
+        {
+          "seed": 3,
+          "perf": 0.9977989470033256,
+          "cost": 7.8
+        },
+        {
+          "seed": 4,
+          "perf": 1.0,
+          "cost": 7.8
+        }
+      ],
+      "results_file": "publication_out_banknote/bn_s1_enc_param/results_bn_s1_enc_param.json"
+    },
+    {
+      "scenario": {
+        "name": "bn_s2_thr_soft_youden",
+        "tag": "bn_s2_thr_soft_youden",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 4,
+          "feature_bank_min_size": 4,
+          "feature_bank_schedule": [
+            4
+          ],
+          "CNOT_budget": 3,
+          "ENC_budget": 8,
+          "ROT_budget": 12,
+          "freeze_enc_params": false,
+          "use_focal": false,
+          "hard_block_budget": false,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S1 + threshold soft Youden J. Elimina colapso all-positive \u2014 relevante em Banknote (~55/45): leve desbalanceamento aumenta risco de collapse para classe majorit\u00e1ria."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9995466037466567,
+          "ci95": [
+            0.9986661825479869,
+            1.0
+          ],
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            0.9977989470033256,
+            0.9999340717299579
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 0,
+            "n_qubits": 4,
+            "cost": 9.8,
+            "perf": 1.0
+          }
+        ]
+      },
+      "results": [
+        {
+          "seed": 0,
+          "perf": 1.0,
+          "cost": 9.8
+        },
+        {
+          "seed": 1,
+          "perf": 1.0,
+          "cost": 9.8
+        },
+        {
+          "seed": 2,
+          "perf": 1.0,
+          "cost": 9.8
+        },
+        {
+          "seed": 3,
+          "perf": 0.9977989470033256,
+          "cost": 9.8
+        },
+        {
+          "seed": 4,
+          "perf": 0.9999340717299579,
+          "cost": 9.8
+        }
+      ],
+      "results_file": "publication_out_banknote/bn_s2_thr_soft_youden/results_bn_s2_thr_soft_youden.json"
+    },
+    {
+      "scenario": {
+        "name": "bn_s3_hard_budget",
+        "tag": "bn_s3_hard_budget",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 4,
+          "feature_bank_min_size": 4,
+          "feature_bank_schedule": [
+            4
+          ],
+          "CNOT_budget": 3,
+          "ENC_budget": 8,
+          "ROT_budget": 12,
+          "freeze_enc_params": false,
+          "use_focal": false,
+          "hard_block_budget": true,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S2 + hard budget blocking. Sweet-spot esperado \u2014 mesmo padr\u00e3o de cc_s3 / mm_s3. CNOT_budget=3 reflete fronteira n\u00e3o-linear real com 4 features."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9999735940098947,
+          "ci95": [
+            0.9999573402893164,
+            0.9999878161730466
+          ],
+          "per_seed": [
+            0.999949207123193,
+            1.0,
+            0.9999797143784486,
+            0.9999593656985544,
+            0.9999796828492773
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 2,
+            "n_qubits": 4,
+            "cost": 10.8,
+            "perf": 0.9999797143784486
+          },
+          {
+            "seed": 1,
+            "n_qubits": 4,
+            "cost": 18.2,
+            "perf": 1.0
+          }
+        ]
+      },
+      "results": [
+        {
+          "seed": 0,
+          "perf": 0.999949207123193,
+          "cost": 10.8
+        },
+        {
+          "seed": 1,
+          "perf": 1.0,
+          "cost": 10.8
+        },
+        {
+          "seed": 2,
+          "perf": 0.9999797143784486,
+          "cost": 10.8
+        },
+        {
+          "seed": 3,
+          "perf": 0.9999593656985544,
+          "cost": 10.8
+        },
+        {
+          "seed": 4,
+          "perf": 0.9999796828492773,
+          "cost": 10.8
+        }
+      ],
+      "results_file": "publication_out_banknote/bn_s3_hard_budget/results_bn_s3_hard_budget.json"
+    },
+    {
+      "scenario": {
+        "name": "bn_s4_focal",
+        "tag": "bn_s4_focal",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 4,
+          "feature_bank_min_size": 4,
+          "feature_bank_schedule": [
+            4
+          ],
+          "CNOT_budget": 3,
+          "ENC_budget": 8,
+          "ROT_budget": 12,
+          "freeze_enc_params": false,
+          "use_focal": true,
+          "hard_block_budget": true,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S3 + focal loss. FULL: todos os componentes \u2014 refer\u00eancia final Banknote. Dataset ~55/45: ganho marginal esperado sobre S3, diferente de cc_s4 / mm_s4 que s\u00e3o 50/50."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9981881314099855,
+          "ci95": [
+            0.9970798390603711,
+            0.9993356870706696
+          ],
+          "per_seed": [
+            1.0,
+            0.9989079531486503,
+            0.996688309223384,
+            0.996678182177194,
+            0.9986662125006998
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 3,
+            "n_qubits": 6,
+            "cost": 7.0,
+            "perf": 0.9945667907251772
+          },
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 12.4,
+            "perf": 0.9989079531486503
+          },
+          {
+            "seed": 0,
+            "n_qubits": 4,
+            "cost": 13.8,
+            "perf": 1.0
+          }
+        ]
+      },
+      "results": [
+        {
+          "seed": 0,
+          "perf": 1.0,
+          "cost": 7.0
+        },
+        {
+          "seed": 1,
+          "perf": 0.9989079531486503,
+          "cost": 7.0
+        },
+        {
+          "seed": 2,
+          "perf": 0.996688309223384,
+          "cost": 7.0
+        },
+        {
+          "seed": 3,
+          "perf": 0.996678182177194,
+          "cost": 7.0
+        },
+        {
+          "seed": 4,
+          "perf": 0.9986662125006998,
+          "cost": 7.0
+        }
+      ],
+      "results_file": "publication_out_banknote/bn_s4_focal/results_bn_s4_focal.json"
+    }
+  ]
+}

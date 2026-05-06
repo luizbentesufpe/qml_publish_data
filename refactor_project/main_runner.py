@@ -3,6 +3,7 @@ import os
 
 from main.main_banknote import main_banknote
 from main.main_cross_circle import main_cross_circle
+from main.main_higgs import main_higgs
 from main.main_moons import main_make_moons
 from refactor_project.main.main_breat_cancer import main_breast_cancer
 
@@ -16,7 +17,7 @@ def parse_args():
     parser.add_argument(
         "--experiment",
         type=str,
-        choices=["cross_circle", "make_moons", "banknote", "breast_cancer", "all"],
+        choices=["cross_circle", "make_moons", "banknote", "breast_cancer", "higgs", "all"],
         required=True,
         help="Which experiment to run",
     )
@@ -47,6 +48,9 @@ def run_experiment(name: str, debug: bool):
 
     elif name == "breast_cancer":
         main_breast_cancer(DEBUG=debug)
+    
+    elif name == "higgs":
+        main_higgs(DEBUG=debug)
 
     else:
         raise ValueError(f"Unknown experiment: {name}")
@@ -62,7 +66,7 @@ if __name__ == "__main__":
     args = parse_args()
 
     if args.experiment == "all":
-        experiments = ["cross_circle", "make_moons", "banknote", "breast_cancer"]
+        experiments = ["cross_circle", "make_moons", "banknote", "breast_cancer", "higgs"]
 
         for exp in experiments:
             run_experiment(exp, args.debug)

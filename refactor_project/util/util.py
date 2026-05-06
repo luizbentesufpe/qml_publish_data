@@ -486,6 +486,234 @@ def _plot_alpha_bar_breast_cancer(
     plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"[OK] Barplot α salvo: {out_path}")
+
+
+def _plot_alpha_bar_higgs(
+    alpha_per_seed: List[Optional[np.ndarray]],
+    out_path: str,
+    title: str = "α convergido — HIGGS Boson (28 features físicas)",
+    feature_names: Optional[List[str]] = None,
+    low_level_indices: Optional[List[int]] = None,
+    high_level_indices: Optional[List[int]] = None,
+    alpha_init: float = 0.5,
+) -> None:
+    """
+    Barplot do α convergido para 28 features físicas do HIGGS Boson,
+    com erro entre seeds e separação visual low-level vs high-level.
+
+    Layout (barras horizontais para acomodar d=28):
+      - Painel esquerdo : α médio com barra de erro (std entre seeds)
+                          Linha tracejada em α=alpha_init (default 0.5)
+                          Coloração por grupo: cinza=low-level, vermelho=high-level
+      - Painel direito  : std(α) entre seeds por feature
+
+    Caixa de estatísticas agregadas no painel esquerdo:
+        mean(α[LL])  vs  mean(α[HL])  e  ratio HL/LL.
+    Esta razão é o diagnóstico físico-chave: HL/LL >> 1 indica que o
+    agente recuperou (sem supervisão) a hierarquia conhecida em que
+    massas invariantes derivadas (high-level) são mais discriminativas
+    que cinemáticas diretas (low-level) — Baldi et al. 2014.
+
+    Parâmetros
+    ----------
+    alpha_per_seed       : lista de arrays (28,) — um α por seed
+    out_path             : path do PNG de saída
+    title                : título do plot
+    feature_names        : nomes das 28 features (default: importa de higgs.py)
+    low_level_indices    : índices low-level (default: [0..20])
+    high_level_indices   : índices high-level (default: [21..27])
+    alpha_init           : valor de inicialização (default 0.5 para S1-S4 do Higgs;
+                           use 1.0 apenas se plotar S0 com encoding congelado)
+    """
+    # Import tardio para evitar dependência circular se util.py for
+    # importado antes de higgs.py
+    if feature_names is None:
+        try:
+            from refactor_project.data.higgs import FEATURE_NAMES as _HIGGS_FN
+            feature_names = list(_HIGGS_FN)
+        except Exception:
+            feature_names = [f"f{i}" for i in range(28)]
+
+    if low_level_indices is None:
+        low_level_indices = list(range(0, 21))
+    if high_level_indices is None:
+        high_level_indices = list(range(21, 28))
+
+    arrays = [
+        np.asarray(a, dtype=np.float32).flatten()[:28]
+        for a in alpha_per_seed
+        if a is not None
+    ]
+    if not arrays:
+        print("[WARN] Nenhum α disponível para barplot Higgs.")
+        return
+
+    # Filtra arrays que não têm exatamente 28 elementos (fail-soft)
+    arrays = [a for a in arrays if a.size == 28]
+    if not arrays:
+        print("[WARN] Nenhum α com d=28 disponível — pulando barplot Higgs.")
+        return
+
+    stacked = np.stack(arrays, axis=0)  # (n_seeds, 28)
+    alpha_mean = stacked.mean(axis=0)   # (28,)
+    alpha_std = stacked.std(axis=0)     # (28,)
+    n_seeds = stacked.shape[0]
+
+    # Paleta por grupo físico
+    LL_COLOR = "#6c7a89"   # cinza-azulado para low-level
+    HL_COLOR = "#c0392b"   # vermelho-quente para high-level
+    LL_LIGHT = "#aab2bd"   # versão clara para painel std
+    HL_LIGHT = "#e8826b"
+
+    n_feat = len(feature_names)
+    bar_colors = [
+        HL_COLOR if i in set(high_level_indices) else LL_COLOR
+        for i in range(n_feat)
+    ]
+    bar_colors_light = [
+        HL_LIGHT if i in set(high_level_indices) else LL_LIGHT
+        for i in range(n_feat)
+    ]
+    y_pos = np.arange(n_feat)
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 9))
+    fig.suptitle(title, fontsize=13, fontweight="bold")
+
+    # ── painel esquerdo: α médio (barras horizontais) ─────────────────
+    ax = axes[0]
+    bars = ax.barh(
+        y_pos,
+        alpha_mean,
+        color=bar_colors,
+        xerr=alpha_std,
+        capsize=3,
+        edgecolor="black",
+        linewidth=0.5,
+        error_kw={"elinewidth": 0.8, "alpha": 0.7},
+    )
+    ax.axvline(
+        alpha_init,
+        color="gray",
+        linestyle="--",
+        linewidth=1.0,
+        label=f"init (α={alpha_init})",
+    )
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(feature_names, fontsize=8)
+    ax.invert_yaxis()  # idx 0 no topo (convenção física)
+    ax.set_xlabel("α convergido")
+    ax.set_title(f"α médio  ·  {n_seeds} seeds", fontsize=11)
+
+    # Sombreamento de fundo separando grupos LL e HL
+    if high_level_indices and len(high_level_indices) > 0:
+        hl_min = min(high_level_indices) - 0.5
+        hl_max = max(high_level_indices) + 0.5
+        ax.axhspan(hl_min, hl_max, color=HL_COLOR, alpha=0.06, zorder=0)
+
+    x_max = max(float((alpha_mean + alpha_std).max()) * 1.15, 1.0)
+    ax.set_xlim(0.0, x_max)
+
+    # Legenda manual de grupos
+    from matplotlib.patches import Patch
+    legend_handles = [
+        Patch(facecolor=LL_COLOR, edgecolor="black", label="low-level (kinematic)"),
+        Patch(facecolor=HL_COLOR, edgecolor="black", label="high-level (invariant mass)"),
+    ]
+    ax.legend(
+        handles=legend_handles + [
+            plt.Line2D([0], [0], color="gray", linestyle="--",
+                       label=f"init (α={alpha_init})"),
+        ],
+        loc="upper right",
+        fontsize=9,
+        framealpha=0.9,
+    )
+
+    # ── Caixa de estatísticas agregadas LL vs HL (resultado-chave) ────
+    # Posicionada no canto inferior direito (longe da legenda upper-right)
+    ll_alpha = alpha_mean[low_level_indices]
+    hl_alpha = alpha_mean[high_level_indices]
+    ll_m, ll_s = float(ll_alpha.mean()), float(ll_alpha.std())
+    hl_m, hl_s = float(hl_alpha.mean()), float(hl_alpha.std())
+    ratio = hl_m / ll_m if ll_m > 1e-6 else float("nan")
+
+    stats_text = (
+        f"$\\overline{{\\alpha}}_{{LL}}$ = {ll_m:.3f} ± {ll_s:.3f}\n"
+        f"$\\overline{{\\alpha}}_{{HL}}$ = {hl_m:.3f} ± {hl_s:.3f}\n"
+        f"ratio HL/LL = {ratio:.2f}"
+    )
+    ax.text(
+        0.98, 0.02,
+        stats_text,
+        transform=ax.transAxes,
+        ha="right", va="bottom",
+        fontsize=10,
+        family="monospace",
+        bbox=dict(
+            facecolor="white",
+            edgecolor="gray",
+            alpha=0.95,
+            boxstyle="round,pad=0.4",
+        ),
+        zorder=10,
+    )
+
+    # ── painel direito: std entre seeds ───────────────────────────────
+    ax2 = axes[1]
+    ax2.barh(
+        y_pos,
+        alpha_std,
+        color=bar_colors_light,
+        edgecolor="black",
+        linewidth=0.5,
+    )
+    ax2.set_yticks(y_pos)
+    ax2.set_yticklabels(feature_names, fontsize=8)
+    ax2.invert_yaxis()
+    ax2.set_xlabel("std(α)")
+    ax2.set_title(f"std(α) entre seeds  ·  {n_seeds} seeds", fontsize=11)
+
+    if high_level_indices and len(high_level_indices) > 0:
+        hl_min = min(high_level_indices) - 0.5
+        hl_max = max(high_level_indices) + 0.5
+        ax2.axhspan(hl_min, hl_max, color=HL_COLOR, alpha=0.06, zorder=0)
+
+    # Diagnóstico de barren plateau: features com std≈0 E mean≈init
+    # são candidatas a colapso de gradiente.
+    bp_threshold_std = 0.01
+    bp_threshold_mean = 0.02
+    for i, (m, s) in enumerate(zip(alpha_mean, alpha_std)):
+        if s < bp_threshold_std and abs(m - alpha_init) < bp_threshold_mean:
+            ax2.scatter(
+                s + 0.001, i,
+                marker="o",
+                color="black",
+                s=18,
+                zorder=5,
+            )
+    # Anota o marcador de barren plateau na legenda (apenas se houver)
+    bp_count = int(
+        np.sum(
+            (alpha_std < bp_threshold_std)
+            & (np.abs(alpha_mean - alpha_init) < bp_threshold_mean)
+        )
+    )
+    if bp_count > 0:
+        ax2.scatter(
+            [], [],
+            marker="o",
+            color="black",
+            s=18,
+            label=f"barren plateau candidate ({bp_count})",
+        )
+        ax2.legend(loc="upper right", fontsize=9, framealpha=0.9)
+
+    plt.tight_layout()
+    plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[OK] Barplot α (Higgs) salvo: {out_path}")
+
+    
 class RunningStd:
     def __init__(self):
         self.n = 0

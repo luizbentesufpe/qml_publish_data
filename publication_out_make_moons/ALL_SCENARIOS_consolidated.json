@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "timestamp": "2026-04-29 22:46:23",
+    "dataset": "make_moons",
+    "n_scenarios": 2
+  },
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "mm_s3_hard_budget",
+        "tag": "mm_s3_hard_budget",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 2,
+          "feature_bank_min_size": 2,
+          "feature_bank_schedule": [
+            2
+          ],
+          "CNOT_budget": 4,
+          "ENC_budget": 4,
+          "ROT_budget": 8,
+          "freeze_enc_params": false,
+          "use_focal": false,
+          "hard_block_budget": true,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S2 + hard budget blocking. Sweet-spot esperado \u2014 mesmo padr\u00e3o do cc_s3. CNOT_budget=4 permite mais entanglement que Cross/Circle (budget=2)."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9130438317752901,
+          "ci95": [
+            0.89801387954942,
+            0.9280351076126561
+          ],
+          "per_seed": [
+            0.9116738965142905,
+            0.9234438247432196,
+            0.8849838921631967,
+            0.9358070839321581,
+            0.9093104615235861
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 4,
+            "n_qubits": 4,
+            "cost": 3.8,
+            "perf": 0.7454027838209635
+          },
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 14.2,
+            "perf": 0.9234438247432196
+          },
+          {
+            "seed": 3,
+            "n_qubits": 4,
+            "cost": 17.0,
+            "perf": 0.9358070839321581
+          }
+        ]
+      },
+      "results": [
+        {
+          "seed": 0,
+          "perf": 0.9116738965142905,
+          "cost": 3.8
+        },
+        {
+          "seed": 1,
+          "perf": 0.9234438247432196,
+          "cost": 3.8
+        },
+        {
+          "seed": 2,
+          "perf": 0.8849838921631967,
+          "cost": 3.8
+        },
+        {
+          "seed": 3,
+          "perf": 0.9358070839321581,
+          "cost": 3.8
+        },
+        {
+          "seed": 4,
+          "perf": 0.9093104615235861,
+          "cost": 3.8
+        }
+      ],
+      "results_file": "publication_out_make_moons/mm_s3_hard_budget/results_mm_s3_hard_budget.json"
+    },
+    {
+      "scenario": {
+        "name": "mm_s4_focal",
+        "tag": "mm_s4_focal",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 2,
+          "feature_bank_min_size": 2,
+          "feature_bank_schedule": [
+            2
+          ],
+          "CNOT_budget": 4,
+          "ENC_budget": 4,
+          "ROT_budget": 8,
+          "freeze_enc_params": false,
+          "use_focal": true,
+          "hard_block_budget": true,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S3 + focal loss. FULL: todos os componentes \u2014 refer\u00eancia final Make Moons. Dataset balanceado (50/50) \u2192 focal neutro, confirma padr\u00e3o cc_s4."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9071700750234036,
+          "ci95": [
+            0.8936379538432462,
+            0.9198468162300191
+          ],
+          "per_seed": [
+            0.9066108056555429,
+            0.9304352412219982,
+            0.8846927204883772,
+            0.8983030734543729,
+            0.915808534296727
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 3,
+            "n_qubits": 6,
+            "cost": 10.0,
+            "perf": 0.8615956647284522
+          },
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 13.2,
+            "perf": 0.9179148592047608
+          },
+          {
+            "seed": 1,
+            "n_qubits": 4,
+            "cost": 16.8,
+            "perf": 0.9304352412219982
+          }
+        ]
+      },
+      "results": [
+        {
+          "seed": 0,
+          "perf": 0.9066108056555429,
+          "cost": 10.0
+        },
+        {
+          "seed": 1,
+          "perf": 0.9304352412219982,
+          "cost": 10.0
+        },
+        {
+          "seed": 2,
+          "perf": 0.8846927204883772,
+          "cost": 10.0
+        },
+        {
+          "seed": 3,
+          "perf": 0.8983030734543729,
+          "cost": 10.0
+        },
+        {
+          "seed": 4,
+          "perf": 0.915808534296727,
+          "cost": 10.0
+        }
+      ],
+      "results_file": "publication_out_make_moons/mm_s4_focal/results_mm_s4_focal.json"
+    }
+  ]
+}

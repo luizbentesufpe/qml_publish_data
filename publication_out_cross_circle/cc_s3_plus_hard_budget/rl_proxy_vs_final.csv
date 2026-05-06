@@ -1,0 +1,11 @@
+scenario_tag,seed,nq_requested,best_nq,best_proxy_rl,final_auc_nested
+cc_s3_plus_hard_budget,0,4,4,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,0,6,6,0.9995470888889532,1.0
+cc_s3_plus_hard_budget,1,4,4,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,1,6,6,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,2,4,6,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,2,6,6,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,3,4,5,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,3,6,7,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,4,4,5,0.9999999874396778,1.0
+cc_s3_plus_hard_budget,4,6,7,0.9999999874396778,1.0

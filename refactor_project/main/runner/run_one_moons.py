@@ -58,13 +58,14 @@ def _run_one_seed_make_moons(
     PERCENT_EVAL  : percentual de dados para o stage FINAL
     """
     # DEVICE forçado para CPU: PennyLane não é multi-GPU-safe em subprocessos
-    if torch.cuda.is_available():
-        n_gpus = torch.cuda.device_count()
-        gpu_id = (seed * len(str(nq)) + nq) % n_gpus
-        DEVICE = f"cuda:{gpu_id}"
-        torch.cuda.set_device(gpu_id)
-    else:
-        DEVICE = "cpu"
+    # if torch.cuda.is_available():
+    #     n_gpus = torch.cuda.device_count()
+    #     gpu_id = (seed * len(str(nq)) + nq) % n_gpus
+    #     DEVICE = f"cuda:{gpu_id}"
+    #     torch.cuda.set_device(gpu_id)
+    # else:
+    #     DEVICE = "cpu"
+    DEVICE = "cpu"  # força CPU para evitar OOMs e interferência entre workers
     set_seeds(seed)  # crítico: deve ser a primeira chamada dentro do worker
 
     # Logger isolado por (nq × seed) — sem colisão de paths entre workers
