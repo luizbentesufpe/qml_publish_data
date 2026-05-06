@@ -82,6 +82,7 @@ class ReplayBuffer:
 
 class DDQNAgent:
     def __init__(self, cfg, n_actions: int, device: torch.device | str = "cpu"):
+        print(f"Initializing DDQNAgent on device {device}")
         self.DEVICE = torch.device(device)
         self.cfg = cfg
         self.online = QNet(cfg.L_max, n_actions).to(self.DEVICE)

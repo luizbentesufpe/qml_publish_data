@@ -15,6 +15,7 @@ from refactor_project.environments.qml.arch_util import (
     budget_excess,
     confusion_from_thr,
     count_ops,
+    dead_qubit_count,
     would_exceed_budget,
 )
 from refactor_project.environments.qml.proxy_trainer import ProxyPack, ProxyTrainer
@@ -68,6 +69,7 @@ class QMLEnvEnd2End:
 
         self.current_n_qubits = int(cfg.start_qubits)
         self._qubit_cooldown = 0
+        self._grace_qubits: dict[int, int] = {}
 
         # ── tensors ───────────────────────────────────────────────────────────
         self.X_tr = torch.as_tensor(X_tr, dtype=torch.float32, device=self.DEVICE)
@@ -326,7 +328,7 @@ class QMLEnvEnd2End:
         self._last_cnot_tape = None
         self.current_n_qubits = int(self.cfg.start_qubits)
         self._qubit_cooldown = 0
-
+        self._grace_qubits = {}
         if self._ep_count > 0:
             self._recent_actions_q.clear()
             self.recent_actions.clear()
@@ -427,10 +429,13 @@ class QMLEnvEnd2End:
         # 3) qubit actions
         kind = action[0]
         if kind == "ADD_QUBIT":
-            if self._qubit_cooldown == 0 and self.current_n_qubits < cfg.max_qubits:
+            if self._qubit_cooldown == 0 and self.current_n_qubits < self.cfg.max_qubits:
                 self.current_n_qubits += 1
-                self._qubit_cooldown = int(cfg.qubit_change_cooldown)
-                reward = -0.01
+                self._qubit_cooldown = int(self.cfg.qubit_change_cooldown)
+                # FIX-A: grace period — novo qubit não é penalizado até usar ou expirar
+                grace = self.cfg.qubit_grace_steps
+                self._grace_qubits[self.current_n_qubits] = grace
+                reward = -0.05
             else:
                 reward = -0.02
             return (
@@ -444,11 +449,22 @@ class QMLEnvEnd2End:
                     step_time_s=float(time.perf_counter() - t0),
                 ),
             )
-
+        
         if kind == "REMOVE_QUBIT":
-            if self._qubit_cooldown == 0 and self.current_n_qubits > cfg.min_qubits:
+            if self._qubit_cooldown == 0 and self.current_n_qubits > self.cfg.min_qubits:
                 self.current_n_qubits -= 1
-                self._qubit_cooldown = int(cfg.qubit_change_cooldown)
+                self._qubit_cooldown = int(self.cfg.qubit_change_cooldown)
+                # FIX-B: limpar gates órfãos imediatamente
+                clean = sanitize_architecture(
+                    torch.tensor(self.state, dtype=torch.int64),
+                    self.current_n_qubits,
+                )
+                self.state = clean.cpu().numpy()
+                # FIX-B: remover do grace qubits que não existem mais
+                self._grace_qubits = {
+                    q: s for q, s in self._grace_qubits.items()
+                    if q <= self.current_n_qubits
+                }
                 reward = -0.005
             else:
                 reward = -0.02
@@ -528,9 +544,9 @@ class QMLEnvEnd2End:
             )
 
         # 7) aplica ação
+        _t_step = time.perf_counter()
         encode_action_in_state(self.state, self.step_idx, action)
         self.step_idx += 1
-
         # 8) step barato — usa métricas cacheadas
         arch = torch.tensor(self.state, dtype=torch.int64, device=self.DEVICE)
         auc, sens = float(self.last_auc), float(self.last_sens)
@@ -547,7 +563,8 @@ class QMLEnvEnd2End:
         action_key = tuple(action)
         self._reward.last_spec = float(self.last_spec)
         reward = self._reward.compute(
-            auc, sens, arch, int(depth), int(cnot_count), action_key, self.recent_actions
+            auc, sens, arch, int(depth), int(cnot_count), action_key, self.recent_actions,
+            grace_qubits=self._grace_qubits,
         )
 
         if len(self._recent_actions_q) == self._recent_actions_q.maxlen:
@@ -577,11 +594,12 @@ class QMLEnvEnd2End:
                 "step_time_s": float(time.perf_counter() - t0),
             },
         )
-
+    
     # ── terminal_evaluate ─────────────────────────────────────────────────────
 
     def terminal_evaluate(self):
         t0 = time.perf_counter()
+    
         _arch_cache_key = hash(self.state.tobytes())
 
         # cache hit
@@ -616,7 +634,7 @@ class QMLEnvEnd2End:
             pass
 
         thr_config = self._build_thr_config(phase)
-
+        packs, proxy_scores = self._trainer.run_multi_seed(arch, phase, thr_config)
         try:
             packs, proxy_scores = self._trainer.run_multi_seed(arch, phase, thr_config)
         except Exception as e:
@@ -673,7 +691,18 @@ class QMLEnvEnd2End:
         self.last_spec = float(best.spec)
         self.thr = float(best.thr_star)
         self._reward.last_spec = float(best.spec)
-
+        dead_terminal = dead_qubit_count(arch, self.current_n_qubits, grace_qubits=self._grace_qubits)
+        if dead_terminal > 0:
+            dead_pen = float(self.cfg.dead_qubit_penalty_terminal) * float(dead_terminal)
+            self.last_auc = float(max(0.0, self.last_auc - dead_pen))
+            try:
+                self.logger.log_to_file(
+                    "thr",
+                    f"[dead_terminal] dead_q={dead_terminal} pen={dead_pen:.4f} "
+                    f"auc_adj={self.last_auc:.4f}",
+                )
+            except Exception:
+                pass
         counts = count_ops(arch)
         depth_t = int(self.step_idx)
         cnot_t = int(counts["CNOT"])
@@ -1059,5 +1088,6 @@ class QMLEnvEnd2End:
     def compute_reward(self, auc, sens, arch_mat, depth, cnot_count, action_key):
         self._reward.last_spec = float(self.last_spec)
         return self._reward.compute(
-            auc, sens, arch_mat, depth, cnot_count, action_key, self.recent_actions
+            auc, sens, arch_mat, depth, cnot_count, action_key, self.recent_actions,
+            grace_qubits=self._grace_qubits,
         )

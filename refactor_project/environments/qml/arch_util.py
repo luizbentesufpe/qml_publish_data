@@ -35,7 +35,11 @@ def would_exceed_budget(counts: dict[str, int], action, cfg: Config) -> bool:
     return False
 
 
-def dead_qubit_count(arch_mat: torch.Tensor, n_qubits: int) -> int:
+def dead_qubit_count(
+    arch_mat: torch.Tensor,
+    n_qubits: int,
+    grace_qubits: dict[int, int] | None = None,  # FIX-A
+) -> int:
     nq = int(n_qubits)
     if nq <= 0:
         return 0
@@ -57,8 +61,14 @@ def dead_qubit_count(arch_mat: torch.Tensor, n_qubits: int) -> int:
             if 0 < t <= nq:
                 used[t - 1] = True
 
-    return int((~used).sum())
+    dead = int((~used).sum())
 
+    # FIX-A: desconta qubits em grace period
+    if grace_qubits:
+        grace_active = sum(1 for s in grace_qubits.values() if s > 0)
+        dead = max(0, dead - grace_active)
+
+    return dead
 
 def p95_p5(arr: np.ndarray) -> float:
     z = np.asarray(arr, dtype=float).reshape(-1)

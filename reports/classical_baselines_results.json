@@ -1,0 +1,254 @@
+{
+  "Cross/Circle": {
+    "baselines": {
+      "Logistic Regression": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "n_folds": 5
+      },
+      "Random Forest": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "n_folds": 5
+      },
+      "SVM (RBF)": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "n_folds": 5
+      }
+    },
+    "rl_s0": {
+      "auc_mean": 1.0,
+      "auc_std": 0.0,
+      "seeds_ok": 5,
+      "n_seeds": 5
+    },
+    "rl_s3": {
+      "auc_mean": 1.0,
+      "auc_std": 0.0,
+      "seeds_ok": 5,
+      "n_seeds": 5
+    },
+    "rl_all": {
+      "cc_s0_baseline_minimum": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      },
+      "cc_s1_plus_enc_parametric": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      },
+      "cc_s2_plus_thr_soft_youden": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      },
+      "cc_s3_plus_hard_budget": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      },
+      "cc_s4_plus_focal": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      }
+    }
+  },
+  "Make Moons": {
+    "baselines": {
+      "Logistic Regression": {
+        "auc_mean": 0.95,
+        "auc_std": 0.0078,
+        "n_folds": 5
+      },
+      "Random Forest": {
+        "auc_mean": 0.9988,
+        "auc_std": 0.0008,
+        "n_folds": 5
+      },
+      "SVM (RBF)": {
+        "auc_mean": 0.9986,
+        "auc_std": 0.001,
+        "n_folds": 5
+      }
+    },
+    "rl_s0": {
+      "auc_mean": 0.8291,
+      "auc_std": 0.1202,
+      "seeds_ok": 1,
+      "n_seeds": 5
+    },
+    "rl_s3": {
+      "auc_mean": 0.9503,
+      "auc_std": 0.0103,
+      "seeds_ok": 0,
+      "n_seeds": 5
+    },
+    "rl_all": {
+      "mm_s0_baseline": {
+        "auc_mean": 0.8291,
+        "auc_std": 0.1202,
+        "seeds_ok": 1,
+        "n_seeds": 5
+      },
+      "mm_s1_enc_param": {
+        "auc_mean": 0.9456,
+        "auc_std": 0.018,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      },
+      "mm_s2_thr_soft_youden": {
+        "auc_mean": 0.9546,
+        "auc_std": 0.0244,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      },
+      "mm_s3_hard_budget": {
+        "auc_mean": 0.9503,
+        "auc_std": 0.0103,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      },
+      "mm_s4_focal": {
+        "auc_mean": 0.9436,
+        "auc_std": 0.013,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      }
+    }
+  },
+  "Banknote": {
+    "baselines": {
+      "Logistic Regression": {
+        "auc_mean": 0.9995,
+        "auc_std": 0.0005,
+        "n_folds": 5
+      },
+      "Random Forest": {
+        "auc_mean": 0.9999,
+        "auc_std": 0.0001,
+        "n_folds": 5
+      },
+      "SVM (RBF)": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "n_folds": 5
+      }
+    },
+    "rl_s0": {
+      "auc_mean": 0.9302,
+      "auc_std": 0.028,
+      "seeds_ok": 0,
+      "n_seeds": 5
+    },
+    "rl_s3": {
+      "auc_mean": 1.0,
+      "auc_std": 0.0,
+      "seeds_ok": 5,
+      "n_seeds": 5
+    },
+    "rl_all": {
+      "bn_s0_baseline": {
+        "auc_mean": 0.9302,
+        "auc_std": 0.028,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      },
+      "bn_s1_enc_param": {
+        "auc_mean": 0.9999,
+        "auc_std": 0.0001,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      },
+      "bn_s2_thr_soft_youden": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      },
+      "bn_s3_hard_budget": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      },
+      "bn_s4_focal": {
+        "auc_mean": 1.0,
+        "auc_std": 0.0001,
+        "seeds_ok": 5,
+        "n_seeds": 5
+      }
+    }
+  },
+  "BC Wisconsin": {
+    "baselines": {
+      "Logistic Regression": {
+        "auc_mean": 0.9851,
+        "auc_std": 0.0075,
+        "n_folds": 5
+      },
+      "Random Forest": {
+        "auc_mean": 0.9834,
+        "auc_std": 0.0066,
+        "n_folds": 5
+      },
+      "SVM (RBF)": {
+        "auc_mean": 0.9881,
+        "auc_std": 0.0098,
+        "n_folds": 5
+      }
+    },
+    "rl_s0": {
+      "auc_mean": 0.6435,
+      "auc_std": 0.0696,
+      "seeds_ok": 0,
+      "n_seeds": 5
+    },
+    "rl_s3": {
+      "auc_mean": 0.9647,
+      "auc_std": 0.0184,
+      "seeds_ok": 0,
+      "n_seeds": 5
+    },
+    "rl_all": {
+      "bc_s0_baseline": {
+        "auc_mean": 0.6435,
+        "auc_std": 0.0696,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      },
+      "bc_s1_enc_param": {
+        "auc_mean": 0.9746,
+        "auc_std": 0.01,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      },
+      "bc_s2_thr_soft_youden": {
+        "auc_mean": 0.9788,
+        "auc_std": 0.0104,
+        "seeds_ok": 1,
+        "n_seeds": 5
+      },
+      "bc_s3_hard_budget": {
+        "auc_mean": 0.9647,
+        "auc_std": 0.0184,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      },
+      "bc_s4_focal": {
+        "auc_mean": 0.9745,
+        "auc_std": 0.009,
+        "seeds_ok": 0,
+        "n_seeds": 5
+      }
+    }
+  }
+}

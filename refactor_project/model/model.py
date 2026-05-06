@@ -28,6 +28,8 @@ class CQV_End2End(nn.Module):
         enc_beta_init: float = 0.0,
         enc_beta_max: float = 1.0,
         vqc_theta_init_std: float = 0.1,
+        noise: bool = False,
+        noise_p: float = 0.01,
     ):
         """Initialize the BinaryCQV_End2End model.
         variables:
@@ -147,11 +149,18 @@ class CQV_End2End(nn.Module):
             nn.init.normal_(self.theta, mean=0.0, std=vqc_theta_init_std)
             self.theta.data.clamp_(-vqc_theta_init_std * 3, vqc_theta_init_std * 3)
 
+        self.noise = bool(noise)
+        self.noise_p = float(noise_p)
         # device selection
         # The choice of device for running the quantum circuit is crucial for performance.
         if str(diff_method).lower() == "backprop":
             dev = qml.device("default.qubit", wires=self.n_qubits, shots=None)
             self._dev_name = "default.qubit"
+        elif self.noise:
+            # ruído requer density matrix — CPU only, sem adjoint
+            dev = qml.device("default.mixed", wires=self.n_qubits, shots=None)
+            self._dev_name = "default.mixed"
+            diff_method = "best"  # adjoint não suporta default.mixed
         else:
             try:
                 dev = qml.device("lightning.gpu", wires=self.n_qubits, shots=None)
@@ -160,6 +169,7 @@ class CQV_End2End(nn.Module):
                 dev = qml.device("lightning.qubit", wires=self.n_qubits, shots=None)
                 self._dev_name = "lightning.qubit"
 
+    
         def circuit(xi, theta_vec, enc_alpha_raw, enc_beta_raw):
             """Defines the quantum circuit used in the model.
             variables:
@@ -256,6 +266,9 @@ class CQV_End2End(nn.Module):
                         if (0 <= c0 < self.n_qubits) and (0 <= t0 < self.n_qubits) and (c0 != t0):
                             qml.CNOT(wires=[c0, t0])
 
+            if self.noise:
+                for q in range(self.n_qubits):
+                    qml.DepolarizingChannel(self.noise_p, wires=q)
             # Measure the expectation value of Z on the first qubit as the output of the circuit.
             return [qml.expval(qml.PauliZ(j)) for j in range(self.n_qubits)]
 

@@ -1,0 +1,272 @@
+{
+  "config": {
+    "dataset": "Cross/Circle",
+    "n_qubits": 4,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "device": "cuda"
+  },
+  "results": [
+    {
+      "name": "B0_minimal_1cnot",
+      "circuit": {
+        "n_enc": 2,
+        "n_rot": 2,
+        "n_cnot": 1,
+        "n_total": 5,
+        "depth": 5
+      },
+      "rationale": "f4(centro)+f0(canto), 1 CNOT, 5 gates. M\u00ednimo absoluto.",
+      "frozen": {
+        "name": "B0_minimal_1cnot",
+        "freeze_enc": true,
+        "circuit": {
+          "n_enc": 2,
+          "n_rot": 2,
+          "n_cnot": 1,
+          "n_total": 5,
+          "depth": 5
+        },
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "auc_min": 1.0,
+        "sens_mean": 1.0,
+        "sens_std": 0.0,
+        "n_seeds_ok": 3,
+        "per_seed": [
+          {
+            "seed": 0,
+            "auc": 1.0,
+            "sens": 1.0,
+            "thr_star": 0.1268
+          },
+          {
+            "seed": 1,
+            "auc": 1.0,
+            "sens": 1.0,
+            "thr_star": 0.1336
+          },
+          {
+            "seed": 2,
+            "auc": 1.0,
+            "sens": 1.0,
+            "thr_star": 0.0881
+          }
+        ]
+      },
+      "trainable": {
+        "name": "B0_minimal_1cnot",
+        "freeze_enc": false,
+        "circuit": {
+          "n_enc": 2,
+          "n_rot": 2,
+          "n_cnot": 1,
+          "n_total": 5,
+          "depth": 5
+        },
+        "auc_mean": 1.0,
+        "auc_std": 0.0,
+        "auc_min": 1.0,
+        "sens_mean": 1.0,
+        "sens_std": 0.0,
+        "n_seeds_ok": 3,
+        "per_seed": [
+          {
+            "seed": 0,
+            "auc": 1.0,
+            "sens": 1.0,
+            "thr_star": 0.1273
+          },
+          {
+            "seed": 1,
+            "auc": 1.0,
+            "sens": 1.0,
+            "thr_star": 0.1451
+          },
+          {
+            "seed": 2,
+            "auc": 1.0,
+            "sens": 1.0,
+            "thr_star": 0.0601
+          }
+        ]
+      },
+      "delta_auc": 0.0
+    },
+    {
+      "name": "B1_structural_2cnot",
+      "circuit": {
+        "n_enc": 4,
+        "n_rot": 8,
+        "n_cnot": 2,
+        "n_total": 14,
+        "depth": 14
+      },
+      "rationale": "4 pixels borda, simetria 4-fold, 2 CNOTs, 14 gates.",
+      "frozen": {
+        "name": "B1_structural_2cnot",
+        "freeze_enc": true,
+        "circuit": {
+          "n_enc": 4,
+          "n_rot": 8,
+          "n_cnot": 2,
+          "n_total": 14,
+          "depth": 14
+        },
+        "auc_mean": 0.48,
+        "auc_std": 0.0301,
+        "auc_min": 0.4397,
+        "sens_mean": 0.1167,
+        "sens_std": 0.0514,
+        "n_seeds_ok": 0,
+        "per_seed": [
+          {
+            "seed": 0,
+            "auc": 0.5119,
+            "sens": 0.05,
+            "thr_star": 0.5085
+          },
+          {
+            "seed": 1,
+            "auc": 0.4884,
+            "sens": 0.125,
+            "thr_star": 0.5029
+          },
+          {
+            "seed": 2,
+            "auc": 0.4397,
+            "sens": 0.175,
+            "thr_star": 0.495
+          }
+        ]
+      },
+      "trainable": {
+        "name": "B1_structural_2cnot",
+        "freeze_enc": false,
+        "circuit": {
+          "n_enc": 4,
+          "n_rot": 8,
+          "n_cnot": 2,
+          "n_total": 14,
+          "depth": 14
+        },
+        "auc_mean": 0.5052,
+        "auc_std": 0.0472,
+        "auc_min": 0.4703,
+        "sens_mean": 0.0917,
+        "sens_std": 0.0312,
+        "n_seeds_ok": 0,
+        "per_seed": [
+          {
+            "seed": 0,
+            "auc": 0.5719,
+            "sens": 0.05,
+            "thr_star": 0.4989
+          },
+          {
+            "seed": 1,
+            "auc": 0.4703,
+            "sens": 0.1,
+            "thr_star": 0.5052
+          },
+          {
+            "seed": 2,
+            "auc": 0.4734,
+            "sens": 0.125,
+            "thr_star": 0.5005
+          }
+        ]
+      },
+      "delta_auc": 0.0252
+    },
+    {
+      "name": "B2_hw_efficient_3cnot",
+      "circuit": {
+        "n_enc": 4,
+        "n_rot": 9,
+        "n_cnot": 3,
+        "n_total": 16,
+        "depth": 16
+      },
+      "rationale": "Hardware-efficient Kandala 2017, round-robin 9 feat, CNOT chain.",
+      "frozen": {
+        "name": "B2_hw_efficient_3cnot",
+        "freeze_enc": true,
+        "circuit": {
+          "n_enc": 4,
+          "n_rot": 9,
+          "n_cnot": 3,
+          "n_total": 16,
+          "depth": 16
+        },
+        "auc_mean": 0.4534,
+        "auc_std": 0.0678,
+        "auc_min": 0.3581,
+        "sens_mean": 0.1083,
+        "sens_std": 0.0471,
+        "n_seeds_ok": 0,
+        "per_seed": [
+          {
+            "seed": 0,
+            "auc": 0.5103,
+            "sens": 0.075,
+            "thr_star": 0.513
+          },
+          {
+            "seed": 1,
+            "auc": 0.4919,
+            "sens": 0.175,
+            "thr_star": 0.5062
+          },
+          {
+            "seed": 2,
+            "auc": 0.3581,
+            "sens": 0.075,
+            "thr_star": 0.5055
+          }
+        ]
+      },
+      "trainable": {
+        "name": "B2_hw_efficient_3cnot",
+        "freeze_enc": false,
+        "circuit": {
+          "n_enc": 4,
+          "n_rot": 9,
+          "n_cnot": 3,
+          "n_total": 16,
+          "depth": 16
+        },
+        "auc_mean": 0.4332,
+        "auc_std": 0.0496,
+        "auc_min": 0.3631,
+        "sens_mean": 0.1833,
+        "sens_std": 0.0656,
+        "n_seeds_ok": 0,
+        "per_seed": [
+          {
+            "seed": 0,
+            "auc": 0.4678,
+            "sens": 0.15,
+            "thr_star": 0.5016
+          },
+          {
+            "seed": 1,
+            "auc": 0.4688,
+            "sens": 0.275,
+            "thr_star": 0.5002
+          },
+          {
+            "seed": 2,
+            "auc": 0.3631,
+            "sens": 0.125,
+            "thr_star": 0.5034
+          }
+        ]
+      },
+      "delta_auc": -0.0202
+    }
+  ]
+}

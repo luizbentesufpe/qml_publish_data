@@ -34,6 +34,10 @@ def _run_one_seed_cross_circle(
     nq_dir.mkdir(parents=True, exist_ok=True)
     nq_logger = Logger(nq_dir / "logs")
 
+    noise_dir = nq_dir / "noise"
+    noise_dir.mkdir(parents=True, exist_ok=True)
+    noise_logger = Logger(noise_dir / "logs")
+
     # ── Dados ────────────────────────────────────────────────────────────
     X_full, Y_full = load_circle_cross_pool_flatten(
         cfg_base, percent_total=int(PERCENT_EVAL), seed=int(seed)
@@ -94,7 +98,7 @@ def _run_one_seed_cross_circle(
         device=DEVICE,
     )
 
-    # ── Final holdout ────────────────────────────────────────────────────
+    # ── Final holdout ─────────────────────────────────────────────────────
     auc_ho, sens_ho, thr_ho = train_final_model_end2end(
         arch_mat,
         int(best_nq),
@@ -105,6 +109,22 @@ def _run_one_seed_cross_circle(
         cfg_nq,
         nq_logger,
         device=DEVICE,
+        noise=False,
+    )
+
+
+    # ── Final holdout ─────────────────────────────────────────────────────
+    auc_with_noise, sens_with_noise, thr_with_noise = train_final_model_end2end(
+        arch_mat,
+        int(best_nq),
+        X_train_all,
+        Y_train_all,
+        X_holdout,
+        Y_holdout,
+        cfg_nq,
+        noise_logger,
+        device=DEVICE,
+        noise=True,
     )
 
     # ── Lê α/β do logger isolado por seed (sem colisão) ──────────────────
@@ -136,6 +156,12 @@ def _run_one_seed_cross_circle(
         "arch_mat": arch_mat.cpu().numpy().tolist(),
         "nested_cv": nested,
         "holdout": {"thr_star": float(thr_ho), "auc": float(auc_ho), "sens@thr*": float(sens_ho)},
+        "holdout_noisy": {           # ← adiciona
+            "thr_star":  float(thr_with_noise),
+            "auc":       float(auc_with_noise),
+            "sens@thr*": float(sens_with_noise),
+            "noise_p":   float(getattr(cfg_nq, "noise_p", 0.01)),
+        },
         "perf": float(perf),
         "cost": float(cost),
         "measured_cost": cost_obj,

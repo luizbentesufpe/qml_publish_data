@@ -1,6 +1,11 @@
 scenario_tag,seed,nq_requested,best_nq,best_proxy_rl,final_auc_nested
-cc_s0_baseline_minimum,0,4,4,0.9999999874396778,1.0
-cc_s0_baseline_minimum,1,4,4,0.9327185229600696,0.5119662856308946
-cc_s0_baseline_minimum,2,4,5,0.8946599589284601,1.0
-cc_s0_baseline_minimum,3,4,4,0.9990941903382285,1.0
-cc_s0_baseline_minimum,4,4,4,0.9198391231585715,0.5903403935500494
+cc_s0_baseline_minimum,0,4,4,0.8355236782855913,1.0
+cc_s0_baseline_minimum,0,6,6,0.9999999874396778,1.0
+cc_s0_baseline_minimum,1,4,4,0.9245474318802924,0.5163514243674244
+cc_s0_baseline_minimum,1,6,6,0.9348674468544765,1.0
+cc_s0_baseline_minimum,2,4,4,0.8069606247709531,1.0
+cc_s0_baseline_minimum,2,6,5,0.8857765772730324,0.46774885846241804
+cc_s0_baseline_minimum,3,4,4,0.8297254231657505,0.5426180212275137
+cc_s0_baseline_minimum,3,6,6,0.9943198829320943,1.0
+cc_s0_baseline_minimum,4,4,4,0.8919523226227926,1.0
+cc_s0_baseline_minimum,4,6,6,0.9093372467989544,1.0

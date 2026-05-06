@@ -19,6 +19,7 @@ def run_arch_search_end2end(
     seed: int = 0,
     device: torch.device | str = "cpu",
 ):
+    print(device)
     # SEARCH phase: relax threshold constraints
     try:
         cfg.phase = "search"

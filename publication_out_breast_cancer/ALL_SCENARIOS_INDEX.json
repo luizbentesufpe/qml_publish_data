@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "timestamp": "2026-04-24 18:21:46",
+    "dataset": "breast_cancer_wisconsin",
+    "n_scenarios": 1
+  },
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "bc_s4_focal",
+        "tag": "bc_s4_focal",
+        "overrides": {
+          "use_patch_bank": false,
+          "patch_bank_compact_features": false,
+          "feature_bank_update": "none",
+          "feature_bank_decay_enabled": false,
+          "enc_affine_mode": "per_feature",
+          "enc_alpha_init": 0.5,
+          "enc_beta_init": 0.0,
+          "enc_beta_max": 1.0,
+          "feature_bank_size": 9,
+          "feature_bank_min_size": 9,
+          "feature_bank_schedule": [
+            9
+          ],
+          "CNOT_budget": 8,
+          "ENC_budget": 18,
+          "ROT_budget": 27,
+          "freeze_enc_params": false,
+          "use_focal": true,
+          "hard_block_budget": true,
+          "thr_mode": "soft",
+          "thr_policy": "youden"
+        },
+        "semantics_flag": "strong",
+        "notes": "S3 + focal loss. FULL: todos os componentes \u2014 refer\u00eancia final Breast Cancer. Dataset 62.7/37.3: focal loss reduz custo de hard negatives (benign), focando em exemplos dif\u00edceis de classificar \u2014 cr\u00edtico em diagn\u00f3stico m\u00e9dico. Diferente de bn_s4 (55/45) / cc_s4 / mm_s4 (50/50)."
+      },
+      "summary": {
+        "rlqcv_perf_ci95": {
+          "mean": 0.9468614881850176,
+          "ci95": [
+            0.9379203117144292,
+            0.9557160633484163
+          ],
+          "per_seed": [
+            0.9530844645550528,
+            0.9618495475113122,
+            0.9487122926093514,
+            0.9396468074409251,
+            0.9310143288084465
+          ]
+        },
+        "baselines": {},
+        "pareto_front": [
+          {
+            "seed": 4,
+            "n_qubits": 6,
+            "cost": 5.2,
+            "perf": 0.9310143288084465
+          },
+          {
+            "seed": 3,
+            "n_qubits": 4,
+            "cost": 6.8,
+            "perf": 0.9396468074409251
+          },
+          {
+            "seed": 2,
+            "n_qubits": 4,
+            "cost": 8.8,
+            "perf": 0.9487122926093514
+          },
+          {
+            "seed": 1,
+            "n_qubits": 6,
+            "cost": 13.4,
+            "perf": 0.9618495475113122
+          }
+        ]
+      },
+      "results_file": "publication_out_breast_cancer/bc_s4_focal/results_bc_s4_focal.json"
+    }
+  ]
+}

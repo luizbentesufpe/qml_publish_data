@@ -75,7 +75,11 @@ def main_make_moons(DEBUG: bool = False) -> None:
     print("  ABLATION — Make Moons (Two Moons, 2 features)")
     mode_str = "DEBUG" if DEBUG else "PUBLICAÇÃO"
     print(f"  Modo: {mode_str}")
-    print(f"{'=' * 68}\n")
+
+
+
+
+
 
     # ── config base ───────────────────────────────────────────────────
     if DEBUG:
@@ -89,8 +93,7 @@ def main_make_moons(DEBUG: bool = False) -> None:
 
     root_out.mkdir(parents=True, exist_ok=True)
 
-    QUBITS_LIST = [4]
-    nq = QUBITS_LIST[0]
+    QUBITS_LIST = [4, 6]
     PERCENT_SEARCH = int(cfg0.percent_search)
     PERCENT_EVAL = int(cfg0.percent_eval)
 
@@ -170,6 +173,7 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 PERCENT_EVAL=PERCENT_EVAL,
             )
             for seed in SEEDS
+            for nq in QUBITS_LIST
         )
 
         # ── Agrega resultados dos workers ─────────────────────────────
@@ -383,7 +387,8 @@ def main_make_moons(DEBUG: bool = False) -> None:
                 "results_file": str(out_path),
             }
         )
-
+    
+    #Ending scenarios loop
     # ── Índice agregado ───────────────────────────────────────────────
     agg = {
         "meta": {

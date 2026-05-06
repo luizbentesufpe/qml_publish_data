@@ -50,6 +50,7 @@ class RewardModule:
         cnot_count: int,
         action_key: Hashable,
         recent_actions: set,
+        grace_qubits: dict[int, int] | None = None,  # FIX-A
     ) -> float:
         cfg = self.cfg
 
@@ -90,7 +91,7 @@ class RewardModule:
         reward = comp_metric + comp_depth + comp_cnot + comp_rot + comp_qubit
 
         # dead qubits + budget excess
-        dead_q = dead_qubit_count(arch_mat, self._n_qubits())
+        dead_q = dead_qubit_count(arch_mat, self._n_qubits(), grace_qubits=grace_qubits)
         counts = count_ops(arch_mat)
         excess = budget_excess(counts, cfg)
         comp_dead = float(-float(cfg.dead_qubit_penalty) * float(dead_q))

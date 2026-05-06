@@ -38,12 +38,12 @@ class Config:
     thr_policy_youden_spec_mult: float = 1.5
     thr_policy_youden_sens_mult: float = 1.5
     search_inner_train_batches_vqc: int = 128
-    search_inner_train_batches_head: int = 16
+    search_inner_train_batches_head: int = 12
     thr_min: float = 0.05
     thr_max: float = 0.95
     wd_vqc: float = 1e-4
     collapse_saturation_abslogit_p95_thr: float = 12.0
-    search_terminal_diff_method: str = "backprop"
+    search_terminal_diff_method: str = "adjoint"
     search_inner_epochs_classif: int = 6
     search_allow_bias_learn: bool = True
     lr_vqc: float = 0.01
@@ -70,7 +70,7 @@ class Config:
     max_qubits: int = 10
     start_qubits: int = 4
     qubit_change_cooldown: int = 1
-    qubit_penalty: float = 0.015
+    qubit_penalty: float = 0.05
     hard_block_budget: bool = True
     budget_penalty: float = 0.25
     feature_bank_size: int = 9
@@ -240,7 +240,10 @@ class Config:
     depth_ref_buf: int = 512  # buffer size for estimating reference depth
     depth_ref_default: float = 10.0  # default reference depth (no history)
     depth_ref_min: float = 8.0  # minimum reference depth
-    dead_qubit_penalty: float = 0.01  # penalty for qubits with no operations
+    dead_qubit_penalty: float = 0.05  # penalty for qubits with no operations
+    qubit_grace_steps:  int   = 3  # number of steps before applying dead qubit penalty
+    noise_p: float = 0.01  # probability of random noise in actions (for robustness)
+    dead_qubit_penalty_terminal: float = 0.20 # penalty applied at episode end if dead qubits are detected
     spec_floor_shaping: float = 0.10  # specificity floor in shaping
     spec_collapse_penalty: float = 0.05  # extra penalty when specificity collapses
 

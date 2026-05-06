@@ -23,7 +23,11 @@ class ConfigDebug:
     # ── Cross-validation ──────────────────────────────────────────────────────
     nested_cv_splits_outer: int = 2  # original: 3
     nested_cv_splits_inner: int = 2  # original: 3
-
+    qubit_grace_steps: int = 3  # number of steps before applying dead qubit penalty
+    noise_p: float = 0.01  # probability of random noise in actions (for robustness)
+    dead_qubit_penalty_terminal: float = (
+        0.20  # penalty applied at episode end if dead qubits are detected
+    )
     # ── Confidence intervals ──────────────────────────────────────────────────
     ci_method: str = "bootstrap"
     bootstrap_B: int = 50  # original: 1000
@@ -54,9 +58,9 @@ class ConfigDebug:
     thr_policy_youden_sens_mult: float = 1.5
 
     # ── Search phase training ─────────────────────────────────────────────────
-    search_inner_train_batches_vqc: int = 4  # original: 128
-    search_inner_train_batches_head: int = 2  # original: 16
-    search_terminal_diff_method: str = "backprop"
+    search_inner_train_batches_vqc: int = 128  # original: 128
+    search_inner_train_batches_head: int = 12  # original: 16
+    search_terminal_diff_method: str = "adjoint"
     search_inner_epochs_classif: int = 2  # original: 6
     search_allow_bias_learn: bool = True
 
@@ -105,7 +109,7 @@ class ConfigDebug:
     max_qubits: int = 6  # original: 10
     start_qubits: int = 4
     qubit_change_cooldown: int = 1
-    qubit_penalty: float = 0.015
+    qubit_penalty: float = 0.05
 
     # ── Learning rates ────────────────────────────────────────────────────────
     lr_head: float = 3e-2
@@ -140,8 +144,8 @@ class ConfigDebug:
     norm_tanh: bool = False
 
     # ── Batch / data sizes ────────────────────────────────────────────────────
-    inner_train_subset_size: int = 128  # original: 2048
-    batch_size: int = 16  # original: 32
+    inner_train_subset_size: int = 2048  # original: 2048
+    batch_size: int = 32  # original: 32
     patch_size: int = 4
     patch_stride: int = 4
     cost_measure_samples: int = 4  # original: 16

@@ -52,14 +52,24 @@ def _run_one_seed_banknote(
     PERCENT_EVAL  : percentual de dados para o stage FINAL
     data_dir      : diretório onde o CSV do Banknote está (ou será baixado)
     """
-    # DEVICE forçado para CPU: PennyLane não é multi-GPU-safe em subprocessos
-    DEVICE = "cpu"
+    # if torch.cuda.is_available():
+    #     n_gpus = torch.cuda.device_count()
+    #     gpu_id = (seed * len(str(nq)) + nq) % n_gpus
+    #     DEVICE = f"cuda:{gpu_id}"
+    #     torch.cuda.set_device(gpu_id)
+    # else:
+    #     DEVICE = "cpu"
+    DEVICE = "cpu"  # força CPU para evitar OOMs e interferência entre workers
     set_seeds(seed)  # crítico: deve ser a primeira chamada dentro do worker
 
     # Logger isolado por (nq × seed) — sem colisão de paths entre workers
     nq_dir = sc_dir / f"nq{nq}" / f"seed{seed}"
     nq_dir.mkdir(parents=True, exist_ok=True)
     nq_logger = Logger(nq_dir / "logs")
+
+    noise_dir = nq_dir / "noise"
+    noise_dir.mkdir(parents=True, exist_ok=True)
+    noise_logger = Logger(noise_dir / "logs")
 
     # ── Dados completos (PERCENT_EVAL) → holdout ──────────────────────────
     X_full, Y_full = load_banknote_pool(
@@ -164,6 +174,21 @@ def _run_one_seed_banknote(
         cfg_nq,
         nq_logger,
         device=DEVICE,
+        noise=False,
+    )
+
+    # ── Final holdout ─────────────────────────────────────────────────────
+    auc_with_noise, sens_with_noise, thr_with_noise = train_final_model_end2end(
+        arch_mat,
+        int(best_nq),
+        X_train_all,
+        Y_train_all,
+        X_holdout,
+        Y_holdout,
+        cfg_nq,
+        noise_logger,
+        device=DEVICE,
+        noise=True,
     )
 
     # ── Lê α/β do logger isolado por seed (sem colisão entre workers) ─────
@@ -211,6 +236,12 @@ def _run_one_seed_banknote(
             "thr_star": float(thr_ho),
             "auc": float(auc_ho),
             "sens@thr*": float(sens_ho),
+        },
+        "holdout_noisy": {  # ← adiciona
+            "thr_star": float(thr_with_noise),
+            "auc": float(auc_with_noise),
+            "sens@thr*": float(sens_with_noise),
+            "noise_p": float(getattr(cfg_nq, "noise_p", 0.01)),
         },
         "perf": float(perf),
         "cost": float(cost),
