@@ -10,9 +10,9 @@ Transition = namedtuple("Transition", "s a r s1 done")
 
 
 class QNet(nn.Module):
-    def __init__(self, L_max, n_actions):
+    def __init__(self, L_max, n_actions, task_context_dim: int = 5):
         super().__init__()
-        in_dim = 5 * L_max + 2
+        in_dim = 5 * L_max + 2 + task_context_dim
 
         self.net = nn.Sequential(
             nn.Linear(in_dim, 512),
@@ -85,8 +85,10 @@ class DDQNAgent:
         print(f"Initializing DDQNAgent on device {device}")
         self.DEVICE = torch.device(device)
         self.cfg = cfg
-        self.online = QNet(cfg.L_max, n_actions).to(self.DEVICE)
-        self.target = QNet(cfg.L_max, n_actions).to(self.DEVICE)
+
+        ctx_dim = len(cfg.task_context)
+        self.online = QNet(cfg.L_max, n_actions, task_context_dim=ctx_dim).to(self.DEVICE)
+        self.target = QNet(cfg.L_max, n_actions, task_context_dim=ctx_dim).to(self.DEVICE)
         self.target.load_state_dict(self.online.state_dict())
         self.opt = torch.optim.Adam(self.online.parameters(), lr=1e-3)
         self.replay = ReplayBuffer(cfg.replay_capacity, device=self.DEVICE)

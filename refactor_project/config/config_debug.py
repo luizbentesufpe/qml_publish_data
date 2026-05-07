@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Tuple
 
 import numpy as np
@@ -14,6 +14,7 @@ class ConfigDebug:
     L_max: int = 5  # original: 20
     enc_lambda: float = float(np.pi)
 
+    task_context: list = field(default_factory=lambda: [0.0, 0.0, 0.0, 0.0, 0.0])
     # ── Data fractions ────────────────────────────────────────────────────────
     val_frac_search: float = 0.40
     percent_search: int = 10  # original: 60  — usa só 10% dos dados na busca

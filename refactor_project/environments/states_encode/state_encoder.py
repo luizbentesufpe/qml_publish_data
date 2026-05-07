@@ -79,4 +79,9 @@ def state_to_vec(
 
     denom = max(1, (cfg.max_qubits - cfg.min_qubits))
     extras[1] = np.float32((current_n_qubits - cfg.min_qubits) / denom)
-    return np.concatenate([flat, extras])
+
+    task_ctx = np.asarray(
+        getattr(cfg, "task_context", [0.0, 0.0, 0.0, 0.0, 0.0]),
+        dtype=np.float32,
+    )
+    return np.concatenate([flat, extras, task_ctx])

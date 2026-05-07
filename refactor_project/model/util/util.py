@@ -8,24 +8,41 @@ from refactor_project.config.config import Config
 from refactor_project.features.features import num_patches
 
 
-def make_cfg_for_qubits(base_cfg: Config, n_qubits: int) -> Config:
-    """Given a base configuration and a desired number of qubits, create a new configuration that is adjusted for the specified number of qubits.
-    This function modifies the feature bank size and schedule based on the number of qubits, ensuring
-    that the feature bank is appropriately sized for the input dimensionality and the model's capacity.
-    various heuristics are applied to determine the starting size of the feature bank and its schedule of reduction during training,
+def make_cfg_for_qubits(
+    base_cfg: Config,
+    n_qubits: int,
+    n_train: int | None = None,          # novo — tamanho de XtrS
+) -> Config:
+    """Given a base configuration and a desired number of qubits, create a new
+    configuration that is adjusted for the specified number of qubits.
+    This function modifies the feature bank size and schedule based on the number
+    of qubits, ensuring that the feature bank is appropriately sized for the input
+    dimensionality and the model's capacity. Various heuristics are applied to
+    determine the starting size of the feature bank and its schedule of reduction
+    during training.
+
+    If n_train is provided, inner_train_subset_size is clamped to the actual
+    training set size so the DataLoader never requests more samples than exist,
+    while still respecting a minimum of batch_size × 8 for diversity.
+
     vars:
-        base_cfg: The original configuration object that contains the default settings for the model and training.
-        n_qubits: The desired number of qubits to be used in the quantum circuit, which will influence the size of the feature bank and its schedule.
+        base_cfg: The original configuration object that contains the default
+            settings for the model and training.
+        n_qubits: The desired number of qubits to be used in the quantum circuit,
+            which will influence the size of the feature bank and its schedule.
+        n_train: Optional size of the search-phase training set (len(XtrS)).
+            When provided, inner_train_subset_size is adapted automatically.
     returns:
-        A new Config object that has been adjusted based on the number of qubits, with updated feature bank
+        A new Config object that has been adjusted based on the number of qubits,
+        with updated feature bank and (optionally) inner_train_subset_size.
     """
     cfg = Config(**base_cfg.__dict__)
-
     nq = int(n_qubits)
     cfg.n_qubits = nq
     cfg.start_qubits = int(np.clip(nq, int(cfg.min_qubits), int(cfg.max_qubits)))
 
-    # Adjust feature bank size and schedule based on the number of qubits and whether patch-based features are used.
+    # Adjust feature bank size and schedule based on the number of qubits and
+    # whether patch-based features are used.
     if bool(cfg.use_patch_bank):
         P = num_patches(28, 28, int(cfg.patch_size), int(cfg.patch_stride))
         cfg.feature_bank_size = int(P)
@@ -36,8 +53,8 @@ def make_cfg_for_qubits(base_cfg: Config, n_qubits: int) -> Config:
             else (P,)
         )
     else:
-        # Heuristic for feature bank size: start with a size that is at least 4 times the number of qubits,
-        # but not more than 784 (the total number of pixels in a 28x28 image).
+        # Heuristic for feature bank size: start with a size that is at least
+        # 4 times the number of qubits, but not more than 784 (28×28 pixels).
         bank_start = int(min(784, max(32, 2 * (2**cfg.n_qubits))))
         bank_min = int(max(32, bank_start // 4))
         cfg.feature_bank_size = int(max(cfg.feature_bank_size, bank_start))
@@ -48,8 +65,13 @@ def make_cfg_for_qubits(base_cfg: Config, n_qubits: int) -> Config:
             int(max(cfg.feature_bank_min_size, round(0.50 * cfg.feature_bank_size))),
             cfg.feature_bank_min_size,
         )
-    return cfg
 
+    # ── Adapt inner_train_subset_size to the actual training set ──────────
+    if n_train is not None:
+        floor = int(cfg.batch_size) * 8          # mínimo para diversidade de batch
+        cfg.inner_train_subset_size = max(floor, min(cfg.inner_train_subset_size, int(n_train)))
+
+    return cfg
 
 def compute_pos_weight(Y_tr: torch.Tensor, device: str) -> torch.Tensor:
     y = Y_tr.detach().cpu().numpy().reshape(-1)

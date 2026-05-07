@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Tuple
 
 import numpy as np
@@ -28,23 +28,24 @@ class Config:
     final_thr_lam_fpr: float = 2.0
     final_thr_lam_sens: float = 2.0
     final_terminal_diff_method: str = "adjoint"
-    final_inner_train_batches_head: int = 5
-    final_inner_train_batches_vqc: int = 32
-    final_inner_epochs_classif: int = 15
+    final_inner_train_batches_head: int = 4
+    final_inner_train_batches_vqc: int = 20
+    final_inner_epochs_classif: int = 10
     final_head_epochs: int = 1
+    task_context: list = field(default_factory=lambda: [0.0, 0.0, 0.0, 0.0, 0.0])
     thr_policy_sens_mult: float = 2.0  # sens policy makes sens penalty heavier
     thr_policy_spec_mult: float = 1.0  # sens policy may soften spec a bit
     thr_policy_fpr_mult: float = 1.0
     thr_policy_youden_spec_mult: float = 1.5
     thr_policy_youden_sens_mult: float = 1.5
-    search_inner_train_batches_vqc: int = 128
-    search_inner_train_batches_head: int = 12
+    search_inner_train_batches_vqc: int = 64
+    search_inner_train_batches_head: int = 8
     thr_min: float = 0.05
     thr_max: float = 0.95
     wd_vqc: float = 1e-4
     collapse_saturation_abslogit_p95_thr: float = 12.0
     search_terminal_diff_method: str = "adjoint"
-    search_inner_epochs_classif: int = 6
+    search_inner_epochs_classif: int = 4
     search_allow_bias_learn: bool = True
     lr_vqc: float = 0.01
     collapse_lr_scale: float = 2.0
@@ -66,7 +67,7 @@ class Config:
     min_qubits: int = 4
     n_qubits = 4
     lr_head: float = 3e-2
-    search_head_epochs: int = 8
+    search_head_epochs: int = 5
     max_qubits: int = 10
     start_qubits: int = 4
     qubit_change_cooldown: int = 1

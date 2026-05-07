@@ -10,6 +10,7 @@ from refactor_project.data.higgs import (
 from refactor_project.data.higgs import (
     load_higgs_pool,
 )
+from refactor_project.data.task_context import compute_task_context
 from refactor_project.data.util import (
     _make_search_splits_from_train_all,
     nested_cv_eval_fixed_arch,
@@ -129,9 +130,16 @@ def _run_one_seed_higgs(
             f"{len(FEATURE_NAMES)} (FEATURE_NAMES). "
             f"Verifique higgs.py / load_higgs_pool."
         )
-
+    task_ctx = compute_task_context(XtrS, YtrS.reshape(-1).astype(int))
     # ── Config por nq ─────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS))
+    cfg_nq.task_context = [
+        task_ctx["class_entropy"],
+        task_ctx["separabilidade"],
+        task_ctx["knn_auc"],
+        task_ctx["pca_fraction"],
+        task_ctx["pca_90"],
+    ]
 
     # Higgs: d=28 — feature bank dinâmico DESATIVADO por consistência com
     # os demais datasets do paper (CC/MM/BN/BCW). O agente seleciona
@@ -177,6 +185,7 @@ def _run_one_seed_higgs(
             # da hipótese "α amplifica high-level sobre low-level"
             "low_level_indices": list(range(0, 21)),
             "high_level_indices": list(range(21, 28)),
+            "task_context": task_ctx, 
         },
     )
 
@@ -302,4 +311,5 @@ def _run_one_seed_higgs(
             "low_level_indices": list(range(0, 21)),
             "high_level_indices": list(range(21, 28)),
         },
+        "task_context": task_ctx, 
     }

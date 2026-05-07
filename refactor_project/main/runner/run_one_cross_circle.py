@@ -3,6 +3,7 @@ from pathlib import Path
 import torch
 
 from refactor_project.data.cross_circle import load_circle_cross_pool_flatten
+from refactor_project.data.task_context import compute_task_context
 from refactor_project.data.util import (
     _make_search_splits_from_train_all,
     nested_cv_eval_fixed_arch,
@@ -55,8 +56,18 @@ def _run_one_seed_cross_circle(
     )
 
     in_dim = int(XtrS.shape[1])
+    
+    task_ctx = compute_task_context(X_train_all, Y_train_all)
+
     # ── Config por nq ────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS))
+    cfg_nq.task_context = [
+        task_ctx["class_entropy"],
+        task_ctx["separabilidade"],
+        task_ctx["knn_auc"],
+        task_ctx["pca_fraction"],
+        task_ctx["pca_90"],
+    ]
     cfg_nq.use_patch_bank = False
     cfg_nq.feature_bank_update = "none"
     cfg_nq.feature_bank_size = in_dim
@@ -78,6 +89,7 @@ def _run_one_seed_cross_circle(
             "n_qubits": int(nq),
             "percent_search": PERCENT_SEARCH,
             "percent_eval": PERCENT_EVAL,
+            "task_context": task_ctx,   # novo
         },
     )
     # ── RL Search ────────────────────────────────────────────────────────
@@ -175,4 +187,5 @@ def _run_one_seed_cross_circle(
             "beta": _beta_final,
             "mode": str(getattr(cfg_nq, "enc_affine_mode", "per_feature")),
         },
+        "task_context": task_ctx,
     }

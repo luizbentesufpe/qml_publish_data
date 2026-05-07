@@ -5,6 +5,7 @@ import numpy as np
 import torch
 
 from refactor_project.data.breast_cancer import load_breast_cancer_pool
+from refactor_project.data.task_context import compute_task_context
 from refactor_project.data.util import (
     _make_search_splits_from_train_all,
     nested_cv_eval_fixed_arch,
@@ -19,8 +20,15 @@ from refactor_project.util.util import Logger, dump_run_metadata, set_seeds
 
 #: Nomes semânticos das 9 features — usados nos JSONs e gráficos
 FEATURE_NAMES: List[str] = [
-    "radius", "texture", "perimeter", "area", "smoothness",
-    "compactness", "concavity", "concave_points", "symmetry"
+    "radius",
+    "texture",
+    "perimeter",
+    "area",
+    "smoothness",
+    "compactness",
+    "concavity",
+    "concave_points",
+    "symmetry",
 ]
 
 
@@ -94,8 +102,17 @@ def _run_one_seed_breast_cancer(
     )
     in_dim = int(XtrS.shape[1])  # 9 para Breast Cancer Wisconsin
 
+    task_ctx = compute_task_context(XtrS, YtrS.reshape(-1).astype(int))
     # ── Config por nq ─────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS))
+
+    cfg_nq.task_context = [
+        task_ctx["class_entropy"],
+        task_ctx["separabilidade"],
+        task_ctx["knn_auc"],
+        task_ctx["pca_fraction"],
+        task_ctx["pca_90"],
+    ]
 
     # Breast Cancer: 9 features — desativa feature bank dinâmico
     cfg_nq.use_patch_bank = False
@@ -135,6 +152,7 @@ def _run_one_seed_breast_cancer(
             "n_samples_total": 569,
             "n_malignant": 357,
             "n_benign": 212,
+            "task_context": task_ctx,
         },
     )
 
@@ -177,7 +195,6 @@ def _run_one_seed_breast_cancer(
         noise=False,
     )
 
-
     # ── Final holdout ─────────────────────────────────────────────────────
     auc_with_noise, sens_with_noise, thr_with_noise = train_final_model_end2end(
         arch_mat,
@@ -191,7 +208,6 @@ def _run_one_seed_breast_cancer(
         device=DEVICE,
         noise=True,
     )
-
 
     # ── Lê α/β do logger isolado por seed (sem colisão entre workers) ─────
     _alpha_final: Optional[List[float]] = None
@@ -239,11 +255,11 @@ def _run_one_seed_breast_cancer(
             "auc": float(auc_ho),
             "sens@thr*": float(sens_ho),
         },
-        "holdout_noisy": {           # ← adiciona
-            "thr_star":  float(thr_with_noise),
-            "auc":       float(auc_with_noise),
+        "holdout_noisy": {  # ← adiciona
+            "thr_star": float(thr_with_noise),
+            "auc": float(auc_with_noise),
             "sens@thr*": float(sens_with_noise),
-            "noise_p":   float(getattr(cfg_nq, "noise_p", 0.01)),
+            "noise_p": float(getattr(cfg_nq, "noise_p", 0.01)),
         },
         "perf": float(perf),
         "cost": float(cost),
@@ -259,4 +275,5 @@ def _run_one_seed_breast_cancer(
             "mode": str(getattr(cfg_nq, "enc_affine_mode", "per_feature")),
             "feature_names": FEATURE_NAMES,
         },
+        "task_context": task_ctx,
     }

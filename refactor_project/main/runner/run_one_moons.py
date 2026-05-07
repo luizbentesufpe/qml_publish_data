@@ -15,6 +15,7 @@ import numpy as np
 import torch
 
 from refactor_project.data.moons import load_make_moons_pool
+from refactor_project.data.task_context import compute_task_context
 from refactor_project.data.util import (
     _make_search_splits_from_train_all,
     nested_cv_eval_fixed_arch,
@@ -101,11 +102,21 @@ def _run_one_seed_make_moons(
         val_frac=float(getattr(cfg_base, "val_frac_search", 0.40)),
     )
     in_dim = int(XtrS.shape[1])  # 2 para Make Moons
-
+    task_ctx = compute_task_context(XtrS, YtrS.reshape(-1).astype(int))
+    
     # ── Config por nq ─────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS))
 
-    # Make Moons: 2 features — desativa feature bank dinâmico
+
+
+    cfg_nq.task_context = [
+        task_ctx["class_entropy"],
+        task_ctx["separabilidade"],
+        task_ctx["knn_auc"],
+        task_ctx["pca_fraction"],
+        task_ctx["pca_90"],
+    ]
+        # Make Moons: 2 features — desativa feature bank dinâmico
     cfg_nq.use_patch_bank = False
     cfg_nq.feature_bank_update = "none"
     cfg_nq.feature_bank_size = in_dim
@@ -139,6 +150,7 @@ def _run_one_seed_make_moons(
             "in_dim": in_dim,
             "percent_search": PERCENT_SEARCH,
             "percent_eval": PERCENT_EVAL,
+            "task_context": task_ctx, 
         },
     )
 
@@ -260,4 +272,5 @@ def _run_one_seed_make_moons(
             "beta": _beta_final,
             "mode": str(getattr(cfg_nq, "enc_affine_mode", "per_feature")),
         },
+        "task_context": task_ctx, 
     }

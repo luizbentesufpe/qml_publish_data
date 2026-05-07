@@ -32,6 +32,18 @@ def get_balanced_subset(dataset, percentage=3, seed=0):
     rng.shuffle(sel)
     return Subset(dataset, sel)
 
+def adapt_inner_train_subset_size(cfg: Config, n_train: int) -> Config:
+    """
+    Ajusta inner_train_subset_size ao tamanho real do dataset de treino.
+    
+    Regra: usa o mínimo entre o valor configurado e um teto baseado
+    no dataset, garantindo sempre pelo menos batch_size × 8 amostras
+    para não matar a diversidade por batch.
+    """
+    floor = int(cfg.batch_size) * 8          # mínimo absoluto
+    ceiling = min(int(cfg.inner_train_subset_size), n_train)
+    cfg.inner_train_subset_size = max(floor, ceiling)
+    return cfg
 
 def dataset_to_arrays(
     ds, batch_size: int, use_patch_bank: bool, compact: bool, patch_size: int, patch_stride: int
