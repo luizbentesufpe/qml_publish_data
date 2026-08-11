@@ -634,7 +634,7 @@ class QMLEnvEnd2End:
             pass
 
         thr_config = self._build_thr_config(phase)
-        packs, proxy_scores = self._trainer.run_multi_seed(arch, phase, thr_config)
+        # packs, proxy_scores = self._trainer.run_multi_seed(arch, phase, thr_config)
         try:
             packs, proxy_scores = self._trainer.run_multi_seed(arch, phase, thr_config)
         except Exception as e:

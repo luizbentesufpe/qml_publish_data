@@ -1,0 +1,780 @@
+[2026-08-08 00:15:07] [vqc_init] empty init state (all-NOP) — skip pre-warmup
+[2026-08-08 00:21:27] >>> [ep 001] TERMINAL EVAL: AUC=0.5170 SENS=0.9294 SPEC=0.0782 THR*=0.474
+[2026-08-08 00:21:27] [ep 001] score=0.5170 best=0.5170 nq=4 std_proxy=0.0056 stability_w=0.888 adjusted=0.4592 best_adjusted=0.4592
+[2026-08-08 00:21:27] [ep 001] score=0.5170 best=0.5170 nq=4 ep_ret=-79.391 | metric=-0.800 depth=-0.355 cnot=-0.084 qubit=0.000 rot=-0.072 dead=-0.550 budget=-79.500 repeat=-0.030 terminal=0.000
+[2026-08-08 00:27:22] >>> [ep 002] TERMINAL EVAL: AUC=0.4960 SENS=0.1152 SPEC=0.8642 THR*=0.592
+[2026-08-08 00:27:22] [ep 002] score=0.4883 best=0.5170 nq=4 std_proxy=0.0123 stability_w=0.754 adjusted=0.3680 best_adjusted=0.4592
+[2026-08-08 00:27:22] [ep 002] score=0.4883 best=0.5170 nq=4 ep_ret=-73.465 | metric=-0.800 depth=-0.355 cnot=-0.828 qubit=0.000 rot=-0.050 dead=-0.450 budget=-68.750 repeat=-0.030 terminal=0.000
+[2026-08-08 00:33:04] >>> [ep 003] TERMINAL EVAL: AUC=0.5408 SENS=0.7063 SPEC=0.3498 THR*=0.494
+[2026-08-08 00:33:04] [ep 003] score=0.5894 best=0.5170 nq=4 std_proxy=0.0171 stability_w=0.658 adjusted=0.3878 best_adjusted=0.4592
+[2026-08-08 00:33:04] [ep 003] score=0.5894 best=0.5170 nq=4 ep_ret=-85.470 | metric=-0.800 depth=-0.355 cnot=-0.276 qubit=0.000 rot=0.000 dead=-0.300 budget=-82.000 repeat=-0.030 terminal=0.000
+[2026-08-08 00:38:58] >>> [ep 004] TERMINAL EVAL: AUC=0.4967 SENS=0.9703 SPEC=0.0370 THR*=0.514
+[2026-08-08 00:38:58] [ep 004] score=0.4415 best=0.5170 nq=4 std_proxy=0.0035 stability_w=0.930 adjusted=0.4107 best_adjusted=0.4592
+[2026-08-08 00:38:58] [ep 004] score=0.4415 best=0.5170 nq=4 ep_ret=-86.182 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.046 dead=-0.700 budget=-82.000 repeat=-0.020 terminal=0.000
+[2026-08-08 00:44:30] >>> [ep 005] TERMINAL EVAL: AUC=0.4912 SENS=0.7249 SPEC=0.2510 THR*=0.535
+[2026-08-08 00:44:30] [ep 005] score=0.4648 best=0.5170 nq=4 std_proxy=0.0053 stability_w=0.894 adjusted=0.4154 best_adjusted=0.4592
+[2026-08-08 00:44:30] [ep 005] score=0.4648 best=0.5170 nq=4 ep_ret=-80.105 | metric=-0.800 depth=-0.355 cnot=-0.288 qubit=0.000 rot=-0.048 dead=-0.550 budget=-75.750 repeat=-0.030 terminal=0.000
+[2026-08-08 00:50:30] >>> [ep 006] TERMINAL EVAL: AUC=0.5546 SENS=0.8290 SPEC=0.2016 THR*=0.445
+[2026-08-08 00:50:30] [ep 006] score=0.6033 best=0.5170 nq=4 std_proxy=0.0136 stability_w=0.728 adjusted=0.4389 best_adjusted=0.4592
+[2026-08-08 00:50:30] [ep 006] score=0.6033 best=0.5170 nq=4 ep_ret=-81.308 | metric=-0.800 depth=-0.355 cnot=-0.372 qubit=0.000 rot=-0.028 dead=-0.350 budget=-77.750 repeat=0.000 terminal=0.000
+[2026-08-08 00:56:27] >>> [ep 007] TERMINAL EVAL: AUC=0.5227 SENS=0.1450 SPEC=0.8148 THR*=0.502
+[2026-08-08 00:56:27] [ep 007] score=0.5338 best=0.5338 nq=4 std_proxy=0.0050 stability_w=0.899 adjusted=0.4800 best_adjusted=0.4800
+[2026-08-08 00:56:27] [ep 007] score=0.5338 best=0.5338 nq=4 ep_ret=-82.247 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.084 dead=-0.300 budget=-78.750 repeat=-0.020 terminal=0.000
+[2026-08-08 01:02:21] >>> [ep 008] TERMINAL EVAL: AUC=0.5263 SENS=0.2751 SPEC=0.7366 THR*=0.556
+[2026-08-08 01:02:21] [ep 008] score=0.5367 best=0.5338 nq=4 std_proxy=0.0216 stability_w=0.568 adjusted=0.3046 best_adjusted=0.4800
+[2026-08-08 01:02:21] [ep 008] score=0.5367 best=0.5338 nq=4 ep_ret=-73.388 | metric=-0.800 depth=-0.355 cnot=-0.756 qubit=0.000 rot=-0.062 dead=-0.500 budget=-69.000 repeat=0.000 terminal=0.000
+[2026-08-08 01:08:01] >>> [ep 009] TERMINAL EVAL: AUC=0.5728 SENS=0.8104 SPEC=0.2757 THR*=0.458
+[2026-08-08 01:08:01] [ep 009] score=0.6086 best=0.5338 nq=4 std_proxy=0.0309 stability_w=0.382 adjusted=0.2327 best_adjusted=0.4800
+[2026-08-08 01:08:01] [ep 009] score=0.6086 best=0.5338 nq=4 ep_ret=-62.968 | metric=-0.800 depth=-0.355 cnot=-0.840 qubit=0.000 rot=-0.144 dead=-0.500 budget=-58.750 repeat=-0.020 terminal=0.000
+[2026-08-08 01:13:47] >>> [ep 010] TERMINAL EVAL: AUC=0.5435 SENS=0.9368 SPEC=0.0658 THR*=0.495
+[2026-08-08 01:13:47] [ep 010] score=0.5090 best=0.5338 nq=4 std_proxy=0.0164 stability_w=0.673 adjusted=0.3424 best_adjusted=0.4800
+[2026-08-08 01:13:47] [ep 010] score=0.5090 best=0.5338 nq=4 ep_ret=-74.438 | metric=-0.800 depth=-0.355 cnot=-0.780 qubit=0.000 rot=-0.042 dead=-0.700 budget=-69.750 repeat=-0.030 terminal=0.000
+[2026-08-08 01:13:47] [health] collapse_count=3 / 10 (spec < terminal_spec_floor)
+[2026-08-08 01:19:56] >>> [ep 011] TERMINAL EVAL: AUC=0.5216 SENS=0.2342 SPEC=0.8313 THR*=0.552
+[2026-08-08 01:19:56] [ep 011] score=0.5407 best=0.5338 nq=5 std_proxy=0.0200 stability_w=0.601 adjusted=0.3249 best_adjusted=0.4800
+[2026-08-08 01:19:56] [ep 011] score=0.5407 best=0.5338 nq=4 ep_ret=-85.618 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=-0.250 rot=-0.066 dead=-0.950 budget=-81.250 repeat=-0.020 terminal=0.000
+[2026-08-08 01:25:33] >>> [ep 012] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:33] [ep 012] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:33] [ep 012] score=0.1793 best=0.5338 nq=4 ep_ret=-75.892 | metric=-0.800 depth=-0.355 cnot=-0.504 qubit=0.000 rot=-0.064 dead=-0.600 budget=-70.750 repeat=-0.030 terminal=0.000
+[2026-08-08 01:25:33] >>> [ep 013] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:33] [ep 013] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:33] [ep 013] score=0.1793 best=0.5338 nq=4 ep_ret=-85.045 | metric=-0.800 depth=-0.355 cnot=-0.048 qubit=0.000 rot=-0.078 dead=-0.850 budget=-80.250 repeat=0.000 terminal=0.000
+[2026-08-08 01:25:33] >>> [ep 014] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:33] [ep 014] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:33] [ep 014] score=0.1793 best=0.5338 nq=4 ep_ret=-76.412 | metric=-0.800 depth=-0.355 cnot=-0.972 qubit=0.000 rot=0.000 dead=-0.650 budget=-71.000 repeat=-0.020 terminal=0.000
+[2026-08-08 01:25:34] >>> [ep 015] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:34] [ep 015] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:34] [ep 015] score=0.1793 best=0.5338 nq=4 ep_ret=-69.320 | metric=-0.800 depth=-0.355 cnot=-0.624 qubit=0.000 rot=-0.098 dead=-0.350 budget=-64.500 repeat=0.000 terminal=0.000
+[2026-08-08 01:25:34] >>> [ep 016] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:34] [ep 016] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:34] [ep 016] score=0.1793 best=0.5338 nq=4 ep_ret=-64.565 | metric=-0.800 depth=-0.355 cnot=-0.312 qubit=-0.575 rot=-0.084 dead=-0.300 budget=-59.500 repeat=0.000 terminal=0.000
+[2026-08-08 01:25:34] >>> [ep 017] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:34] [ep 017] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:34] [ep 017] score=0.1793 best=0.5338 nq=4 ep_ret=-30.178 | metric=-0.560 depth=-0.235 cnot=0.000 qubit=0.000 rot=0.000 dead=-1.150 budget=-26.250 repeat=0.000 terminal=0.000
+[2026-08-08 01:25:34] >>> [ep 018] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:34] [ep 018] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:34] [ep 018] score=0.1793 best=0.5338 nq=4 ep_ret=-85.469 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.058 dead=-0.400 budget=-81.250 repeat=-0.020 terminal=0.000
+[2026-08-08 01:25:34] >>> [ep 019] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:34] [ep 019] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:34] [ep 019] score=0.1793 best=0.5338 nq=4 ep_ret=-79.614 | metric=-0.800 depth=-0.355 cnot=-0.876 qubit=0.000 rot=0.000 dead=-0.200 budget=-74.750 repeat=-0.040 terminal=0.000
+[2026-08-08 01:25:35] >>> [ep 020] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:35] [ep 020] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:35] [ep 020] score=0.1793 best=0.5338 nq=4 ep_ret=-77.158 | metric=-0.800 depth=-0.355 cnot=-0.360 qubit=0.000 rot=-0.062 dead=-0.450 budget=-72.500 repeat=-0.030 terminal=0.000
+[2026-08-08 01:25:35] [health] collapse_count=12 / 20 (spec < terminal_spec_floor)
+[2026-08-08 01:25:35] >>> [ep 021] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:35] [ep 021] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:35] [ep 021] score=0.1793 best=0.5338 nq=4 ep_ret=-87.484 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.038 dead=-0.750 budget=-83.000 repeat=-0.020 terminal=0.000
+[2026-08-08 01:25:35] >>> [ep 022] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:25:35] [ep 022] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:25:35] [ep 022] score=0.1793 best=0.5338 nq=4 ep_ret=-92.245 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.800 budget=-87.750 repeat=-0.030 terminal=0.000
+[2026-08-08 01:31:40] >>> [ep 023] TERMINAL EVAL: AUC=0.5152 SENS=0.1747 SPEC=0.8560 THR*=0.514
+[2026-08-08 01:31:40] [ep 023] score=0.5292 best=0.5338 nq=5 std_proxy=0.0149 stability_w=0.702 adjusted=0.3716 best_adjusted=0.4800
+[2026-08-08 01:31:40] [ep 023] score=0.5292 best=0.5338 nq=4 ep_ret=-78.791 | metric=-0.800 depth=-0.355 cnot=-0.360 qubit=-0.750 rot=-0.050 dead=-0.350 budget=-74.000 repeat=-0.020 terminal=0.000
+[2026-08-08 01:31:40] >>> [ep 024] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:31:40] [ep 024] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:31:40] [ep 024] score=0.1793 best=0.5338 nq=4 ep_ret=-89.811 | metric=-0.800 depth=-0.355 cnot=-0.108 qubit=0.000 rot=0.000 dead=-0.500 budget=-85.500 repeat=-0.020 terminal=0.000
+[2026-08-08 01:31:40] >>> [ep 025] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:31:40] [ep 025] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:31:40] [ep 025] score=0.1793 best=0.5338 nq=4 ep_ret=-77.510 | metric=-0.800 depth=-0.355 cnot=-0.948 qubit=0.000 rot=0.000 dead=-0.350 budget=-72.500 repeat=-0.020 terminal=0.000
+[2026-08-08 01:31:40] >>> [ep 026] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:31:40] [ep 026] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:31:40] [ep 026] score=0.1793 best=0.5338 nq=4 ep_ret=-2.211 | metric=-0.260 depth=-0.085 cnot=0.000 qubit=0.000 rot=-0.020 dead=-0.650 budget=0.000 repeat=0.000 terminal=0.000
+[2026-08-08 01:37:47] >>> [ep 027] TERMINAL EVAL: AUC=0.5210 SENS=0.0372 SPEC=0.9671 THR*=0.590
+[2026-08-08 01:37:47] [ep 027] score=0.5480 best=0.5338 nq=5 std_proxy=0.0102 stability_w=0.796 adjusted=0.4365 best_adjusted=0.4800
+[2026-08-08 01:37:47] [ep 027] score=0.5480 best=0.5338 nq=4 ep_ret=-85.726 | metric=-0.800 depth=-0.355 cnot=-0.420 qubit=-0.450 rot=0.000 dead=-0.400 budget=-81.250 repeat=-0.010 terminal=0.000
+[2026-08-08 01:37:48] >>> [ep 028] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:37:48] [ep 028] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:37:48] [ep 028] score=0.1793 best=0.5338 nq=4 ep_ret=-85.687 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.068 dead=-0.600 budget=-81.250 repeat=-0.050 terminal=0.000
+[2026-08-08 01:37:48] >>> [ep 029] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:37:48] [ep 029] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:37:48] [ep 029] score=0.1793 best=0.5338 nq=4 ep_ret=-68.944 | metric=-0.800 depth=-0.355 cnot=-0.648 qubit=0.000 rot=-0.138 dead=-0.400 budget=-64.000 repeat=-0.030 terminal=0.000
+[2026-08-08 01:37:48] >>> [ep 030] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:37:48] [ep 030] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:37:48] [ep 030] score=0.1793 best=0.5338 nq=4 ep_ret=-70.738 | metric=-0.800 depth=-0.355 cnot=-0.444 qubit=-0.400 rot=-0.052 dead=-0.800 budget=-65.250 repeat=0.000 terminal=0.000
+[2026-08-08 01:37:48] [health] collapse_count=20 / 30 (spec < terminal_spec_floor)
+[2026-08-08 01:43:22] >>> [ep 031] TERMINAL EVAL: AUC=0.5773 SENS=0.9108 SPEC=0.1893 THR*=0.460
+[2026-08-08 01:43:22] [ep 031] score=0.6443 best=0.5338 nq=5 std_proxy=0.0460 stability_w=0.079 adjusted=0.0512 best_adjusted=0.4800
+[2026-08-08 01:43:22] [ep 031] score=0.6443 best=0.5338 nq=4 ep_ret=-74.645 | metric=-0.800 depth=-0.355 cnot=-0.252 qubit=-1.000 rot=-0.116 dead=-0.550 budget=-69.750 repeat=-0.010 terminal=0.000
+[2026-08-08 01:43:23] >>> [ep 032] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:43:23] [ep 032] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:43:23] [ep 032] score=0.1793 best=0.5338 nq=4 ep_ret=-74.663 | metric=-0.800 depth=-0.355 cnot=-0.540 qubit=0.000 rot=-0.058 dead=-0.800 budget=-69.500 repeat=-0.010 terminal=0.000
+[2026-08-08 01:49:21] >>> [ep 033] TERMINAL EVAL: AUC=0.5428 SENS=0.9368 SPEC=0.0905 THR*=0.484
+[2026-08-08 01:49:21] [ep 033] score=0.5730 best=0.5338 nq=5 std_proxy=0.0173 stability_w=0.653 adjusted=0.3744 best_adjusted=0.4800
+[2026-08-08 01:49:21] [ep 033] score=0.5730 best=0.5338 nq=4 ep_ret=-82.315 | metric=-0.800 depth=-0.355 cnot=-0.456 qubit=-0.900 rot=-0.030 dead=-0.300 budget=-77.500 repeat=-0.010 terminal=0.000
+[2026-08-08 01:49:21] >>> [ep 034] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:21] [ep 034] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:21] [ep 034] score=0.1793 best=0.5338 nq=4 ep_ret=-81.301 | metric=-0.800 depth=-0.355 cnot=-0.252 qubit=0.000 rot=-0.056 dead=-1.200 budget=-76.000 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:21] >>> [ep 035] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:21] [ep 035] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:21] [ep 035] score=0.1793 best=0.5338 nq=4 ep_ret=-78.496 | metric=-0.800 depth=-0.355 cnot=-0.780 qubit=0.000 rot=-0.014 dead=-0.650 budget=-73.250 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:21] >>> [ep 036] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:21] [ep 036] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:21] [ep 036] score=0.1793 best=0.5338 nq=4 ep_ret=-68.139 | metric=-0.800 depth=-0.355 cnot=-0.240 qubit=0.000 rot=-0.188 dead=-0.400 budget=-63.500 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:21] >>> [ep 037] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:21] [ep 037] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:21] [ep 037] score=0.1793 best=0.5338 nq=4 ep_ret=-75.566 | metric=-0.800 depth=-0.355 cnot=-0.516 qubit=0.000 rot=-0.070 dead=-0.650 budget=-70.500 repeat=-0.030 terminal=0.000
+[2026-08-08 01:49:22] >>> [ep 038] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:22] [ep 038] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:22] [ep 038] score=0.1793 best=0.5338 nq=4 ep_ret=-84.415 | metric=-0.800 depth=-0.355 cnot=-0.216 qubit=0.000 rot=-0.030 dead=-0.850 budget=-79.500 repeat=-0.010 terminal=0.000
+[2026-08-08 01:49:22] >>> [ep 039] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:22] [ep 039] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:22] [ep 039] score=0.1793 best=0.5338 nq=4 ep_ret=-79.320 | metric=-0.800 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.152 dead=-0.600 budget=-74.750 repeat=0.000 terminal=0.000
+[2026-08-08 01:49:22] >>> [ep 040] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:22] [ep 040] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:22] [ep 040] score=0.1793 best=0.5338 nq=4 ep_ret=-82.651 | metric=-0.800 depth=-0.355 cnot=-0.444 qubit=0.000 rot=-0.020 dead=-0.600 budget=-77.750 repeat=-0.010 terminal=0.000
+[2026-08-08 01:49:22] [health] collapse_count=29 / 40 (spec < terminal_spec_floor)
+[2026-08-08 01:49:22] >>> [ep 041] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:22] [ep 041] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:22] [ep 041] score=0.1793 best=0.5338 nq=4 ep_ret=-84.359 | metric=-1.000 depth=-0.355 cnot=-0.072 qubit=0.000 rot=-0.060 dead=-0.400 budget=-79.750 repeat=-0.040 terminal=0.000
+[2026-08-08 01:49:22] >>> [ep 042] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:22] [ep 042] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:22] [ep 042] score=0.1793 best=0.5338 nq=4 ep_ret=-75.304 | metric=-1.000 depth=-0.355 cnot=-0.444 qubit=0.000 rot=-0.094 dead=-1.450 budget=-69.250 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:23] >>> [ep 043] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:23] [ep 043] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:23] [ep 043] score=0.1793 best=0.5338 nq=4 ep_ret=-73.113 | metric=-1.000 depth=-0.355 cnot=-0.588 qubit=0.000 rot=-0.080 dead=-0.350 budget=-68.000 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:23] >>> [ep 044] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:23] [ep 044] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:23] [ep 044] score=0.1793 best=0.5338 nq=4 ep_ret=-86.484 | metric=-1.000 depth=-0.355 cnot=-0.288 qubit=0.000 rot=-0.002 dead=-0.600 budget=-81.500 repeat=-0.030 terminal=0.000
+[2026-08-08 01:49:23] >>> [ep 045] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:23] [ep 045] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:23] [ep 045] score=0.1793 best=0.5338 nq=4 ep_ret=-77.711 | metric=-1.000 depth=-0.355 cnot=-0.768 qubit=0.000 rot=0.000 dead=-0.350 budget=-72.500 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:23] >>> [ep 046] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:23] [ep 046] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:23] [ep 046] score=0.1793 best=0.5338 nq=4 ep_ret=-74.416 | metric=-1.000 depth=-0.355 cnot=-0.396 qubit=0.000 rot=-0.118 dead=-0.300 budget=-69.500 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:23] >>> [ep 047] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:23] [ep 047] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:23] [ep 047] score=0.1793 best=0.5338 nq=4 ep_ret=-88.951 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.030 dead=-0.800 budget=-84.000 repeat=-0.030 terminal=0.000
+[2026-08-08 01:49:23] >>> [ep 048] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:23] [ep 048] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:23] [ep 048] score=0.1793 best=0.5338 nq=4 ep_ret=-92.220 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.350 budget=-87.750 repeat=-0.020 terminal=0.000
+[2026-08-08 01:49:24] >>> [ep 049] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:24] [ep 049] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:24] [ep 049] score=0.1793 best=0.5338 nq=4 ep_ret=-92.339 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.450 budget=-87.750 repeat=-0.030 terminal=0.000
+[2026-08-08 01:49:24] >>> [ep 050] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 01:49:24] [ep 050] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 01:49:24] [ep 050] score=0.1793 best=0.5338 nq=4 ep_ret=-70.248 | metric=-1.000 depth=-0.355 cnot=-0.324 qubit=0.000 rot=-0.126 dead=-0.400 budget=-65.250 repeat=-0.030 terminal=0.000
+[2026-08-08 01:49:24] [health] collapse_count=39 / 50 (spec < terminal_spec_floor)
+[2026-08-08 01:55:13] >>> [ep 051] TERMINAL EVAL: AUC=0.5197 SENS=0.7807 SPEC=0.2634 THR*=0.421
+[2026-08-08 01:55:13] [ep 051] score=0.5500 best=0.5338 nq=5 std_proxy=0.0190 stability_w=0.620 adjusted=0.3412 best_adjusted=0.4800
+[2026-08-08 01:55:13] [ep 051] score=0.5500 best=0.5338 nq=4 ep_ret=-72.675 | metric=-1.000 depth=-0.355 cnot=-1.164 qubit=-0.025 rot=-0.010 dead=-0.350 budget=-67.750 repeat=-0.020 terminal=0.000
+[2026-08-08 02:01:04] >>> [ep 052] TERMINAL EVAL: AUC=0.4945 SENS=0.1970 SPEC=0.8477 THR*=0.561
+[2026-08-08 02:01:04] [ep 052] score=0.4846 best=0.5338 nq=4 std_proxy=0.0229 stability_w=0.543 adjusted=0.2629 best_adjusted=0.4800
+[2026-08-08 02:01:05] [ep 052] score=0.4846 best=0.5338 nq=4 ep_ret=-79.824 | metric=-1.000 depth=-0.355 cnot=-0.708 qubit=0.000 rot=0.000 dead=-0.600 budget=-75.000 repeat=0.000 terminal=0.000
+[2026-08-08 02:06:59] >>> [ep 053] TERMINAL EVAL: AUC=0.4979 SENS=0.7584 SPEC=0.2510 THR*=0.427
+[2026-08-08 02:06:59] [ep 053] score=0.4933 best=0.5338 nq=4 std_proxy=0.0091 stability_w=0.818 adjusted=0.4035 best_adjusted=0.4800
+[2026-08-08 02:06:59] [ep 053] score=0.4933 best=0.5338 nq=4 ep_ret=-88.203 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.032 dead=-0.900 budget=-83.750 repeat=-0.030 terminal=0.000
+[2026-08-08 02:12:31] >>> [ep 054] TERMINAL EVAL: AUC=0.5008 SENS=0.4312 SPEC=0.5885 THR*=0.501
+[2026-08-08 02:12:31] [ep 054] score=0.4979 best=0.5338 nq=4 std_proxy=0.0049 stability_w=0.902 adjusted=0.4491 best_adjusted=0.4800
+[2026-08-08 02:12:31] [ep 054] score=0.4979 best=0.5338 nq=4 ep_ret=-86.107 | metric=-1.000 depth=-0.355 cnot=-0.204 qubit=0.000 rot=-0.016 dead=-0.900 budget=-81.500 repeat=-0.020 terminal=0.000
+[2026-08-08 02:18:25] >>> [ep 055] TERMINAL EVAL: AUC=0.5178 SENS=0.4461 SPEC=0.6379 THR*=0.487
+[2026-08-08 02:18:25] [ep 055] score=0.5207 best=0.5338 nq=4 std_proxy=0.0169 stability_w=0.661 adjusted=0.3444 best_adjusted=0.4800
+[2026-08-08 02:18:25] [ep 055] score=0.5207 best=0.5338 nq=4 ep_ret=-87.063 | metric=-1.000 depth=-0.355 cnot=-0.204 qubit=0.000 rot=-0.004 dead=-0.450 budget=-83.000 repeat=-0.010 terminal=0.000
+[2026-08-08 02:23:41] >>> [ep 056] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:23:41] [ep 056] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:23:41] [ep 056] score=0.1793 best=0.5338 nq=4 ep_ret=-82.690 | metric=-1.000 depth=-0.355 cnot=-0.408 qubit=0.000 rot=-0.030 dead=-0.550 budget=-77.500 repeat=-0.030 terminal=0.000
+[2026-08-08 02:23:41] >>> [ep 057] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:23:41] [ep 057] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:23:41] [ep 057] score=0.1793 best=0.5338 nq=4 ep_ret=-76.899 | metric=-1.000 depth=-0.355 cnot=-0.504 qubit=0.000 rot=-0.044 dead=-0.400 budget=-71.750 repeat=-0.020 terminal=0.000
+[2026-08-08 02:23:41] >>> [ep 058] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:23:41] [ep 058] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:23:41] [ep 058] score=0.1793 best=0.5338 nq=4 ep_ret=-69.846 | metric=-1.000 depth=-0.355 cnot=-0.732 qubit=0.000 rot=-0.084 dead=-0.300 budget=-64.500 repeat=-0.040 terminal=0.000
+[2026-08-08 02:23:42] >>> [ep 059] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:23:42] [ep 059] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:23:42] [ep 059] score=0.1793 best=0.5338 nq=4 ep_ret=-81.743 | metric=-1.000 depth=-0.355 cnot=-0.216 qubit=0.000 rot=-0.078 dead=-0.450 budget=-76.750 repeat=-0.050 terminal=0.000
+[2026-08-08 02:23:42] >>> [ep 060] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:23:42] [ep 060] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:23:42] [ep 060] score=0.1793 best=0.5338 nq=4 ep_ret=-66.148 | metric=-1.000 depth=-0.355 cnot=-0.168 qubit=0.000 rot=-0.202 dead=-0.300 budget=-61.250 repeat=-0.020 terminal=0.000
+[2026-08-08 02:23:42] [health] collapse_count=44 / 60 (spec < terminal_spec_floor)
+[2026-08-08 02:23:42] >>> [ep 061] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:23:42] [ep 061] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:23:42] [ep 061] score=0.1793 best=0.5338 nq=4 ep_ret=-1.965 | metric=-0.175 depth=-0.028 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.550 budget=0.000 repeat=0.000 terminal=0.000
+[2026-08-08 02:23:42] >>> [ep 062] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:23:42] [ep 062] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:23:42] [ep 062] score=0.1793 best=0.5338 nq=4 ep_ret=-75.750 | metric=-1.000 depth=-0.355 cnot=-0.216 qubit=0.000 rot=-0.138 dead=-0.650 budget=-70.500 repeat=-0.020 terminal=0.000
+[2026-08-08 02:29:47] >>> [ep 063] TERMINAL EVAL: AUC=0.5170 SENS=0.8699 SPEC=0.1235 THR*=0.453
+[2026-08-08 02:29:47] [ep 063] score=0.5048 best=0.5338 nq=5 std_proxy=0.0029 stability_w=0.942 adjusted=0.4754 best_adjusted=0.4800
+[2026-08-08 02:29:47] [ep 063] score=0.5048 best=0.5338 nq=4 ep_ret=-73.873 | metric=-1.000 depth=-0.355 cnot=-0.408 qubit=-0.250 rot=-0.106 dead=-0.350 budget=-69.250 repeat=-0.020 terminal=0.000
+[2026-08-08 02:35:46] >>> [ep 064] TERMINAL EVAL: AUC=0.5343 SENS=0.0520 SPEC=0.9506 THR*=0.587
+[2026-08-08 02:35:46] [ep 064] score=0.5736 best=0.5338 nq=4 std_proxy=0.0136 stability_w=0.727 adjusted=0.4171 best_adjusted=0.4800
+[2026-08-08 02:35:46] [ep 064] score=0.5736 best=0.5338 nq=4 ep_ret=-90.427 | metric=-1.000 depth=-0.355 cnot=-0.060 qubit=0.000 rot=0.000 dead=-0.650 budget=-86.500 repeat=-0.020 terminal=0.000
+[2026-08-08 02:41:50] >>> [ep 065] TERMINAL EVAL: AUC=0.5217 SENS=0.5056 SPEC=0.5391 THR*=0.476
+[2026-08-08 02:41:50] [ep 065] score=0.5495 best=0.5338 nq=5 std_proxy=0.0108 stability_w=0.784 adjusted=0.4310 best_adjusted=0.4800
+[2026-08-08 02:41:50] [ep 065] score=0.5495 best=0.5338 nq=4 ep_ret=-76.647 | metric=-1.000 depth=-0.355 cnot=-0.516 qubit=-0.150 rot=-0.080 dead=-0.550 budget=-72.000 repeat=-0.020 terminal=0.000
+[2026-08-08 02:41:50] >>> [ep 066] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:41:50] [ep 066] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:41:50] [ep 066] score=0.1793 best=0.5338 nq=4 ep_ret=-74.172 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.230 dead=-0.650 budget=-69.000 repeat=-0.030 terminal=0.000
+[2026-08-08 02:47:57] >>> [ep 067] TERMINAL EVAL: AUC=0.5422 SENS=0.7472 SPEC=0.2757 THR*=0.454
+[2026-08-08 02:47:57] [ep 067] score=0.5876 best=0.5338 nq=5 std_proxy=0.0169 stability_w=0.662 adjusted=0.3891 best_adjusted=0.4800
+[2026-08-08 02:47:57] [ep 067] score=0.5876 best=0.5338 nq=4 ep_ret=-80.108 | metric=-1.000 depth=-0.355 cnot=-0.288 qubit=-0.175 rot=-0.046 dead=-0.400 budget=-76.000 repeat=-0.010 terminal=0.000
+[2026-08-08 02:47:58] >>> [ep 068] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 02:47:58] [ep 068] score=0.1793 best=0.5338 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4800
+[2026-08-08 02:47:58] [ep 068] score=0.1793 best=0.5338 nq=4 ep_ret=-2.868 | metric=-0.300 depth=-0.075 cnot=0.000 qubit=0.000 rot=-0.018 dead=-0.950 budget=0.000 repeat=0.000 terminal=0.000
+[2026-08-08 02:54:03] >>> [ep 069] TERMINAL EVAL: AUC=0.5157 SENS=0.7175 SPEC=0.3169 THR*=0.460
+[2026-08-08 02:54:03] [ep 069] score=0.5051 best=0.5338 nq=4 std_proxy=0.0203 stability_w=0.594 adjusted=0.3001 best_adjusted=0.4800
+[2026-08-08 02:54:03] [ep 069] score=0.5051 best=0.5338 nq=4 ep_ret=-85.232 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.066 dead=-0.450 budget=-81.250 repeat=-0.020 terminal=0.000
+[2026-08-08 02:59:49] >>> [ep 070] TERMINAL EVAL: AUC=0.5186 SENS=0.5130 SPEC=0.4938 THR*=0.521
+[2026-08-08 02:59:49] [ep 070] score=0.5421 best=0.5338 nq=4 std_proxy=0.0094 stability_w=0.812 adjusted=0.4401 best_adjusted=0.4800
+[2026-08-08 02:59:49] [ep 070] score=0.5421 best=0.5338 nq=4 ep_ret=-68.156 | metric=-1.000 depth=-0.355 cnot=-0.480 qubit=0.000 rot=-0.166 dead=-0.700 budget=-63.500 repeat=-0.010 terminal=0.000
+[2026-08-08 02:59:49] [health] collapse_count=48 / 70 (spec < terminal_spec_floor)
+[2026-08-08 03:05:55] >>> [ep 071] TERMINAL EVAL: AUC=0.5016 SENS=0.6691 SPEC=0.3704 THR*=0.482
+[2026-08-08 03:05:55] [ep 071] score=0.4970 best=0.5338 nq=4 std_proxy=0.0124 stability_w=0.752 adjusted=0.3736 best_adjusted=0.4800
+[2026-08-08 03:05:55] [ep 071] score=0.4970 best=0.5338 nq=4 ep_ret=-81.125 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.102 dead=-0.500 budget=-77.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:12:05] >>> [ep 072] TERMINAL EVAL: AUC=0.5143 SENS=0.3680 SPEC=0.6420 THR*=0.534
+[2026-08-08 03:12:05] [ep 072] score=0.5342 best=0.5342 nq=5 std_proxy=0.0043 stability_w=0.914 adjusted=0.4884 best_adjusted=0.4884
+[2026-08-08 03:12:05] [ep 072] score=0.5342 best=0.5342 nq=5 ep_ret=-78.181 | metric=-1.000 depth=-0.355 cnot=-0.876 qubit=-0.800 rot=0.000 dead=-0.600 budget=-72.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:12:05] >>> [ep 073] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:05] [ep 073] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:05] [ep 073] score=0.1793 best=0.5342 nq=5 ep_ret=-86.265 | metric=-1.000 depth=-0.355 cnot=-0.024 qubit=0.000 rot=-0.046 dead=-0.350 budget=-81.500 repeat=-0.020 terminal=0.000
+[2026-08-08 03:12:05] >>> [ep 074] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:05] [ep 074] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:05] [ep 074] score=0.1793 best=0.5342 nq=5 ep_ret=-88.448 | metric=-1.000 depth=-0.355 cnot=-0.204 qubit=0.000 rot=0.000 dead=-0.400 budget=-83.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:12:05] >>> [ep 075] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:05] [ep 075] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:05] [ep 075] score=0.1793 best=0.5342 nq=5 ep_ret=-82.041 | metric=-1.000 depth=-0.355 cnot=-0.312 qubit=0.000 rot=-0.036 dead=-0.600 budget=-76.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:12:06] >>> [ep 076] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:06] [ep 076] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:06] [ep 076] score=0.1793 best=0.5342 nq=5 ep_ret=-76.488 | metric=-1.000 depth=-0.355 cnot=-0.780 qubit=0.000 rot=-0.036 dead=-0.800 budget=-70.500 repeat=0.000 terminal=0.000
+[2026-08-08 03:12:06] >>> [ep 077] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:06] [ep 077] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:06] [ep 077] score=0.1793 best=0.5342 nq=5 ep_ret=-90.309 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.018 dead=-0.400 budget=-85.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:12:06] >>> [ep 078] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:06] [ep 078] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:06] [ep 078] score=0.1793 best=0.5342 nq=5 ep_ret=-64.984 | metric=-1.000 depth=-0.355 cnot=-0.516 qubit=0.000 rot=-0.168 dead=-0.400 budget=-59.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:12:06] >>> [ep 079] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:06] [ep 079] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:06] [ep 079] score=0.1793 best=0.5342 nq=5 ep_ret=-80.471 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.112 dead=-0.450 budget=-75.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:12:06] >>> [ep 080] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:06] [ep 080] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:06] [ep 080] score=0.1793 best=0.5342 nq=5 ep_ret=-82.314 | metric=-1.000 depth=-0.355 cnot=-0.192 qubit=0.000 rot=-0.054 dead=-0.400 budget=-77.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:12:06] [health] collapse_count=56 / 80 (spec < terminal_spec_floor)
+[2026-08-08 03:12:07] >>> [ep 081] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:12:07] [ep 081] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:12:07] [ep 081] score=0.1793 best=0.5342 nq=5 ep_ret=-81.309 | metric=-1.000 depth=-0.355 cnot=-0.252 qubit=0.000 rot=-0.050 dead=-0.350 budget=-76.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:18:03] >>> [ep 082] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:18:03] [ep 082] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:18:03] [ep 082] score=0.1793 best=0.5342 nq=5 ep_ret=-85.708 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=-0.550 rot=-0.062 dead=-0.600 budget=-80.000 repeat=-0.040 terminal=0.000
+[2026-08-08 03:18:03] >>> [ep 083] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:18:03] [ep 083] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:18:03] [ep 083] score=0.1793 best=0.5342 nq=5 ep_ret=-93.035 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.850 budget=-87.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:18:04] >>> [ep 084] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:18:04] [ep 084] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:18:04] [ep 084] score=0.1793 best=0.5342 nq=5 ep_ret=-86.322 | metric=-1.000 depth=-0.355 cnot=-0.324 qubit=0.000 rot=-0.004 dead=-0.800 budget=-80.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:11] >>> [ep 085] TERMINAL EVAL: AUC=0.5888 SENS=0.7770 SPEC=0.3786 THR*=0.465
+[2026-08-08 03:24:11] [ep 085] score=0.6654 best=0.5342 nq=6 std_proxy=0.0244 stability_w=0.511 adjusted=0.3402 best_adjusted=0.4884
+[2026-08-08 03:24:11] [ep 085] score=0.6654 best=0.5342 nq=5 ep_ret=-82.229 | metric=-1.000 depth=-0.355 cnot=-0.288 qubit=-1.675 rot=-0.040 dead=-0.600 budget=-76.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:12] >>> [ep 086] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:12] [ep 086] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:12] [ep 086] score=0.1793 best=0.5342 nq=5 ep_ret=-52.174 | metric=-0.900 depth=-0.315 cnot=-0.168 qubit=0.000 rot=-0.134 dead=-0.500 budget=-47.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:12] >>> [ep 087] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:12] [ep 087] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:12] [ep 087] score=0.1793 best=0.5342 nq=5 ep_ret=-80.482 | metric=-1.000 depth=-0.355 cnot=-0.012 qubit=0.000 rot=-0.098 dead=-0.650 budget=-75.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:12] >>> [ep 088] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:12] [ep 088] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:12] [ep 088] score=0.1793 best=0.5342 nq=5 ep_ret=-2.096 | metric=-0.125 depth=-0.015 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.600 budget=0.000 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:13] >>> [ep 089] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:13] [ep 089] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:13] [ep 089] score=0.1793 best=0.5342 nq=5 ep_ret=-74.422 | metric=-1.000 depth=-0.355 cnot=-0.444 qubit=0.000 rot=-0.078 dead=-0.650 budget=-68.750 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:13] >>> [ep 090] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:13] [ep 090] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:13] [ep 090] score=0.1793 best=0.5342 nq=5 ep_ret=-92.789 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.550 budget=-87.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:13] [health] collapse_count=65 / 90 (spec < terminal_spec_floor)
+[2026-08-08 03:24:13] >>> [ep 091] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:13] [ep 091] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:13] [ep 091] score=0.1793 best=0.5342 nq=5 ep_ret=-87.927 | metric=-1.000 depth=-0.355 cnot=-0.264 qubit=-0.125 rot=0.000 dead=-0.700 budget=-82.250 repeat=-0.050 terminal=0.000
+[2026-08-08 03:24:13] >>> [ep 092] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:13] [ep 092] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:13] [ep 092] score=0.1793 best=0.5342 nq=5 ep_ret=-82.533 | metric=-1.000 depth=-0.355 cnot=-0.276 qubit=0.000 rot=-0.040 dead=-0.700 budget=-77.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:14] >>> [ep 093] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:14] [ep 093] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:14] [ep 093] score=0.1793 best=0.5342 nq=5 ep_ret=-88.192 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.036 dead=-0.350 budget=-83.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:14] >>> [ep 094] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:14] [ep 094] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:14] [ep 094] score=0.1793 best=0.5342 nq=5 ep_ret=-77.279 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.144 dead=-0.600 budget=-72.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:14] >>> [ep 095] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:14] [ep 095] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:14] [ep 095] score=0.1793 best=0.5342 nq=5 ep_ret=-87.148 | metric=-1.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.044 dead=-0.300 budget=-82.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:14] >>> [ep 096] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:14] [ep 096] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:14] [ep 096] score=0.1793 best=0.5342 nq=5 ep_ret=-84.253 | metric=-1.000 depth=-0.355 cnot=-0.480 qubit=0.000 rot=-0.010 dead=-0.700 budget=-78.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:15] >>> [ep 097] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:15] [ep 097] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:15] [ep 097] score=0.1793 best=0.5342 nq=5 ep_ret=-51.497 | metric=-1.000 depth=-0.355 cnot=-0.612 qubit=-0.350 rot=-0.178 dead=-0.500 budget=-45.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:15] >>> [ep 098] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:15] [ep 098] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:15] [ep 098] score=0.1793 best=0.5342 nq=5 ep_ret=-73.981 | metric=-1.000 depth=-0.355 cnot=-1.056 qubit=0.000 rot=-0.014 dead=-0.300 budget=-68.000 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:15] >>> [ep 099] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:15] [ep 099] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:15] [ep 099] score=0.1793 best=0.5342 nq=5 ep_ret=-80.536 | metric=-1.000 depth=-0.355 cnot=-0.276 qubit=0.000 rot=-0.060 dead=-0.850 budget=-74.750 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:15] >>> [ep 100] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:15] [ep 100] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:15] [ep 100] score=0.1793 best=0.5342 nq=5 ep_ret=-73.727 | metric=-1.000 depth=-0.355 cnot=-1.092 qubit=0.000 rot=-0.006 dead=-0.300 budget=-67.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:15] [health] collapse_count=75 / 100 (spec < terminal_spec_floor)
+[2026-08-08 03:24:16] >>> [ep 101] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:16] [ep 101] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:16] [ep 101] score=0.1793 best=0.5342 nq=5 ep_ret=-75.998 | metric=-2.000 depth=-0.355 cnot=-0.720 qubit=0.000 rot=-0.080 dead=-0.600 budget=-69.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:16] >>> [ep 102] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:16] [ep 102] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:16] [ep 102] score=0.1793 best=0.5342 nq=5 ep_ret=-76.885 | metric=-2.000 depth=-0.355 cnot=-0.660 qubit=0.000 rot=-0.068 dead=-0.300 budget=-70.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:16] >>> [ep 103] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:16] [ep 103] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:16] [ep 103] score=0.1793 best=0.5342 nq=5 ep_ret=-5.516 | metric=-0.850 depth=-0.125 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.950 budget=-1.500 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:16] >>> [ep 104] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:16] [ep 104] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:16] [ep 104] score=0.1793 best=0.5342 nq=5 ep_ret=-57.311 | metric=-1.750 depth=-0.305 cnot=-0.048 qubit=0.000 rot=-0.048 dead=-0.650 budget=-51.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:16] >>> [ep 105] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:16] [ep 105] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:16] [ep 105] score=0.1793 best=0.5342 nq=5 ep_ret=-89.162 | metric=-2.000 depth=-0.355 cnot=-0.228 qubit=0.000 rot=0.000 dead=-0.300 budget=-83.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:17] >>> [ep 106] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:17] [ep 106] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:17] [ep 106] score=0.1793 best=0.5342 nq=5 ep_ret=-70.577 | metric=-2.000 depth=-0.355 cnot=-1.284 qubit=0.000 rot=0.000 dead=-0.400 budget=-63.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:17] >>> [ep 107] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:17] [ep 107] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:17] [ep 107] score=0.1793 best=0.5342 nq=5 ep_ret=-74.969 | metric=-2.000 depth=-0.355 cnot=-0.864 qubit=-0.025 rot=-0.018 dead=-0.350 budget=-68.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:17] >>> [ep 108] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:17] [ep 108] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:17] [ep 108] score=0.1793 best=0.5342 nq=5 ep_ret=-84.351 | metric=-2.000 depth=-0.355 cnot=-0.192 qubit=0.000 rot=-0.048 dead=-0.700 budget=-77.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:17] >>> [ep 109] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:17] [ep 109] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:17] [ep 109] score=0.1793 best=0.5342 nq=5 ep_ret=-93.910 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.450 budget=-87.750 repeat=-0.060 terminal=0.000
+[2026-08-08 03:24:18] >>> [ep 110] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:18] [ep 110] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:18] [ep 110] score=0.1793 best=0.5342 nq=5 ep_ret=-72.033 | metric=-2.000 depth=-0.355 cnot=-0.876 qubit=0.000 rot=-0.058 dead=-0.400 budget=-65.000 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:18] [health] collapse_count=85 / 110 (spec < terminal_spec_floor)
+[2026-08-08 03:24:18] >>> [ep 111] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:18] [ep 111] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:18] [ep 111] score=0.1793 best=0.5342 nq=5 ep_ret=-85.064 | metric=-2.000 depth=-0.355 cnot=-0.024 qubit=0.000 rot=-0.072 dead=-1.050 budget=-78.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:18] >>> [ep 112] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:18] [ep 112] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:18] [ep 112] score=0.1793 best=0.5342 nq=5 ep_ret=-86.973 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=-0.125 rot=-0.006 dead=-0.600 budget=-80.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:18] >>> [ep 113] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:18] [ep 113] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:18] [ep 113] score=0.1793 best=0.5342 nq=5 ep_ret=-5.836 | metric=-0.900 depth=-0.135 cnot=-0.120 qubit=0.000 rot=0.000 dead=-0.950 budget=-1.500 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:18] >>> [ep 114] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:18] [ep 114] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:18] [ep 114] score=0.1793 best=0.5342 nq=5 ep_ret=-70.969 | metric=-2.000 depth=-0.355 cnot=-0.696 qubit=0.000 rot=-0.078 dead=-0.950 budget=-63.500 repeat=-0.050 terminal=0.000
+[2026-08-08 03:24:19] >>> [ep 115] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:19] [ep 115] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:19] [ep 115] score=0.1793 best=0.5342 nq=5 ep_ret=-86.189 | metric=-2.000 depth=-0.355 cnot=-0.156 qubit=-0.675 rot=-0.044 dead=-0.550 budget=-79.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:19] >>> [ep 116] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:19] [ep 116] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:19] [ep 116] score=0.1793 best=0.5342 nq=5 ep_ret=-93.765 | metric=-2.000 depth=-0.355 cnot=-0.012 qubit=0.000 rot=0.000 dead=-0.500 budget=-87.500 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:19] >>> [ep 117] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:19] [ep 117] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:19] [ep 117] score=0.1793 best=0.5342 nq=5 ep_ret=-13.917 | metric=-1.100 depth=-0.175 cnot=0.000 qubit=-0.475 rot=0.000 dead=-0.650 budget=-9.000 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:19] >>> [ep 118] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:19] [ep 118] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:19] [ep 118] score=0.1793 best=0.5342 nq=5 ep_ret=-88.301 | metric=-2.000 depth=-0.355 cnot=-0.420 qubit=0.000 rot=0.000 dead=-0.850 budget=-81.250 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:20] >>> [ep 119] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:20] [ep 119] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:20] [ep 119] score=0.1793 best=0.5342 nq=5 ep_ret=-89.818 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=-0.550 rot=-0.038 dead=-0.400 budget=-83.000 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:20] >>> [ep 120] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:20] [ep 120] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:20] [ep 120] score=0.1793 best=0.5342 nq=5 ep_ret=-81.807 | metric=-2.000 depth=-0.355 cnot=-0.348 qubit=0.000 rot=-0.060 dead=-0.600 budget=-75.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:20] [health] collapse_count=95 / 120 (spec < terminal_spec_floor)
+[2026-08-08 03:24:20] >>> [ep 121] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:20] [ep 121] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:20] [ep 121] score=0.1793 best=0.5342 nq=5 ep_ret=-57.110 | metric=-1.850 depth=-0.325 cnot=-0.396 qubit=0.000 rot=-0.116 dead=-0.400 budget=-50.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:20] >>> [ep 122] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:20] [ep 122] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:20] [ep 122] score=0.1793 best=0.5342 nq=5 ep_ret=-92.782 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.014 dead=-1.000 budget=-86.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:20] >>> [ep 123] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:20] [ep 123] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:20] [ep 123] score=0.1793 best=0.5342 nq=5 ep_ret=-79.256 | metric=-2.000 depth=-0.355 cnot=-0.552 qubit=0.000 rot=-0.036 dead=-1.150 budget=-71.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:21] >>> [ep 124] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:21] [ep 124] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:21] [ep 124] score=0.1793 best=0.5342 nq=5 ep_ret=-91.598 | metric=-2.000 depth=-0.355 cnot=-0.024 qubit=0.000 rot=-0.016 dead=-0.550 budget=-85.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:21] >>> [ep 125] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:21] [ep 125] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:21] [ep 125] score=0.1793 best=0.5342 nq=5 ep_ret=-68.714 | metric=-2.000 depth=-0.355 cnot=-0.576 qubit=0.000 rot=-0.120 dead=-0.500 budget=-61.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:21] >>> [ep 126] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:21] [ep 126] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:21] [ep 126] score=0.1793 best=0.5342 nq=5 ep_ret=-69.268 | metric=-1.800 depth=-0.315 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.700 budget=-63.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:21] >>> [ep 127] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:21] [ep 127] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:21] [ep 127] score=0.1793 best=0.5342 nq=5 ep_ret=-83.663 | metric=-2.000 depth=-0.355 cnot=-0.300 qubit=-0.125 rot=-0.040 dead=-0.850 budget=-76.500 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:22] >>> [ep 128] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:22] [ep 128] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:22] [ep 128] score=0.1793 best=0.5342 nq=5 ep_ret=-73.930 | metric=-2.000 depth=-0.355 cnot=-1.272 qubit=0.000 rot=0.000 dead=-0.650 budget=-66.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:22] >>> [ep 129] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:22] [ep 129] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:22] [ep 129] score=0.1793 best=0.5342 nq=5 ep_ret=-79.016 | metric=-2.000 depth=-0.355 cnot=-0.924 qubit=0.000 rot=-0.024 dead=-0.300 budget=-72.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:22] >>> [ep 130] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:22] [ep 130] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:22] [ep 130] score=0.1793 best=0.5342 nq=5 ep_ret=-77.330 | metric=-2.000 depth=-0.355 cnot=-0.588 qubit=0.000 rot=-0.074 dead=-0.400 budget=-70.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:22] [health] collapse_count=105 / 130 (spec < terminal_spec_floor)
+[2026-08-08 03:24:22] >>> [ep 131] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:22] [ep 131] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:22] [ep 131] score=0.1793 best=0.5342 nq=5 ep_ret=-83.235 | metric=-2.000 depth=-0.355 cnot=-0.408 qubit=-0.875 rot=-0.044 dead=-0.350 budget=-75.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:22] >>> [ep 132] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:22] [ep 132] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:22] [ep 132] score=0.1793 best=0.5342 nq=5 ep_ret=-20.078 | metric=-1.300 depth=-0.215 cnot=-0.180 qubit=0.000 rot=-0.010 dead=-0.400 budget=-15.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:23] >>> [ep 133] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:23] [ep 133] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:23] [ep 133] score=0.1793 best=0.5342 nq=5 ep_ret=-74.130 | metric=-1.950 depth=-0.345 cnot=-0.456 qubit=0.000 rot=-0.076 dead=-0.450 budget=-67.500 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:23] >>> [ep 134] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:23] [ep 134] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:23] [ep 134] score=0.1793 best=0.5342 nq=5 ep_ret=-87.514 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.056 dead=-0.450 budget=-81.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:23] >>> [ep 135] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:23] [ep 135] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:23] [ep 135] score=0.1793 best=0.5342 nq=5 ep_ret=-81.630 | metric=-2.000 depth=-0.355 cnot=-0.372 qubit=0.000 rot=-0.080 dead=-0.400 budget=-75.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:23] >>> [ep 136] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:23] [ep 136] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:23] [ep 136] score=0.1793 best=0.5342 nq=5 ep_ret=-83.012 | metric=-2.000 depth=-0.355 cnot=-0.624 qubit=0.000 rot=0.000 dead=-0.600 budget=-76.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:23] >>> [ep 137] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:23] [ep 137] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:23] [ep 137] score=0.1793 best=0.5342 nq=5 ep_ret=-81.432 | metric=-2.000 depth=-0.355 cnot=-0.804 qubit=0.000 rot=0.000 dead=-0.850 budget=-74.000 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:24] >>> [ep 138] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:24] [ep 138] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:24] [ep 138] score=0.1793 best=0.5342 nq=5 ep_ret=-92.556 | metric=-2.000 depth=-0.355 cnot=-0.048 qubit=-0.350 rot=-0.010 dead=-0.800 budget=-85.500 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:24] >>> [ep 139] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:24] [ep 139] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:24] [ep 139] score=0.1793 best=0.5342 nq=5 ep_ret=-87.558 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.080 dead=-0.450 budget=-81.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:24] >>> [ep 140] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:24] [ep 140] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:24] [ep 140] score=0.1793 best=0.5342 nq=5 ep_ret=-74.692 | metric=-2.000 depth=-0.355 cnot=-1.212 qubit=0.000 rot=-0.012 dead=-0.200 budget=-67.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:24] [health] collapse_count=115 / 140 (spec < terminal_spec_floor)
+[2026-08-08 03:24:24] >>> [ep 141] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:24] [ep 141] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:24] [ep 141] score=0.1793 best=0.5342 nq=5 ep_ret=-86.998 | metric=-2.000 depth=-0.355 cnot=-0.312 qubit=0.000 rot=-0.008 dead=-0.650 budget=-80.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:25] >>> [ep 142] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:25] [ep 142] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:25] [ep 142] score=0.1793 best=0.5342 nq=5 ep_ret=-78.840 | metric=-2.000 depth=-0.355 cnot=-0.588 qubit=0.000 rot=-0.054 dead=-0.400 budget=-72.000 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:25] >>> [ep 143] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:25] [ep 143] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:25] [ep 143] score=0.1793 best=0.5342 nq=5 ep_ret=-76.668 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.190 dead=-0.450 budget=-70.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:25] >>> [ep 144] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:25] [ep 144] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:25] [ep 144] score=0.1793 best=0.5342 nq=5 ep_ret=-77.794 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.166 dead=-0.850 budget=-71.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:25] >>> [ep 145] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:25] [ep 145] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:25] [ep 145] score=0.1793 best=0.5342 nq=5 ep_ret=-79.170 | metric=-2.000 depth=-0.355 cnot=-0.792 qubit=0.000 rot=0.000 dead=-0.350 budget=-72.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:25] >>> [ep 146] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:25] [ep 146] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:25] [ep 146] score=0.1793 best=0.5342 nq=5 ep_ret=-91.016 | metric=-2.000 depth=-0.355 cnot=-0.168 qubit=0.000 rot=0.000 dead=-0.800 budget=-84.250 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:26] >>> [ep 147] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:26] [ep 147] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:26] [ep 147] score=0.1793 best=0.5342 nq=5 ep_ret=-77.936 | metric=-2.000 depth=-0.355 cnot=-0.180 qubit=0.000 rot=-0.138 dead=-0.600 budget=-71.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:26] >>> [ep 148] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:26] [ep 148] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:26] [ep 148] score=0.1793 best=0.5342 nq=5 ep_ret=-87.984 | metric=-2.000 depth=-0.355 cnot=-0.456 qubit=0.000 rot=0.000 dead=-0.500 budget=-81.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:26] >>> [ep 149] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:26] [ep 149] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:26] [ep 149] score=0.1793 best=0.5342 nq=5 ep_ret=-76.538 | metric=-2.000 depth=-0.355 cnot=-1.140 qubit=0.000 rot=0.000 dead=-0.600 budget=-69.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:26] >>> [ep 150] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:26] [ep 150] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:26] [ep 150] score=0.1793 best=0.5342 nq=5 ep_ret=-89.634 | metric=-2.000 depth=-0.355 cnot=-0.216 qubit=0.000 rot=0.000 dead=-0.400 budget=-83.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:26] [health] collapse_count=125 / 150 (spec < terminal_spec_floor)
+[2026-08-08 03:24:27] >>> [ep 151] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:27] [ep 151] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:27] [ep 151] score=0.1793 best=0.5342 nq=5 ep_ret=-94.270 | metric=-2.000 depth=-0.355 cnot=-0.012 qubit=0.000 rot=0.000 dead=-1.000 budget=-87.500 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:27] >>> [ep 152] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:27] [ep 152] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:27] [ep 152] score=0.1793 best=0.5342 nq=5 ep_ret=-87.837 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=-0.075 rot=-0.054 dead=-0.650 budget=-81.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:27] >>> [ep 153] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:27] [ep 153] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:27] [ep 153] score=0.1793 best=0.5342 nq=5 ep_ret=-81.702 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.114 dead=-0.550 budget=-75.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:27] >>> [ep 154] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:27] [ep 154] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:27] [ep 154] score=0.1793 best=0.5342 nq=5 ep_ret=-88.152 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.074 dead=-1.050 budget=-81.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:27] >>> [ep 155] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:27] [ep 155] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:27] [ep 155] score=0.1793 best=0.5342 nq=5 ep_ret=-76.622 | metric=-2.000 depth=-0.355 cnot=-0.684 qubit=0.000 rot=-0.060 dead=-1.100 budget=-69.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:28] >>> [ep 156] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:28] [ep 156] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:28] [ep 156] score=0.1793 best=0.5342 nq=5 ep_ret=-2.431 | metric=-0.350 depth=-0.028 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.300 budget=0.000 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:28] >>> [ep 157] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:28] [ep 157] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:28] [ep 157] score=0.1793 best=0.5342 nq=5 ep_ret=-78.174 | metric=-2.000 depth=-0.355 cnot=-0.492 qubit=0.000 rot=-0.054 dead=-0.850 budget=-71.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:28] >>> [ep 158] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:28] [ep 158] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:28] [ep 158] score=0.1793 best=0.5342 nq=5 ep_ret=-89.008 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.040 dead=-0.450 budget=-82.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:28] >>> [ep 159] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:28] [ep 159] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:28] [ep 159] score=0.1793 best=0.5342 nq=5 ep_ret=-45.134 | metric=-1.650 depth=-0.285 cnot=-0.420 qubit=0.000 rot=-0.016 dead=-0.400 budget=-39.250 repeat=-0.060 terminal=0.000
+[2026-08-08 03:24:28] >>> [ep 160] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:28] [ep 160] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:28] [ep 160] score=0.1793 best=0.5342 nq=5 ep_ret=-79.006 | metric=-2.000 depth=-0.355 cnot=-0.300 qubit=0.000 rot=-0.078 dead=-0.350 budget=-72.500 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:28] [health] collapse_count=135 / 160 (spec < terminal_spec_floor)
+[2026-08-08 03:24:29] >>> [ep 161] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:29] [ep 161] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:29] [ep 161] score=0.1793 best=0.5342 nq=5 ep_ret=-83.588 | metric=-2.000 depth=-0.355 cnot=-0.600 qubit=0.000 rot=0.000 dead=-0.700 budget=-76.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:29] >>> [ep 162] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:29] [ep 162] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:29] [ep 162] score=0.1793 best=0.5342 nq=5 ep_ret=-69.338 | metric=-1.900 depth=-0.335 cnot=-0.468 qubit=0.000 rot=-0.062 dead=-1.000 budget=-62.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:29] >>> [ep 163] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:29] [ep 163] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:29] [ep 163] score=0.1793 best=0.5342 nq=5 ep_ret=-13.388 | metric=-1.100 depth=-0.175 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.600 budget=-9.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:29] >>> [ep 164] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:29] [ep 164] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:29] [ep 164] score=0.1793 best=0.5342 nq=5 ep_ret=-88.746 | metric=-2.000 depth=-0.355 cnot=-0.252 qubit=0.000 rot=-0.006 dead=-0.950 budget=-81.750 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:29] >>> [ep 165] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:29] [ep 165] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:29] [ep 165] score=0.1793 best=0.5342 nq=5 ep_ret=-85.881 | metric=-2.000 depth=-0.355 cnot=-0.528 qubit=-0.825 rot=0.000 dead=-0.450 budget=-78.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:30] >>> [ep 166] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:30] [ep 166] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:30] [ep 166] score=0.1793 best=0.5342 nq=5 ep_ret=-88.860 | metric=-2.000 depth=-0.355 cnot=-0.204 qubit=0.000 rot=-0.008 dead=-0.350 budget=-82.500 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:30] >>> [ep 167] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:30] [ep 167] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:30] [ep 167] score=0.1793 best=0.5342 nq=5 ep_ret=-87.936 | metric=-2.000 depth=-0.355 cnot=-0.468 qubit=0.000 rot=0.000 dead=-0.450 budget=-81.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:30] >>> [ep 168] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:30] [ep 168] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:30] [ep 168] score=0.1793 best=0.5342 nq=5 ep_ret=-94.148 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.600 budget=-87.750 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:30] >>> [ep 169] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:30] [ep 169] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:30] [ep 169] score=0.1793 best=0.5342 nq=5 ep_ret=-93.434 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.006 dead=-0.650 budget=-87.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:30] >>> [ep 170] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:30] [ep 170] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:30] [ep 170] score=0.1793 best=0.5342 nq=5 ep_ret=-74.144 | metric=-2.000 depth=-0.355 cnot=-0.648 qubit=0.000 rot=-0.068 dead=-0.400 budget=-67.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:30] [health] collapse_count=145 / 170 (spec < terminal_spec_floor)
+[2026-08-08 03:24:31] >>> [ep 171] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:31] [ep 171] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:31] [ep 171] score=0.1793 best=0.5342 nq=5 ep_ret=-87.834 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.076 dead=-0.750 budget=-81.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:31] >>> [ep 172] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:31] [ep 172] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:31] [ep 172] score=0.1793 best=0.5342 nq=5 ep_ret=-68.912 | metric=-2.000 depth=-0.355 cnot=-0.780 qubit=-0.700 rot=-0.114 dead=-0.500 budget=-61.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:31] >>> [ep 173] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:31] [ep 173] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:31] [ep 173] score=0.1793 best=0.5342 nq=5 ep_ret=-73.332 | metric=-1.850 depth=-0.325 cnot=-0.084 qubit=0.000 rot=0.000 dead=-0.550 budget=-67.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:31] >>> [ep 174] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:31] [ep 174] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:31] [ep 174] score=0.1793 best=0.5342 nq=5 ep_ret=-88.000 | metric=-2.000 depth=-0.355 cnot=-0.312 qubit=0.000 rot=0.000 dead=-0.650 budget=-81.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:32] >>> [ep 175] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:32] [ep 175] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:32] [ep 175] score=0.1793 best=0.5342 nq=5 ep_ret=-91.612 | metric=-2.000 depth=-0.355 cnot=-0.144 qubit=-0.350 rot=0.000 dead=-0.550 budget=-84.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:32] >>> [ep 176] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:32] [ep 176] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:32] [ep 176] score=0.1793 best=0.5342 nq=5 ep_ret=-81.184 | metric=-2.000 depth=-0.355 cnot=-0.792 qubit=0.000 rot=-0.004 dead=-0.850 budget=-73.750 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:32] >>> [ep 177] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:32] [ep 177] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:32] [ep 177] score=0.1793 best=0.5342 nq=5 ep_ret=-74.604 | metric=-2.000 depth=-0.355 cnot=-0.492 qubit=0.000 rot=-0.084 dead=-0.500 budget=-67.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:32] >>> [ep 178] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:32] [ep 178] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:32] [ep 178] score=0.1793 best=0.5342 nq=5 ep_ret=-88.106 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.068 dead=-1.000 budget=-81.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:32] >>> [ep 179] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:32] [ep 179] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:32] [ep 179] score=0.1793 best=0.5342 nq=5 ep_ret=-72.133 | metric=-2.000 depth=-0.355 cnot=-0.336 qubit=-0.175 rot=-0.164 dead=-0.900 budget=-64.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:33] >>> [ep 180] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:33] [ep 180] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:33] [ep 180] score=0.1793 best=0.5342 nq=5 ep_ret=-71.834 | metric=-2.000 depth=-0.355 cnot=-1.656 qubit=0.000 rot=0.000 dead=-0.400 budget=-64.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:33] [health] collapse_count=155 / 180 (spec < terminal_spec_floor)
+[2026-08-08 03:24:33] >>> [ep 181] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:33] [ep 181] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:33] [ep 181] score=0.1793 best=0.5342 nq=5 ep_ret=-7.270 | metric=-0.950 depth=-0.145 cnot=-0.012 qubit=0.000 rot=0.000 dead=-0.300 budget=-3.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:33] >>> [ep 182] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:33] [ep 182] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:33] [ep 182] score=0.1793 best=0.5342 nq=5 ep_ret=-82.235 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=-0.575 rot=-0.142 dead=-0.700 budget=-75.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:33] >>> [ep 183] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:33] [ep 183] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:33] [ep 183] score=0.1793 best=0.5342 nq=5 ep_ret=-72.827 | metric=-2.000 depth=-0.355 cnot=-0.864 qubit=-0.175 rot=-0.080 dead=-0.650 budget=-65.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:33] >>> [ep 184] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:33] [ep 184] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:33] [ep 184] score=0.1793 best=0.5342 nq=5 ep_ret=-73.830 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.162 dead=-0.400 budget=-67.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:34] >>> [ep 185] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:34] [ep 185] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:34] [ep 185] score=0.1793 best=0.5342 nq=5 ep_ret=-79.554 | metric=-2.000 depth=-0.355 cnot=-0.456 qubit=0.000 rot=-0.080 dead=-0.500 budget=-72.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:34] >>> [ep 186] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:34] [ep 186] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:34] [ep 186] score=0.1793 best=0.5342 nq=5 ep_ret=-77.216 | metric=-2.000 depth=-0.355 cnot=-0.396 qubit=0.000 rot=-0.082 dead=-0.450 budget=-70.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:34] >>> [ep 187] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:34] [ep 187] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:34] [ep 187] score=0.1793 best=0.5342 nq=5 ep_ret=-74.086 | metric=-2.000 depth=-0.355 cnot=-0.192 qubit=0.000 rot=-0.166 dead=-0.950 budget=-67.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:34] >>> [ep 188] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:34] [ep 188] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:34] [ep 188] score=0.1793 best=0.5342 nq=5 ep_ret=-94.178 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.650 budget=-87.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:35] >>> [ep 189] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:35] [ep 189] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:35] [ep 189] score=0.1793 best=0.5342 nq=5 ep_ret=-74.222 | metric=-2.000 depth=-0.355 cnot=-0.708 qubit=0.000 rot=-0.096 dead=-0.400 budget=-67.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:35] >>> [ep 190] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:35] [ep 190] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:35] [ep 190] score=0.1793 best=0.5342 nq=5 ep_ret=-69.530 | metric=-2.000 depth=-0.355 cnot=-0.888 qubit=-0.750 rot=-0.104 dead=-0.450 budget=-61.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:35] [health] collapse_count=165 / 190 (spec < terminal_spec_floor)
+[2026-08-08 03:24:35] >>> [ep 191] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:35] [ep 191] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:35] [ep 191] score=0.1793 best=0.5342 nq=5 ep_ret=-76.922 | metric=-2.000 depth=-0.355 cnot=-1.044 qubit=0.000 rot=0.000 dead=-0.350 budget=-69.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:35] >>> [ep 192] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:35] [ep 192] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:35] [ep 192] score=0.1793 best=0.5342 nq=5 ep_ret=-90.110 | metric=-2.000 depth=-0.355 cnot=-0.192 qubit=0.000 rot=0.000 dead=-0.400 budget=-83.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:35] >>> [ep 193] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:35] [ep 193] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:35] [ep 193] score=0.1793 best=0.5342 nq=5 ep_ret=-74.812 | metric=-2.000 depth=-0.355 cnot=-0.948 qubit=0.000 rot=-0.026 dead=-0.800 budget=-67.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:36] >>> [ep 194] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:36] [ep 194] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:36] [ep 194] score=0.1793 best=0.5342 nq=5 ep_ret=-83.608 | metric=-2.000 depth=-0.355 cnot=-0.660 qubit=0.000 rot=0.000 dead=-1.150 budget=-76.000 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:36] >>> [ep 195] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:36] [ep 195] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:36] [ep 195] score=0.1793 best=0.5342 nq=5 ep_ret=-18.148 | metric=-1.200 depth=-0.195 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.400 budget=-13.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:36] >>> [ep 196] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:36] [ep 196] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:36] [ep 196] score=0.1793 best=0.5342 nq=5 ep_ret=-25.572 | metric=-1.400 depth=-0.235 cnot=0.000 qubit=0.000 rot=-0.064 dead=-0.800 budget=-20.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:36] >>> [ep 197] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:36] [ep 197] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:36] [ep 197] score=0.1793 best=0.5342 nq=5 ep_ret=-67.806 | metric=-2.000 depth=-0.355 cnot=-1.464 qubit=0.000 rot=-0.054 dead=-0.500 budget=-60.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:36] >>> [ep 198] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:36] [ep 198] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:36] [ep 198] score=0.1793 best=0.5342 nq=5 ep_ret=-94.178 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.650 budget=-87.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:36] >>> [ep 199] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:36] [ep 199] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:36] [ep 199] score=0.1793 best=0.5342 nq=5 ep_ret=-2.710 | metric=-0.450 depth=-0.045 cnot=-0.108 qubit=0.000 rot=-0.004 dead=-0.250 budget=0.000 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:37] >>> [ep 200] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:37] [ep 200] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:37] [ep 200] score=0.1793 best=0.5342 nq=5 ep_ret=-87.864 | metric=-2.000 depth=-0.355 cnot=-0.396 qubit=0.000 rot=0.000 dead=-0.450 budget=-81.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:37] [health] collapse_count=175 / 200 (spec < terminal_spec_floor)
+[2026-08-08 03:24:37] >>> [ep 201] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:37] [ep 201] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:37] [ep 201] score=0.1793 best=0.5342 nq=5 ep_ret=-79.610 | metric=-1.900 depth=-0.335 cnot=-0.060 qubit=-0.050 rot=-0.002 dead=-0.400 budget=-73.500 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:37] >>> [ep 202] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:37] [ep 202] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:37] [ep 202] score=0.1793 best=0.5342 nq=5 ep_ret=-94.428 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.900 budget=-87.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:37] >>> [ep 203] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:37] [ep 203] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:37] [ep 203] score=0.1793 best=0.5342 nq=5 ep_ret=-84.680 | metric=-2.000 depth=-0.355 cnot=-0.492 qubit=0.000 rot=0.000 dead=-0.650 budget=-77.750 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:37] >>> [ep 204] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:37] [ep 204] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:37] [ep 204] score=0.1793 best=0.5342 nq=5 ep_ret=-88.236 | metric=-2.000 depth=-0.355 cnot=-0.348 qubit=0.000 rot=0.000 dead=-0.850 budget=-81.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:38] >>> [ep 205] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:38] [ep 205] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:38] [ep 205] score=0.1793 best=0.5342 nq=5 ep_ret=-84.668 | metric=-2.000 depth=-0.355 cnot=-0.600 qubit=0.000 rot=0.000 dead=-0.550 budget=-77.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:38] >>> [ep 206] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:38] [ep 206] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:38] [ep 206] score=0.1793 best=0.5342 nq=5 ep_ret=-78.912 | metric=-2.000 depth=-0.355 cnot=-0.288 qubit=0.000 rot=-0.076 dead=-0.500 budget=-72.250 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:38] >>> [ep 207] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:38] [ep 207] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:38] [ep 207] score=0.1793 best=0.5342 nq=5 ep_ret=-93.998 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.450 budget=-87.750 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:38] >>> [ep 208] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:38] [ep 208] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:38] [ep 208] score=0.1793 best=0.5342 nq=5 ep_ret=-71.844 | metric=-2.000 depth=-0.355 cnot=-0.288 qubit=0.000 rot=-0.148 dead=-0.400 budget=-65.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:39] >>> [ep 209] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:39] [ep 209] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:39] [ep 209] score=0.1793 best=0.5342 nq=5 ep_ret=-94.068 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.550 budget=-87.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:39] >>> [ep 210] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:39] [ep 210] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:39] [ep 210] score=0.1793 best=0.5342 nq=5 ep_ret=-82.444 | metric=-2.000 depth=-0.355 cnot=-0.264 qubit=0.000 rot=-0.052 dead=-0.600 budget=-75.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:39] [health] collapse_count=185 / 210 (spec < terminal_spec_floor)
+[2026-08-08 03:24:39] >>> [ep 211] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:39] [ep 211] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:39] [ep 211] score=0.1793 best=0.5342 nq=5 ep_ret=-80.830 | metric=-2.000 depth=-0.355 cnot=-0.432 qubit=0.000 rot=-0.060 dead=-0.800 budget=-73.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:39] >>> [ep 212] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:39] [ep 212] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:39] [ep 212] score=0.1793 best=0.5342 nq=5 ep_ret=-70.098 | metric=-2.000 depth=-0.355 cnot=-0.564 qubit=0.000 rot=-0.116 dead=-0.400 budget=-63.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:39] >>> [ep 213] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:39] [ep 213] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:39] [ep 213] score=0.1793 best=0.5342 nq=5 ep_ret=-86.172 | metric=-2.000 depth=-0.355 cnot=-0.132 qubit=0.000 rot=-0.042 dead=-0.450 budget=-79.750 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:40] >>> [ep 214] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:40] [ep 214] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:40] [ep 214] score=0.1793 best=0.5342 nq=5 ep_ret=-94.058 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.550 budget=-87.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:40] >>> [ep 215] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:40] [ep 215] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:40] [ep 215] score=0.1793 best=0.5342 nq=5 ep_ret=-87.564 | metric=-2.000 depth=-0.355 cnot=-0.012 qubit=0.000 rot=-0.074 dead=-0.700 budget=-81.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:40] >>> [ep 216] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:40] [ep 216] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:40] [ep 216] score=0.1793 best=0.5342 nq=5 ep_ret=-77.812 | metric=-2.000 depth=-0.355 cnot=-0.564 qubit=0.000 rot=-0.070 dead=-1.350 budget=-70.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:40] >>> [ep 217] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:40] [ep 217] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:40] [ep 217] score=0.1793 best=0.5342 nq=5 ep_ret=-81.562 | metric=-2.000 depth=-0.355 cnot=-0.588 qubit=0.000 rot=-0.006 dead=-0.450 budget=-74.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:41] >>> [ep 218] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:41] [ep 218] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:41] [ep 218] score=0.1793 best=0.5342 nq=5 ep_ret=-91.254 | metric=-2.000 depth=-0.355 cnot=-0.156 qubit=0.000 rot=0.000 dead=-0.800 budget=-84.500 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:41] >>> [ep 219] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:41] [ep 219] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:41] [ep 219] score=0.1793 best=0.5342 nq=5 ep_ret=-92.309 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=-0.175 rot=-0.016 dead=-0.550 budget=-85.750 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:41] >>> [ep 220] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:41] [ep 220] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:41] [ep 220] score=0.1793 best=0.5342 nq=5 ep_ret=-94.158 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.650 budget=-87.750 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:41] [health] collapse_count=195 / 220 (spec < terminal_spec_floor)
+[2026-08-08 03:24:41] >>> [ep 221] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:41] [ep 221] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:41] [ep 221] score=0.1793 best=0.5342 nq=5 ep_ret=-85.408 | metric=-2.000 depth=-0.355 cnot=-0.300 qubit=0.000 rot=-0.020 dead=-0.300 budget=-79.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:41] >>> [ep 222] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:41] [ep 222] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:41] [ep 222] score=0.1793 best=0.5342 nq=5 ep_ret=-88.794 | metric=-2.000 depth=-0.355 cnot=-0.276 qubit=0.000 rot=0.000 dead=-0.750 budget=-82.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:42] >>> [ep 223] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:42] [ep 223] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:42] [ep 223] score=0.1793 best=0.5342 nq=5 ep_ret=-80.190 | metric=-2.000 depth=-0.355 cnot=-0.384 qubit=0.000 rot=-0.078 dead=-0.700 budget=-73.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:42] >>> [ep 224] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:42] [ep 224] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:42] [ep 224] score=0.1793 best=0.5342 nq=5 ep_ret=-75.696 | metric=-2.000 depth=-0.355 cnot=-0.432 qubit=0.000 rot=-0.126 dead=-0.850 budget=-68.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:42] >>> [ep 225] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:42] [ep 225] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:42] [ep 225] score=0.1793 best=0.5342 nq=5 ep_ret=-76.016 | metric=-2.000 depth=-0.355 cnot=-0.456 qubit=0.000 rot=-0.122 dead=-0.650 budget=-69.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:42] >>> [ep 226] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:42] [ep 226] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:42] [ep 226] score=0.1793 best=0.5342 nq=5 ep_ret=-90.103 | metric=-2.000 depth=-0.355 cnot=-0.240 qubit=-0.875 rot=0.000 dead=-0.400 budget=-82.750 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:43] >>> [ep 227] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:43] [ep 227] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:43] [ep 227] score=0.1793 best=0.5342 nq=5 ep_ret=-79.104 | metric=-2.000 depth=-0.355 cnot=-0.528 qubit=0.000 rot=-0.058 dead=-0.750 budget=-72.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:43] >>> [ep 228] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:43] [ep 228] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:43] [ep 228] score=0.1793 best=0.5342 nq=5 ep_ret=-70.552 | metric=-2.000 depth=-0.355 cnot=-0.996 qubit=0.000 rot=-0.078 dead=-0.700 budget=-63.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:43] >>> [ep 229] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:43] [ep 229] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:43] [ep 229] score=0.1793 best=0.5342 nq=5 ep_ret=-82.124 | metric=-2.000 depth=-0.355 cnot=-0.696 qubit=0.000 rot=0.000 dead=-0.400 budget=-75.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:43] >>> [ep 230] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:43] [ep 230] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:43] [ep 230] score=0.1793 best=0.5342 nq=5 ep_ret=-84.416 | metric=-2.000 depth=-0.355 cnot=-0.036 qubit=0.000 rot=-0.082 dead=-0.500 budget=-78.000 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:43] [health] collapse_count=205 / 230 (spec < terminal_spec_floor)
+[2026-08-08 03:24:43] >>> [ep 231] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:43] [ep 231] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:43] [ep 231] score=0.1793 best=0.5342 nq=5 ep_ret=-90.327 | metric=-2.000 depth=-0.355 cnot=-0.192 qubit=-0.525 rot=-0.002 dead=-0.300 budget=-83.500 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:44] >>> [ep 232] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:44] [ep 232] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:44] [ep 232] score=0.1793 best=0.5342 nq=5 ep_ret=-92.252 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.014 dead=-0.450 budget=-86.000 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:44] >>> [ep 233] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:44] [ep 233] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:44] [ep 233] score=0.1793 best=0.5342 nq=5 ep_ret=-87.498 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.080 dead=-0.400 budget=-81.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:44] >>> [ep 234] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:44] [ep 234] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:44] [ep 234] score=0.1793 best=0.5342 nq=5 ep_ret=-87.818 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.060 dead=-0.750 budget=-81.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:44] >>> [ep 235] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:44] [ep 235] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:44] [ep 235] score=0.1793 best=0.5342 nq=5 ep_ret=-93.928 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.400 budget=-87.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:44] >>> [ep 236] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:44] [ep 236] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:44] [ep 236] score=0.1793 best=0.5342 nq=5 ep_ret=-87.714 | metric=-2.000 depth=-0.355 cnot=-0.336 qubit=0.000 rot=0.000 dead=-0.350 budget=-81.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:45] >>> [ep 237] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:45] [ep 237] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:45] [ep 237] score=0.1793 best=0.5342 nq=5 ep_ret=-70.578 | metric=-2.000 depth=-0.355 cnot=-0.456 qubit=0.000 rot=-0.144 dead=-0.450 budget=-63.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:45] >>> [ep 238] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:45] [ep 238] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:45] [ep 238] score=0.1793 best=0.5342 nq=5 ep_ret=-92.794 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.016 dead=-1.250 budget=-85.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:45] >>> [ep 239] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:45] [ep 239] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:45] [ep 239] score=0.1793 best=0.5342 nq=5 ep_ret=-39.870 | metric=-1.600 depth=-0.275 cnot=-0.288 qubit=0.000 rot=-0.034 dead=-0.650 budget=-34.000 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:45] >>> [ep 240] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:45] [ep 240] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:45] [ep 240] score=0.1793 best=0.5342 nq=5 ep_ret=-87.662 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=-0.074 dead=-0.550 budget=-81.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:45] [health] collapse_count=215 / 240 (spec < terminal_spec_floor)
+[2026-08-08 03:24:46] >>> [ep 241] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:46] [ep 241] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:46] [ep 241] score=0.1793 best=0.5342 nq=5 ep_ret=-86.816 | metric=-2.000 depth=-0.355 cnot=-0.480 qubit=0.000 rot=-0.008 dead=-0.300 budget=-80.250 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:46] >>> [ep 242] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:46] [ep 242] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:46] [ep 242] score=0.1793 best=0.5342 nq=5 ep_ret=-14.164 | metric=-1.150 depth=-0.185 cnot=0.000 qubit=0.000 rot=-0.016 dead=-1.000 budget=-9.250 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:46] >>> [ep 243] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:46] [ep 243] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:46] [ep 243] score=0.1793 best=0.5342 nq=5 ep_ret=-82.412 | metric=-2.000 depth=-0.355 cnot=-0.624 qubit=0.000 rot=0.000 dead=-1.000 budget=-75.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:46] >>> [ep 244] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:46] [ep 244] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:46] [ep 244] score=0.1793 best=0.5342 nq=5 ep_ret=-78.366 | metric=-2.000 depth=-0.355 cnot=-0.780 qubit=0.000 rot=-0.008 dead=-0.300 budget=-71.500 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:46] >>> [ep 245] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:46] [ep 245] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:46] [ep 245] score=0.1793 best=0.5342 nq=5 ep_ret=-93.948 | metric=-2.000 depth=-0.355 cnot=0.000 qubit=0.000 rot=0.000 dead=-0.400 budget=-87.750 repeat=-0.040 terminal=0.000
+[2026-08-08 03:24:47] >>> [ep 246] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:47] [ep 246] score=0.1793 best=0.5342 nq=5 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:47] [ep 246] score=0.1793 best=0.5342 nq=5 ep_ret=-78.738 | metric=-2.000 depth=-0.355 cnot=-0.468 qubit=-1.000 rot=-0.092 dead=-0.600 budget=-70.750 repeat=-0.020 terminal=0.000
+[2026-08-08 03:24:47] >>> [ep 247] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:47] [ep 247] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:47] [ep 247] score=0.1793 best=0.5342 nq=5 ep_ret=-14.998 | metric=-1.150 depth=-0.185 cnot=-0.060 qubit=0.000 rot=0.000 dead=-1.050 budget=-10.000 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:47] >>> [ep 248] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:47] [ep 248] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:47] [ep 248] score=0.1793 best=0.5342 nq=5 ep_ret=-3.824 | metric=-0.850 depth=-0.125 cnot=-0.024 qubit=0.000 rot=-0.022 dead=-0.300 budget=-0.250 repeat=0.000 terminal=0.000
+[2026-08-08 03:24:47] >>> [ep 249] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:47] [ep 249] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:47] [ep 249] score=0.1793 best=0.5342 nq=5 ep_ret=-87.888 | metric=-2.000 depth=-0.355 cnot=-0.300 qubit=0.000 rot=0.000 dead=-0.300 budget=-81.500 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:47] >>> [ep 250] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:47] [ep 250] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:47] [ep 250] score=0.1793 best=0.5342 nq=5 ep_ret=-90.498 | metric=-2.000 depth=-0.355 cnot=-0.180 qubit=0.000 rot=0.000 dead=-0.550 budget=-84.000 repeat=-0.010 terminal=0.000
+[2026-08-08 03:24:47] [health] collapse_count=225 / 250 (spec < terminal_spec_floor)
+[2026-08-08 03:24:48] >>> [ep 251] TERMINAL EVAL: AUC=0.5000 SENS=0.0000 SPEC=0.0000 THR*=0.500
+[2026-08-08 03:24:48] [ep 251] score=0.1793 best=0.5342 nq=4 std_proxy=0.0000 stability_w=1.000 adjusted=0.1793 best_adjusted=0.4884
+[2026-08-08 03:24:48] [ep 251] score=0.1793 best=0.5342 nq=5 ep_ret=-83.888 | metric=-2.000 depth=-0.355 cnot=-0.540 qubit=0.000 rot=-0.010 dead=-1.300 budget=-76.250 repeat=-0.030 terminal=0.000
+[2026-08-08 03:24:48] [early_stop] ep=251 sem melhora em 179 eps (patience=80, best_adjusted=0.4884). Encerrando busca.

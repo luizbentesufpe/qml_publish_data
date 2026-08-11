@@ -32,7 +32,7 @@ def run_arch_search_end2end(
     env._best_adjusted_score = -1.0
 
     agent = DDQNAgent(cfg, n_actions=env.N_ACTIONS, device=DEVICE)
-
+    best_adjusted_history: list[float] = []
     run_score_std = RunningStd()
     best_arch = None
     best_score = -1.0
@@ -452,16 +452,16 @@ def run_arch_search_end2end(
         _es_patience = cfg.early_stop_patience
         _es_min_eps = cfg.early_stop_min_eps
 
-        if best_score > _last_best_score_for_es + 1e-6:
+        if float(env._best_adjusted_score) > _last_best_score_for_es + 1e-6:
             _no_improve_count = 0
-            _last_best_score_for_es = best_score
+            _last_best_score_for_es = float(env._best_adjusted_score)
         else:
             _no_improve_count += 1
         if ep >= _es_min_eps and _no_improve_count >= _es_patience:
             logger.log_to_file(
                 "rl",
                 f"[early_stop] ep={ep + 1} sem melhora em {_no_improve_count} eps "
-                f"(patience={_es_patience}, best={best_score:.4f}). Encerrando busca.",
+                f"(patience={_es_patience}, best_adjusted={env._best_adjusted_score:.4f}). Encerrando busca.",
             )
             break
 

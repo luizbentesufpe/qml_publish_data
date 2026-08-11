@@ -1,6 +1,13 @@
 import argparse
 import os
 
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
+
+
 from main.main_banknote import main_banknote
 from main.main_cross_circle import main_cross_circle
 from main.main_higgs import main_higgs
@@ -38,19 +45,45 @@ def run_experiment(name: str, debug: bool):
     print(f"\n[RUN] Experiment: {name} | DEBUG={debug}")
 
     if name == "cross_circle":
-        main_cross_circle(DEBUG=debug)
+        main_higgs(
+            DEBUG=debug,
+            scenario_filter=None,
+            total_core_budget=28,
+            outer_n_jobs=2,
+        )
 
     elif name == "make_moons":
-        main_make_moons(DEBUG=debug)
+        main_higgs(
+            DEBUG=debug,
+            scenario_filter=None,
+            total_core_budget=28,
+            outer_n_jobs=2,
+        )
 
     elif name == "banknote":
-        main_banknote(DEBUG=debug)
+        main_higgs(
+            DEBUG=debug,
+            scenario_filter=None,
+            total_core_budget=28,
+            outer_n_jobs=2,
+        )
 
     elif name == "breast_cancer":
-        main_breast_cancer(DEBUG=debug)
+        main_higgs(
+            DEBUG=debug,
+            scenario_filter=None,
+            total_core_budget=28,
+            outer_n_jobs=2,
+        )
     
     elif name == "higgs":
-        main_higgs(DEBUG=debug)
+        main_higgs(
+            DEBUG=debug,
+            scenario_filter=None,
+            total_core_budget=28,
+            outer_n_jobs=2,
+        )
+
 
     else:
         raise ValueError(f"Unknown experiment: {name}")

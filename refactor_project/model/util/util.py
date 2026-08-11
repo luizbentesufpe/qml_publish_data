@@ -6,9 +6,15 @@ from torch import nn
 
 from refactor_project.config.config import Config
 from refactor_project.features.features import num_patches
+from refactor_project.model.util.auto_config import compute_auto_config
 
 
-def make_cfg_for_qubits(base_cfg: Config, n_qubits: int) -> Config:
+def make_cfg_for_qubits(
+    base_cfg: Config,
+    n_qubits: int,
+    n_train: int | None = None,
+    in_dim: int | None = None,
+) -> Config:
     """Given a base configuration and a desired number of qubits, create a new configuration that is adjusted for the specified number of qubits.
     This function modifies the feature bank size and schedule based on the number of qubits, ensuring
     that the feature bank is appropriately sized for the input dimensionality and the model's capacity.
@@ -48,6 +54,18 @@ def make_cfg_for_qubits(base_cfg: Config, n_qubits: int) -> Config:
             int(max(cfg.feature_bank_min_size, round(0.50 * cfg.feature_bank_size))),
             cfg.feature_bank_min_size,
         )
+        auto = compute_auto_config(
+            in_dim=int(in_dim),
+            n_train=int(n_train),
+            batch_size=int(cfg.batch_size),
+            enc_budget=int(cfg.ENC_budget) if cfg.ENC_budget > 0 else None,
+            rot_budget=int(cfg.ROT_budget) if cfg.ROT_budget > 0 else None,
+            cnot_budget=int(cfg.CNOT_budget) if cfg.CNOT_budget > 0 else None,
+        )
+        cfg.L_max = auto.L_max
+        cfg.budget_penalty = auto.budget_penalty
+        cfg.inner_train_subset_size = auto.inner_train_subset_size
+
     return cfg
 
 

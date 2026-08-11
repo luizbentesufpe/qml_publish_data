@@ -3,6 +3,7 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 import torch
+import torch as _torch
 
 from refactor_project.data.breast_cancer import load_breast_cancer_pool
 from refactor_project.data.util import (
@@ -56,6 +57,8 @@ def _run_one_seed_breast_cancer(
     data_dir      : diretório onde o CSV do Breast Cancer está (ou será baixado)
     """
     # DEVICE forçado para CPU: PennyLane não é multi-GPU-safe em subprocessos
+
+    _torch.set_num_threads(1)
     DEVICE = "cpu"
     set_seeds(seed)  # crítico: deve ser a primeira chamada dentro do worker
 
@@ -95,7 +98,7 @@ def _run_one_seed_breast_cancer(
     in_dim = int(XtrS.shape[1])  # 9 para Breast Cancer Wisconsin
 
     # ── Config por nq ─────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS), in_dim=in_dim)
 
     # Breast Cancer: 9 features — desativa feature bank dinâmico
     cfg_nq.use_patch_bank = False

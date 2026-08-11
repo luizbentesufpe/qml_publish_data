@@ -11,6 +11,8 @@ class Config:
     CNOT_budget: int = 2
     allow_nop: bool = True
     L_max: int = 20
+    l_max_adaptive: bool = True
+    l_max_factor: float = 1.5
     enc_lambda: float = float(np.pi)
     val_frac_search: float = 0.40
     percent_search: int = 60

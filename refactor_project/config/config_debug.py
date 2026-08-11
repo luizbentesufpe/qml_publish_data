@@ -12,6 +12,8 @@ class ConfigDebug:
     CNOT_budget: int = 1  # original: 2
     allow_nop: bool = True
     L_max: int = 5  # original: 20
+    l_max_adaptive: bool = True
+    l_max_factor: float = 1.5
     enc_lambda: float = float(np.pi)
 
     # ── Data fractions ────────────────────────────────────────────────────────

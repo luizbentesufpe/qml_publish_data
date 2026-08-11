@@ -27,6 +27,7 @@ def train_final_model_end2end(
     logger: Logger,
     device: torch.device | str,
     noise: bool = False,
+    return_model: bool = False,
 ):
     # FINAL phase: strict/clinical threshold constraints
     try:
@@ -290,4 +291,48 @@ def train_final_model_end2end(
     except Exception as e:
         logger.log_to_file("circuit", f"[WARN] could not save posttrain circuit: {e}")
 
+    if return_model:
+        return auc_te, sens_te, float(thr_star), model
     return auc_te, sens_te, float(thr_star)
+
+def evaluate_final_model_posthoc_noise(
+trained_model,
+arch_mat: torch.Tensor,
+n_qubits: int,
+X_te,
+Y_te,
+cfg: Config,
+logger: Logger,
+device: torch.device | str,
+thr_star: float,):
+    DEVICE = torch.device(torch.device)
+    arch_mat = sanitize_architecture(arch_mat, int(n_qubits)).to(DEVICE)
+
+    noisy_model = CQV_End2End(
+        arch_mat=arch_mat,
+        n_qubits=n_qubits,
+        enc_lambda=float(cfg.enc_lambda),
+        diff_method="adjoint",
+        input_dim=int(np.asarray(X_te).shape[1]),
+        enc_affine_mode=str(cfg.enc_affine_mode),
+        enc_alpha_init=float(cfg.enc_alpha_init),
+        enc_beta_init=float(cfg.enc_beta_init),
+        enc_beta_max=float(cfg.enc_beta_max),
+        use_batched_qnode=bool(cfg.use_batched_qnode),
+        vqc_theta_init_std=float(cfg.vqc_theta_init_std),
+        noise=True,
+        noise_p=cfg.noise_p,
+    ).to(DEVICE)
+
+    noisy_model.load_state_dict(trained_model.state_dict(), strict=False)
+    noisy_model.eval()
+
+    auc_noisy, sens_noisy = eval_metrics_final(
+        noisy_model, X_te, Y_te, thr=float(thr_star), device=DEVICE
+    )
+    logger.log_to_file(
+        "final_test_noisy_posthoc",
+        f"[POST-HOC NOISE] thr*(reused)={thr_star:.3f} "
+        f"AUC={auc_noisy:.4f} SENS@thr*={sens_noisy:.4f}",
+    )
+    return float(auc_noisy), float(sens_noisy)

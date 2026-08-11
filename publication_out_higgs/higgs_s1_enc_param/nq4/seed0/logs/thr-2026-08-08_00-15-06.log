@@ -1,0 +1,696 @@
+[2026-08-08 00:15:07] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:17:08] [thr] mode=hard viable=0/51 best t=0.5157 obj=0.5273 f2=0.5365 sens=0.5391 spec=0.5156 fpr=0.4844 | probs(min/mean/max)=0.4776/0.5153/0.5508 range=0.073200
+[2026-08-08 00:17:08] [thr] logits(min/mean/max)=-0.0897/0.0613/0.2039 range=0.2936 pctl(p5/p50/p95)=-0.0390/0.0638/0.1539
+[2026-08-08 00:19:14] [thr] mode=hard viable=0/51 best t=0.5172 obj=0.5586 f2=0.5120 sens=0.5000 spec=0.6172 fpr=0.3828 | probs(min/mean/max)=0.4273/0.5131/0.6001 range=0.172861
+[2026-08-08 00:19:14] [thr] logits(min/mean/max)=-0.2930/0.0527/0.4060 range=0.6990 pctl(p5/p50/p95)=-0.1835/0.0531/0.2780
+[2026-08-08 00:21:24] [thr] mode=hard viable=0/51 best t=0.4887 obj=0.5039 f2=0.8257 sens=0.9844 spec=0.0234 fpr=0.9766 | probs(min/mean/max)=0.4870/0.5066/0.5287 range=0.041672
+[2026-08-08 00:21:24] [thr] logits(min/mean/max)=-0.0519/0.0263/0.1150 range=0.1668 pctl(p5/p50/p95)=-0.0401/0.0289/0.0841
+[2026-08-08 00:21:30] [terminal] phase=search auc=0.5349 sens=0.9777 spec=0.0329 thr*=0.489 std_proxy=0.0151 n_seeds=3 time=383.77s
+[2026-08-08 00:21:31] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:23:29] [thr] mode=hard viable=0/51 best t=0.3885 obj=0.5000 f2=0.8333 sens=1.0000 spec=0.0000 fpr=1.0000 | probs(min/mean/max)=0.3885/0.5020/0.6014 range=0.212892
+[2026-08-08 00:23:29] [thr] logits(min/mean/max)=-0.4538/0.0080/0.4111 range=0.8649 pctl(p5/p50/p95)=-0.2814/0.0140/0.2453
+[2026-08-08 00:25:30] [thr] mode=hard viable=0/51 best t=0.4986 obj=0.5273 f2=0.5958 sens=0.6172 spec=0.4375 fpr=0.5625 | probs(min/mean/max)=0.4399/0.5051/0.5796 range=0.139750
+[2026-08-08 00:25:30] [thr] logits(min/mean/max)=-0.2416/0.0206/0.3213 range=0.5629 pctl(p5/p50/p95)=-0.1437/0.0231/0.1862
+[2026-08-08 00:27:31] [thr] mode=hard viable=0/51 best t=0.5179 obj=0.5352 f2=0.4215 sens=0.3984 spec=0.6719 fpr=0.3281 | probs(min/mean/max)=0.4016/0.5023/0.6093 range=0.207781
+[2026-08-08 00:27:31] [thr] logits(min/mean/max)=-0.3990/0.0091/0.4445 range=0.8435 pctl(p5/p50/p95)=-0.2545/0.0143/0.2669
+[2026-08-08 00:27:37] [terminal] phase=search auc=0.5510 sens=0.6394 spec=0.4198 thr*=0.499 std_proxy=0.0231 n_seeds=3 time=365.86s
+[2026-08-08 00:27:37] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:29:25] [thr] mode=hard viable=0/51 best t=0.4816 obj=0.5312 f2=0.5793 sens=0.5938 spec=0.4688 fpr=0.5312 | probs(min/mean/max)=0.4000/0.4904/0.5855 range=0.185522
+[2026-08-08 00:29:25] [thr] logits(min/mean/max)=-0.4056/-0.0388/0.3454 range=0.7509 pctl(p5/p50/p95)=-0.3052/-0.0443/0.2389
+[2026-08-08 00:31:18] [thr] mode=hard viable=0/51 best t=0.4772 obj=0.5547 f2=0.6957 sens=0.7500 spec=0.3594 fpr=0.6406 | probs(min/mean/max)=0.4286/0.4950/0.5565 range=0.127816
+[2026-08-08 00:31:18] [thr] logits(min/mean/max)=-0.2874/-0.0199/0.2268 range=0.5142 pctl(p5/p50/p95)=-0.1843/-0.0282/0.1633
+[2026-08-08 00:33:14] [thr] mode=hard viable=0/51 best t=0.4907 obj=0.5352 f2=0.7844 sens=0.8984 spec=0.1719 fpr=0.8281 | probs(min/mean/max)=0.4562/0.5248/0.5997 range=0.143476
+[2026-08-08 00:33:14] [thr] logits(min/mean/max)=-0.1756/0.0995/0.4042 range=0.5798 pctl(p5/p50/p95)=-0.0791/0.1005/0.3138
+[2026-08-08 00:33:19] [terminal] phase=search auc=0.4947 sens=0.7286 spec=0.2551 thr*=0.477 std_proxy=0.0022 n_seeds=3 time=342.65s
+[2026-08-08 00:33:20] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:35:10] [thr] mode=hard viable=0/51 best t=0.4677 obj=0.5039 f2=0.7428 sens=0.8438 spec=0.1641 fpr=0.8359 | probs(min/mean/max)=0.4265/0.4858/0.5348 range=0.108283
+[2026-08-08 00:35:10] [thr] logits(min/mean/max)=-0.2960/-0.0568/0.1395 range=0.4355 pctl(p5/p50/p95)=-0.1807/-0.0571/0.0658
+[2026-08-08 00:37:08] [thr] mode=hard viable=0/51 best t=0.3806 obj=0.5156 f2=0.7838 sens=0.9062 spec=0.1250 fpr=0.8750 | probs(min/mean/max)=0.3078/0.4720/0.6715 range=0.363735
+[2026-08-08 00:37:08] [thr] logits(min/mean/max)=-0.8104/-0.1140/0.7152 range=1.5256 pctl(p5/p50/p95)=-0.5505/-0.1167/0.3958
+[2026-08-08 00:39:03] [thr] mode=hard viable=0/51 best t=0.5090 obj=0.5547 f2=0.4789 sens=0.4609 spec=0.6484 fpr=0.3516 | probs(min/mean/max)=0.3647/0.4983/0.6421 range=0.277388
+[2026-08-08 00:39:03] [thr] logits(min/mean/max)=-0.5550/-0.0069/0.5845 range=1.1395 pctl(p5/p50/p95)=-0.2972/-0.0050/0.3131
+[2026-08-08 00:39:09] [terminal] phase=search auc=0.5147 sens=0.8848 spec=0.0741 thr*=0.381 std_proxy=0.0038 n_seeds=3 time=349.26s
+[2026-08-08 00:39:09] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:40:55] [thr] mode=hard viable=0/51 best t=0.5099 obj=0.5352 f2=0.6203 sens=0.6484 spec=0.4219 fpr=0.5781 | probs(min/mean/max)=0.4327/0.5190/0.6007 range=0.168001
+[2026-08-08 00:40:55] [thr] logits(min/mean/max)=-0.2710/0.0765/0.4082 range=0.6792 pctl(p5/p50/p95)=-0.1303/0.0879/0.2757
+[2026-08-08 00:42:45] [thr] mode=hard viable=2/51 best t=0.5084 obj=0.4844 f2=0.4844 sens=0.4609 spec=0.7031 fpr=0.2969 | probs(min/mean/max)=0.4289/0.4994/0.5818 range=0.152947
+[2026-08-08 00:42:45] [thr] logits(min/mean/max)=-0.2865/-0.0022/0.3302 range=0.6167 pctl(p5/p50/p95)=-0.2157/-0.0117/0.2303
+[2026-08-08 00:44:35] [thr] mode=hard viable=0/51 best t=0.5441 obj=0.5312 f2=0.3276 sens=0.2969 spec=0.7656 fpr=0.2344 | probs(min/mean/max)=0.3971/0.5042/0.6132 range=0.216083
+[2026-08-08 00:44:35] [thr] logits(min/mean/max)=-0.4174/0.0171/0.4609 range=0.8783 pctl(p5/p50/p95)=-0.3035/0.0263/0.3161
+[2026-08-08 00:44:41] [terminal] phase=search auc=0.5675 sens=0.4387 spec=0.6502 thr*=0.508 std_proxy=0.0356 n_seeds=3 time=331.82s
+[2026-08-08 00:44:41] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:46:33] [thr] mode=hard viable=0/51 best t=0.4354 obj=0.5000 f2=0.8333 sens=1.0000 spec=0.0000 fpr=1.0000 | probs(min/mean/max)=0.4354/0.4899/0.5385 range=0.103090
+[2026-08-08 00:46:33] [thr] logits(min/mean/max)=-0.2597/-0.0404/0.1544 range=0.4141 pctl(p5/p50/p95)=-0.1898/-0.0462/0.1318
+[2026-08-08 00:48:30] [thr] mode=hard viable=0/51 best t=0.5283 obj=0.5352 f2=0.2585 sens=0.2266 spec=0.8438 fpr=0.1562 | probs(min/mean/max)=0.4267/0.5018/0.5677 range=0.141004
+[2026-08-08 00:48:30] [thr] logits(min/mean/max)=-0.2952/0.0074/0.2726 range=0.5678 pctl(p5/p50/p95)=-0.1767/0.0021/0.2001
+[2026-08-08 00:50:30] [thr] mode=hard viable=0/51 best t=0.4871 obj=0.5234 f2=0.7905 sens=0.9141 spec=0.1328 fpr=0.8672 | probs(min/mean/max)=0.4654/0.5170/0.5737 range=0.108303
+[2026-08-08 00:50:30] [thr] logits(min/mean/max)=-0.1385/0.0682/0.2971 range=0.4356 pctl(p5/p50/p95)=-0.0824/0.0662/0.2258
+[2026-08-08 00:50:36] [terminal] phase=search auc=0.5234 sens=0.9108 spec=0.1317 thr*=0.487 std_proxy=0.0181 n_seeds=3 time=355.19s
+[2026-08-08 00:50:37] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:52:31] [thr] mode=hard viable=0/51 best t=0.5821 obj=0.5273 f2=0.1224 sens=0.1016 spec=0.9531 fpr=0.0469 | probs(min/mean/max)=0.4358/0.5210/0.6100 range=0.174252
+[2026-08-08 00:52:31] [thr] logits(min/mean/max)=-0.2584/0.0849/0.4473 range=0.7057 pctl(p5/p50/p95)=-0.1731/0.0820/0.3728
+[2026-08-08 00:54:31] [thr] mode=hard viable=0/51 best t=0.4504 obj=0.5352 f2=0.8300 sens=0.9766 spec=0.0938 fpr=0.9062 | probs(min/mean/max)=0.4318/0.5077/0.5868 range=0.155003
+[2026-08-08 00:54:31] [thr] logits(min/mean/max)=-0.2746/0.0310/0.3507 range=0.6253 pctl(p5/p50/p95)=-0.2030/0.0408/0.2380
+[2026-08-08 00:56:32] [thr] mode=hard viable=0/51 best t=0.4665 obj=0.5234 f2=0.8223 sens=0.9688 spec=0.0781 fpr=0.9219 | probs(min/mean/max)=0.4466/0.5100/0.5707 range=0.124040
+[2026-08-08 00:56:32] [thr] logits(min/mean/max)=-0.2143/0.0402/0.2846 range=0.4989 pctl(p5/p50/p95)=-0.1369/0.0417/0.2044
+[2026-08-08 00:56:38] [terminal] phase=search auc=0.4786 sens=0.9405 spec=0.0576 thr*=0.450 std_proxy=0.0059 n_seeds=3 time=361.35s
+[2026-08-08 00:56:38] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 00:58:28] [thr] mode=hard viable=0/51 best t=0.5264 obj=0.5234 f2=0.4262 sens=0.4062 spec=0.6406 fpr=0.3594 | probs(min/mean/max)=0.4542/0.5208/0.5786 range=0.124376
+[2026-08-08 00:58:28] [thr] logits(min/mean/max)=-0.1836/0.0836/0.3171 range=0.5006 pctl(p5/p50/p95)=-0.0778/0.0840/0.2485
+[2026-08-08 01:00:25] [thr] mode=hard viable=0/51 best t=0.5017 obj=0.5469 f2=0.2915 sens=0.2578 spec=0.8359 fpr=0.1641 | probs(min/mean/max)=0.3742/0.4751/0.6019 range=0.227689
+[2026-08-08 01:00:25] [thr] logits(min/mean/max)=-0.5144/-0.1003/0.4132 range=0.9276 pctl(p5/p50/p95)=-0.3780/-0.0981/0.1141
+[2026-08-08 01:02:21] [thr] mode=hard viable=0/51 best t=0.5070 obj=0.5430 f2=0.6715 sens=0.7188 spec=0.3672 fpr=0.6328 | probs(min/mean/max)=0.4805/0.5131/0.5585 range=0.078065
+[2026-08-08 01:02:21] [thr] logits(min/mean/max)=-0.0781/0.0524/0.2352 range=0.3134 pctl(p5/p50/p95)=-0.0363/0.0500/0.1497
+[2026-08-08 01:02:27] [terminal] phase=search auc=0.5034 sens=0.6914 spec=0.3292 thr*=0.507 std_proxy=0.0040 n_seeds=3 time=348.67s
+[2026-08-08 01:02:27] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:04:23] [thr] mode=hard viable=0/51 best t=0.4243 obj=0.5547 f2=0.8038 sens=0.9219 spec=0.1875 fpr=0.8125 | probs(min/mean/max)=0.3429/0.4919/0.6337 range=0.290781
+[2026-08-08 01:04:23] [thr] logits(min/mean/max)=-0.6504/-0.0328/0.5480 range=1.1984 pctl(p5/p50/p95)=-0.3967/-0.0245/0.3532
+[2026-08-08 01:06:24] [thr] mode=hard viable=0/51 best t=0.4959 obj=0.5234 f2=0.2962 sens=0.2656 spec=0.7812 fpr=0.2188 | probs(min/mean/max)=0.4189/0.4777/0.5431 range=0.124133
+[2026-08-08 01:06:24] [thr] logits(min/mean/max)=-0.3272/-0.0895/0.1727 range=0.4998 pctl(p5/p50/p95)=-0.2664/-0.0874/0.0742
+[2026-08-08 01:08:22] [thr] mode=hard viable=0/51 best t=0.4827 obj=0.5586 f2=0.6701 sens=0.7109 spec=0.4062 fpr=0.5938 | probs(min/mean/max)=0.4150/0.4966/0.5760 range=0.161018
+[2026-08-08 01:08:22] [thr] logits(min/mean/max)=-0.3432/-0.0137/0.3066 range=0.6498 pctl(p5/p50/p95)=-0.2012/-0.0235/0.1823
+[2026-08-08 01:08:26] [terminal] phase=search auc=0.4902 sens=0.7175 spec=0.2840 thr*=0.483 std_proxy=0.0103 n_seeds=3 time=359.29s
+[2026-08-08 01:08:26] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:10:18] [thr] mode=hard viable=0/51 best t=0.5411 obj=0.5664 f2=0.6278 sens=0.6484 spec=0.4844 fpr=0.5156 | probs(min/mean/max)=0.4225/0.5527/0.6696 range=0.247063
+[2026-08-08 01:10:18] [thr] logits(min/mean/max)=-0.3123/0.2137/0.7064 range=1.0187 pctl(p5/p50/p95)=-0.0912/0.2116/0.5672
+[2026-08-08 01:12:14] [thr] mode=hard viable=0/51 best t=0.4790 obj=0.5273 f2=0.7870 sens=0.9062 spec=0.1484 fpr=0.8516 | probs(min/mean/max)=0.4609/0.5093/0.5617 range=0.100807
+[2026-08-08 01:12:14] [thr] logits(min/mean/max)=-0.1569/0.0373/0.2480 range=0.4048 pctl(p5/p50/p95)=-0.1025/0.0282/0.1721
+[2026-08-08 01:13:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:13:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:15:40] [thr] mode=hard viable=0/51 best t=0.5048 obj=0.5742 f2=0.7518 sens=0.8281 spec=0.3203 fpr=0.6797 | probs(min/mean/max)=0.4093/0.5378/0.6605 range=0.251141
+[2026-08-08 01:15:40] [thr] logits(min/mean/max)=-0.3667/0.1533/0.6654 range=1.0321 pctl(p5/p50/p95)=-0.2006/0.1466/0.4971
+[2026-08-08 01:17:39] [thr] mode=hard viable=0/51 best t=0.5010 obj=0.5391 f2=0.5633 sens=0.5703 spec=0.5078 fpr=0.4922 | probs(min/mean/max)=0.4648/0.5022/0.5372 range=0.072391
+[2026-08-08 01:17:39] [thr] logits(min/mean/max)=-0.1409/0.0090/0.1491 range=0.2901 pctl(p5/p50/p95)=-0.0736/0.0083/0.0933
+[2026-08-08 01:19:37] [thr] mode=hard viable=0/51 best t=0.5242 obj=0.5078 f2=0.1562 sens=0.1328 spec=0.8828 fpr=0.1172 | probs(min/mean/max)=0.4113/0.4863/0.5681 range=0.156817
+[2026-08-08 01:19:37] [thr] logits(min/mean/max)=-0.3586/-0.0550/0.2742 range=0.6328 pctl(p5/p50/p95)=-0.2687/-0.0558/0.1625
+[2026-08-08 01:19:42] [terminal] phase=search auc=0.5279 sens=0.1524 spec=0.8807 thr*=0.524 std_proxy=0.0086 n_seeds=3 time=354.38s
+[2026-08-08 01:19:42] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:19:42] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:19:42] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:19:42] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:19:42] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:19:42] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:19:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:19:43] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:19:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:19:43] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:19:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:21:36] [thr] mode=hard viable=0/51 best t=0.4869 obj=0.5625 f2=0.5923 sens=0.6016 spec=0.5234 fpr=0.4766 | probs(min/mean/max)=0.3618/0.4903/0.5934 range=0.231666
+[2026-08-08 01:21:36] [thr] logits(min/mean/max)=-0.5677/-0.0395/0.3782 range=0.9459 pctl(p5/p50/p95)=-0.4085/-0.0340/0.2828
+[2026-08-08 01:23:32] [thr] mode=hard viable=0/51 best t=0.5078 obj=0.5156 f2=0.4582 sens=0.4453 spec=0.5859 fpr=0.4141 | probs(min/mean/max)=0.4326/0.5014/0.5718 range=0.139220
+[2026-08-08 01:23:32] [thr] logits(min/mean/max)=-0.2713/0.0057/0.2892 range=0.5605 pctl(p5/p50/p95)=-0.1830/0.0108/0.1852
+[2026-08-08 01:25:28] [thr] mode=hard viable=0/51 best t=0.6324 obj=0.5312 f2=0.1404 sens=0.1172 spec=0.9453 fpr=0.0547 | probs(min/mean/max)=0.4510/0.5669/0.6835 range=0.232519
+[2026-08-08 01:25:28] [thr] logits(min/mean/max)=-0.1966/0.2714/0.7701 range=0.9666 pctl(p5/p50/p95)=-0.0214/0.2682/0.6034
+[2026-08-08 01:25:33] [terminal] phase=search auc=0.5163 sens=0.5167 spec=0.5144 thr*=0.487 std_proxy=0.0053 n_seeds=3 time=349.69s
+[2026-08-08 01:25:33] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:27:25] [thr] mode=hard viable=0/51 best t=0.3668 obj=0.5039 f2=0.8344 sens=1.0000 spec=0.0078 fpr=0.9922 | probs(min/mean/max)=0.3615/0.4869/0.6241 range=0.262579
+[2026-08-08 01:27:25] [thr] logits(min/mean/max)=-0.5687/-0.0531/0.5070 range=1.0758 pctl(p5/p50/p95)=-0.3717/-0.0491/0.2764
+[2026-08-08 01:29:28] [thr] mode=hard viable=0/51 best t=0.4317 obj=0.5273 f2=0.7916 sens=0.9141 spec=0.1406 fpr=0.8594 | probs(min/mean/max)=0.3877/0.4748/0.5711 range=0.183479
+[2026-08-08 01:29:28] [thr] logits(min/mean/max)=-0.4571/-0.1012/0.2865 range=0.7437 pctl(p5/p50/p95)=-0.3413/-0.0988/0.1353
+[2026-08-08 01:31:31] [thr] mode=hard viable=0/51 best t=0.5253 obj=0.5195 f2=0.1828 sens=0.1562 spec=0.8828 fpr=0.1172 | probs(min/mean/max)=0.3947/0.4822/0.5712 range=0.176511
+[2026-08-08 01:31:31] [thr] logits(min/mean/max)=-0.4277/-0.0717/0.2867 range=0.7144 pctl(p5/p50/p95)=-0.3221/-0.0764/0.2048
+[2026-08-08 01:31:37] [terminal] phase=search auc=0.5252 sens=1.0000 spec=0.0082 thr*=0.367 std_proxy=0.0191 n_seeds=3 time=364.31s
+[2026-08-08 01:31:37] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:31:37] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:31:38] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:33:29] [thr] mode=hard viable=0/51 best t=0.4880 obj=0.5586 f2=0.4530 sens=0.4297 spec=0.6875 fpr=0.3125 | probs(min/mean/max)=0.4041/0.4764/0.5594 range=0.155312
+[2026-08-08 01:33:29] [thr] logits(min/mean/max)=-0.3885/-0.0948/0.2387 range=0.6272 pctl(p5/p50/p95)=-0.3095/-0.0952/0.1110
+[2026-08-08 01:35:26] [thr] mode=hard viable=0/51 best t=0.5900 obj=0.5234 f2=0.2083 sens=0.1797 spec=0.8672 fpr=0.1328 | probs(min/mean/max)=0.4104/0.5465/0.6670 range=0.256673
+[2026-08-08 01:35:26] [thr] logits(min/mean/max)=-0.3625/0.1879/0.6948 range=1.0573 pctl(p5/p50/p95)=-0.1479/0.1981/0.4701
+[2026-08-08 01:37:21] [thr] mode=hard viable=0/51 best t=0.5662 obj=0.5039 f2=0.0194 sens=0.0156 spec=0.9922 fpr=0.0078 | probs(min/mean/max)=0.4308/0.5040/0.5919 range=0.161168
+[2026-08-08 01:37:21] [thr] logits(min/mean/max)=-0.2787/0.0160/0.3720 range=0.6507 pctl(p5/p50/p95)=-0.1869/0.0239/0.2074
+[2026-08-08 01:37:25] [terminal] phase=search auc=0.5162 sens=0.0074 spec=0.9959 thr*=0.566 std_proxy=0.0054 n_seeds=3 time=347.61s
+[2026-08-08 01:37:25] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:25] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:26] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:26] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:26] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:26] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:26] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:26] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:26] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:26] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:26] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:26] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:26] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:26] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:27] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:27] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:27] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:27] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:27] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:27] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:27] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:27] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:27] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:27] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:27] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:27] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:28] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:37:28] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:37:28] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:39:13] [thr] mode=hard viable=0/51 best t=0.5511 obj=0.5273 f2=0.2170 sens=0.1875 spec=0.8672 fpr=0.1328 | probs(min/mean/max)=0.3540/0.4908/0.6526 range=0.298662
+[2026-08-08 01:39:13] [thr] logits(min/mean/max)=-0.6016/-0.0371/0.6307 range=1.2323 pctl(p5/p50/p95)=-0.3988/-0.0456/0.3810
+[2026-08-08 01:41:06] [thr] mode=hard viable=0/51 best t=0.4881 obj=0.5391 f2=0.4952 sens=0.4844 spec=0.5938 fpr=0.4062 | probs(min/mean/max)=0.3928/0.4829/0.5834 range=0.190683
+[2026-08-08 01:41:06] [thr] logits(min/mean/max)=-0.4357/-0.0687/0.3369 range=0.7726 pctl(p5/p50/p95)=-0.3468/-0.0599/0.2086
+[2026-08-08 01:42:57] [thr] mode=hard viable=0/51 best t=0.5263 obj=0.5586 f2=0.4463 sens=0.4219 spec=0.6953 fpr=0.3047 | probs(min/mean/max)=0.3359/0.5063/0.6643 range=0.328418
+[2026-08-08 01:42:57] [thr] logits(min/mean/max)=-0.6818/0.0257/0.6824 range=1.3642 pctl(p5/p50/p95)=-0.3635/0.0148/0.4231
+[2026-08-08 01:43:01] [terminal] phase=search auc=0.4960 sens=0.1636 spec=0.8354 thr*=0.551 std_proxy=0.0209 n_seeds=3 time=333.10s
+[2026-08-08 01:43:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:43:01] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:43:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:43:01] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:43:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:44:53] [thr] mode=hard viable=0/51 best t=0.4837 obj=0.5352 f2=0.6370 sens=0.6719 spec=0.3984 fpr=0.6016 | probs(min/mean/max)=0.4076/0.4928/0.6081 range=0.200514
+[2026-08-08 01:44:53] [thr] logits(min/mean/max)=-0.3741/-0.0289/0.4392 range=0.8133 pctl(p5/p50/p95)=-0.2893/-0.0208/0.1932
+[2026-08-08 01:46:49] [thr] mode=hard viable=0/51 best t=0.5481 obj=0.5273 f2=0.0860 sens=0.0703 spec=0.9844 fpr=0.0156 | probs(min/mean/max)=0.3886/0.4911/0.5831 range=0.194494
+[2026-08-08 01:46:49] [thr] logits(min/mean/max)=-0.4532/-0.0358/0.3355 range=0.7887 pctl(p5/p50/p95)=-0.2501/-0.0332/0.1868
+[2026-08-08 01:48:44] [thr] mode=hard viable=0/51 best t=0.4637 obj=0.5312 f2=0.7973 sens=0.9219 spec=0.1406 fpr=0.8594 | probs(min/mean/max)=0.4350/0.4916/0.5545 range=0.119492
+[2026-08-08 01:48:44] [thr] logits(min/mean/max)=-0.2616/-0.0336/0.2187 range=0.4803 pctl(p5/p50/p95)=-0.1820/-0.0320/0.1176
+[2026-08-08 01:48:49] [terminal] phase=search auc=0.5422 sens=0.6691 spec=0.4280 thr*=0.484 std_proxy=0.0197 n_seeds=3 time=347.37s
+[2026-08-08 01:48:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:48:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 01:48:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:50:47] [thr] mode=hard viable=0/51 best t=0.4837 obj=0.5859 f2=0.7939 sens=0.8906 spec=0.2812 fpr=0.7188 | probs(min/mean/max)=0.4393/0.5076/0.5780 range=0.138716
+[2026-08-08 01:50:47] [thr] logits(min/mean/max)=-0.2442/0.0305/0.3145 range=0.5586 pctl(p5/p50/p95)=-0.1607/0.0333/0.2200
+[2026-08-08 01:52:48] [thr] mode=hard viable=0/51 best t=0.5589 obj=0.5195 f2=0.1913 sens=0.1641 spec=0.8750 fpr=0.1250 | probs(min/mean/max)=0.3985/0.4963/0.5895 range=0.191011
+[2026-08-08 01:52:48] [thr] logits(min/mean/max)=-0.4117/-0.0149/0.3619 range=0.7737 pctl(p5/p50/p95)=-0.3258/-0.0158/0.2884
+[2026-08-08 01:54:50] [thr] mode=hard viable=0/51 best t=0.4801 obj=0.5312 f2=0.3201 sens=0.2891 spec=0.7734 fpr=0.2266 | probs(min/mean/max)=0.4296/0.4695/0.5198 range=0.090145
+[2026-08-08 01:54:50] [thr] logits(min/mean/max)=-0.2834/-0.1224/0.0791 range=0.3625 pctl(p5/p50/p95)=-0.2456/-0.1255/0.0050
+[2026-08-08 01:54:54] [terminal] phase=search auc=0.4815 sens=0.1041 spec=0.9012 thr*=0.559 std_proxy=0.0097 n_seeds=3 time=363.16s
+[2026-08-08 01:54:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 01:56:47] [thr] mode=hard viable=0/51 best t=0.4152 obj=0.5391 f2=0.8132 sens=0.9453 spec=0.1328 fpr=0.8672 | probs(min/mean/max)=0.3560/0.4681/0.5837 range=0.227700
+[2026-08-08 01:56:47] [thr] logits(min/mean/max)=-0.5926/-0.1287/0.3382 range=0.9307 pctl(p5/p50/p95)=-0.3844/-0.1389/0.1558
+[2026-08-08 01:58:42] [thr] mode=hard viable=0/51 best t=0.4559 obj=0.5430 f2=0.7483 sens=0.8359 spec=0.2500 fpr=0.7500 | probs(min/mean/max)=0.3609/0.5041/0.6577 range=0.296736
+[2026-08-08 01:58:42] [thr] logits(min/mean/max)=-0.5713/0.0168/0.6529 range=1.2242 pctl(p5/p50/p95)=-0.3573/0.0002/0.4343
+[2026-08-08 02:00:40] [thr] mode=hard viable=0/51 best t=0.5263 obj=0.5430 f2=0.2432 sens=0.2109 spec=0.8750 fpr=0.1250 | probs(min/mean/max)=0.3734/0.4765/0.5918 range=0.218458
+[2026-08-08 02:00:40] [thr] logits(min/mean/max)=-0.5178/-0.0949/0.3715 range=0.8893 pctl(p5/p50/p95)=-0.4070/-0.0833/0.2018
+[2026-08-08 02:00:44] [terminal] phase=search auc=0.5740 sens=0.8476 spec=0.2016 thr*=0.456 std_proxy=0.0379 n_seeds=3 time=350.08s
+[2026-08-08 02:00:45] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:02:34] [thr] mode=hard viable=0/51 best t=0.4903 obj=0.5586 f2=0.7122 sens=0.7734 spec=0.3438 fpr=0.6562 | probs(min/mean/max)=0.4259/0.5140/0.5952 range=0.169266
+[2026-08-08 02:02:34] [thr] logits(min/mean/max)=-0.2984/0.0562/0.3855 range=0.6840 pctl(p5/p50/p95)=-0.1931/0.0513/0.2854
+[2026-08-08 02:04:27] [thr] mode=hard viable=0/51 best t=0.5566 obj=0.5156 f2=0.0483 sens=0.0391 spec=0.9922 fpr=0.0078 | probs(min/mean/max)=0.4596/0.5122/0.5607 range=0.101072
+[2026-08-08 02:04:27] [thr] logits(min/mean/max)=-0.1620/0.0489/0.2438 range=0.4058 pctl(p5/p50/p95)=-0.1009/0.0546/0.1924
+[2026-08-08 02:06:21] [thr] mode=hard viable=0/51 best t=0.5231 obj=0.5195 f2=0.3109 sens=0.2812 spec=0.7578 fpr=0.2422 | probs(min/mean/max)=0.3778/0.4873/0.6048 range=0.227052
+[2026-08-08 02:06:21] [thr] logits(min/mean/max)=-0.4990/-0.0512/0.4256 range=0.9246 pctl(p5/p50/p95)=-0.3382/-0.0668/0.2679
+[2026-08-08 02:06:25] [terminal] phase=search auc=0.4918 sens=0.7770 spec=0.2346 thr*=0.490 std_proxy=0.0094 n_seeds=3 time=340.60s
+[2026-08-08 02:06:25] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:08:10] [thr] mode=hard viable=0/51 best t=0.4490 obj=0.5234 f2=0.6231 sens=0.6562 spec=0.3906 fpr=0.6094 | probs(min/mean/max)=0.3596/0.4646/0.5723 range=0.212679
+[2026-08-08 02:08:10] [thr] logits(min/mean/max)=-0.5769/-0.1428/0.2913 range=0.8682 pctl(p5/p50/p95)=-0.3916/-0.1400/0.1048
+[2026-08-08 02:10:01] [thr] mode=hard viable=0/51 best t=0.5514 obj=0.5117 f2=0.0576 sens=0.0469 spec=0.9766 fpr=0.0234 | probs(min/mean/max)=0.4393/0.4987/0.5760 range=0.136722
+[2026-08-08 02:10:01] [thr] logits(min/mean/max)=-0.2442/-0.0051/0.3063 range=0.5505 pctl(p5/p50/p95)=-0.1961/-0.0176/0.1799
+[2026-08-08 02:11:53] [thr] mode=hard viable=0/51 best t=0.4419 obj=0.5156 f2=0.7603 sens=0.8672 spec=0.1641 fpr=0.8359 | probs(min/mean/max)=0.3734/0.4878/0.6017 range=0.228311
+[2026-08-08 02:11:53] [thr] logits(min/mean/max)=-0.5177/-0.0492/0.4126 range=0.9303 pctl(p5/p50/p95)=-0.3418/-0.0524/0.2207
+[2026-08-08 02:11:57] [terminal] phase=search auc=0.5031 sens=0.0372 spec=0.9630 thr*=0.551 std_proxy=0.0078 n_seeds=3 time=331.54s
+[2026-08-08 02:11:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:13:50] [thr] mode=hard viable=0/51 best t=0.4276 obj=0.5234 f2=0.7283 sens=0.8125 spec=0.2344 fpr=0.7656 | probs(min/mean/max)=0.3799/0.4607/0.5390 range=0.159104
+[2026-08-08 02:13:50] [thr] logits(min/mean/max)=-0.4900/-0.1585/0.1564 range=0.6463 pctl(p5/p50/p95)=-0.3894/-0.1586/0.0594
+[2026-08-08 02:15:49] [thr] mode=hard viable=0/51 best t=0.5074 obj=0.5430 f2=0.5087 sens=0.5000 spec=0.5859 fpr=0.4141 | probs(min/mean/max)=0.3598/0.4982/0.6234 range=0.263614
+[2026-08-08 02:15:49] [thr] logits(min/mean/max)=-0.5763/-0.0075/0.5040 range=1.0803 pctl(p5/p50/p95)=-0.4044/-0.0089/0.3814
+[2026-08-08 02:17:49] [thr] mode=hard viable=0/51 best t=0.4840 obj=0.5430 f2=0.6222 sens=0.6484 spec=0.4375 fpr=0.5625 | probs(min/mean/max)=0.4116/0.4909/0.5761 range=0.164488
+[2026-08-08 02:17:49] [thr] logits(min/mean/max)=-0.3573/-0.0367/0.3068 range=0.6641 pctl(p5/p50/p95)=-0.2540/-0.0457/0.1704
+[2026-08-08 02:17:53] [terminal] phase=search auc=0.5135 sens=0.4349 spec=0.5720 thr*=0.507 std_proxy=0.0104 n_seeds=3 time=355.83s
+[2026-08-08 02:17:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:19:44] [thr] mode=hard viable=0/51 best t=0.5181 obj=0.5117 f2=0.0387 sens=0.0312 spec=0.9922 fpr=0.0078 | probs(min/mean/max)=0.4030/0.4654/0.5309 range=0.127876
+[2026-08-08 02:19:44] [thr] logits(min/mean/max)=-0.3931/-0.1387/0.1236 range=0.5166 pctl(p5/p50/p95)=-0.2844/-0.1433/0.0264
+[2026-08-08 02:21:41] [thr] mode=hard viable=0/51 best t=0.4984 obj=0.5117 f2=0.4640 sens=0.4531 spec=0.5703 fpr=0.4297 | probs(min/mean/max)=0.3756/0.4950/0.6030 range=0.227406
+[2026-08-08 02:21:41] [thr] logits(min/mean/max)=-0.5082/-0.0203/0.4181 range=0.9263 pctl(p5/p50/p95)=-0.2825/-0.0211/0.2350
+[2026-08-08 02:23:36] [thr] mode=hard viable=0/51 best t=0.5585 obj=0.5117 f2=0.0669 sens=0.0547 spec=0.9688 fpr=0.0312 | probs(min/mean/max)=0.3876/0.4910/0.5775 range=0.189878
+[2026-08-08 02:23:36] [thr] logits(min/mean/max)=-0.4572/-0.0361/0.3126 range=0.7698 pctl(p5/p50/p95)=-0.2659/-0.0379/0.2161
+[2026-08-08 02:23:41] [terminal] phase=search auc=0.5178 sens=0.5428 spec=0.5062 thr*=0.498 std_proxy=0.0121 n_seeds=3 time=347.60s
+[2026-08-08 02:23:41] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:25:32] [thr] mode=hard viable=0/51 best t=0.5381 obj=0.5547 f2=0.5607 sens=0.5625 spec=0.5469 fpr=0.4531 | probs(min/mean/max)=0.4312/0.5378/0.6635 range=0.232262
+[2026-08-08 02:25:32] [thr] logits(min/mean/max)=-0.2768/0.1521/0.6790 range=0.9557 pctl(p5/p50/p95)=-0.0938/0.1553/0.3791
+[2026-08-08 02:27:31] [thr] mode=hard viable=0/51 best t=0.4525 obj=0.5195 f2=0.6604 sens=0.7109 spec=0.3281 fpr=0.6719 | probs(min/mean/max)=0.3386/0.4679/0.5975 range=0.258970
+[2026-08-08 02:27:31] [thr] logits(min/mean/max)=-0.6697/-0.1297/0.3952 range=1.0649 pctl(p5/p50/p95)=-0.4626/-0.1348/0.1662
+[2026-08-08 02:29:30] [thr] mode=hard viable=0/51 best t=0.5495 obj=0.5430 f2=0.2432 sens=0.2109 spec=0.8750 fpr=0.1250 | probs(min/mean/max)=0.4793/0.5314/0.5825 range=0.103244
+[2026-08-08 02:29:30] [thr] logits(min/mean/max)=-0.0829/0.1258/0.3331 range=0.4161 pctl(p5/p50/p95)=0.0080/0.1195/0.2378
+[2026-08-08 02:29:35] [terminal] phase=search auc=0.4752 sens=0.6543 spec=0.2963 thr*=0.453 std_proxy=0.0131 n_seeds=3 time=353.92s
+[2026-08-08 02:29:35] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:31:29] [thr] mode=hard viable=2/51 best t=0.5533 obj=0.4620 f2=0.4620 sens=0.4375 spec=0.7031 fpr=0.2969 | probs(min/mean/max)=0.4765/0.5399/0.6044 range=0.127926
+[2026-08-08 02:31:29] [thr] logits(min/mean/max)=-0.0941/0.1605/0.4240 range=0.5180 pctl(p5/p50/p95)=-0.0394/0.1712/0.3554
+[2026-08-08 02:33:28] [thr] mode=hard viable=0/51 best t=0.4704 obj=0.5508 f2=0.7981 sens=0.9141 spec=0.1875 fpr=0.8125 | probs(min/mean/max)=0.3946/0.5146/0.6315 range=0.236861
+[2026-08-08 02:33:28] [thr] logits(min/mean/max)=-0.4280/0.0590/0.5385 range=0.9665 pctl(p5/p50/p95)=-0.2432/0.0548/0.3500
+[2026-08-08 02:35:25] [thr] mode=hard viable=0/51 best t=0.4775 obj=0.5078 f2=0.4762 sens=0.4688 spec=0.5469 fpr=0.4531 | probs(min/mean/max)=0.3729/0.4748/0.5740 range=0.201035
+[2026-08-08 02:35:25] [thr] logits(min/mean/max)=-0.5197/-0.1016/0.2980 range=0.8177 pctl(p5/p50/p95)=-0.3848/-0.1182/0.1675
+[2026-08-08 02:35:29] [terminal] phase=search auc=0.5480 sens=0.3941 spec=0.6420 thr*=0.553 std_proxy=0.0241 n_seeds=3 time=354.55s
+[2026-08-08 02:35:30] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:35:48] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:35:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:37:46] [thr] mode=hard viable=0/51 best t=0.6008 obj=0.5156 f2=0.1394 sens=0.1172 spec=0.9141 fpr=0.0859 | probs(min/mean/max)=0.4541/0.5468/0.6422 range=0.188041
+[2026-08-08 02:37:46] [thr] logits(min/mean/max)=-0.1841/0.1887/0.5847 range=0.7688 pctl(p5/p50/p95)=-0.0806/0.1929/0.4384
+[2026-08-08 02:39:49] [thr] mode=hard viable=0/51 best t=0.4617 obj=0.5508 f2=0.7204 sens=0.7891 spec=0.3125 fpr=0.6875 | probs(min/mean/max)=0.4141/0.4801/0.5464 range=0.132359
+[2026-08-08 02:39:49] [thr] logits(min/mean/max)=-0.3472/-0.0800/0.1862 range=0.5334 pctl(p5/p50/p95)=-0.2676/-0.0731/0.1030
+[2026-08-08 02:41:50] [thr] mode=hard viable=0/51 best t=0.4657 obj=0.5352 f2=0.6090 sens=0.6328 spec=0.4375 fpr=0.5625 | probs(min/mean/max)=0.3285/0.4798/0.6142 range=0.285648
+[2026-08-08 02:41:50] [thr] logits(min/mean/max)=-0.7148/-0.0819/0.4650 range=1.1797 pctl(p5/p50/p95)=-0.4440/-0.0792/0.3154
+[2026-08-08 02:41:56] [terminal] phase=search auc=0.5104 sens=0.0743 spec=0.9383 thr*=0.601 std_proxy=0.0162 n_seeds=3 time=368.51s
+[2026-08-08 02:41:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:41:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:41:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:41:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:41:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:41:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:41:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:41:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:41:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:43:50] [thr] mode=hard viable=0/51 best t=0.5077 obj=0.5312 f2=0.3788 sens=0.3516 spec=0.7109 fpr=0.2891 | probs(min/mean/max)=0.4138/0.4896/0.5816 range=0.167764
+[2026-08-08 02:43:50] [thr] logits(min/mean/max)=-0.3483/-0.0417/0.3292 range=0.6775 pctl(p5/p50/p95)=-0.2721/-0.0394/0.2106
+[2026-08-08 02:45:48] [thr] mode=hard viable=0/51 best t=0.4262 obj=0.5117 f2=0.8366 sens=1.0000 spec=0.0234 fpr=0.9766 | probs(min/mean/max)=0.4172/0.5180/0.6413 range=0.224027
+[2026-08-08 02:45:48] [thr] logits(min/mean/max)=-0.3342/0.0727/0.5808 range=0.9150 pctl(p5/p50/p95)=-0.2153/0.0780/0.3446
+[2026-08-08 02:47:48] [thr] mode=hard viable=0/51 best t=0.4802 obj=0.5586 f2=0.5433 sens=0.5391 spec=0.5781 fpr=0.4219 | probs(min/mean/max)=0.3648/0.4777/0.5709 range=0.206078
+[2026-08-08 02:47:48] [thr] logits(min/mean/max)=-0.5546/-0.0900/0.2854 range=0.8400 pctl(p5/p50/p95)=-0.3660/-0.0853/0.1899
+[2026-08-08 02:47:52] [terminal] phase=search auc=0.5358 sens=0.9851 spec=0.0165 thr*=0.426 std_proxy=0.0106 n_seeds=3 time=354.96s
+[2026-08-08 02:47:52] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:52] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:47:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 02:47:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:49:48] [thr] mode=hard viable=0/51 best t=0.5292 obj=0.5273 f2=0.0952 sens=0.0781 spec=0.9766 fpr=0.0234 | probs(min/mean/max)=0.4555/0.5009/0.5671 range=0.111676
+[2026-08-08 02:49:48] [thr] logits(min/mean/max)=-0.1786/0.0036/0.2702 range=0.4488 pctl(p5/p50/p95)=-0.0967/0.0061/0.1167
+[2026-08-08 02:51:46] [thr] mode=hard viable=0/51 best t=0.4429 obj=0.5391 f2=0.7995 sens=0.9219 spec=0.1562 fpr=0.8438 | probs(min/mean/max)=0.4111/0.4717/0.5437 range=0.132601
+[2026-08-08 02:51:46] [thr] logits(min/mean/max)=-0.3595/-0.1137/0.1752 range=0.5347 pctl(p5/p50/p95)=-0.2783/-0.1185/0.0493
+[2026-08-08 02:53:42] [thr] mode=hard viable=0/51 best t=0.5627 obj=0.5156 f2=0.1909 sens=0.1641 spec=0.8672 fpr=0.1328 | probs(min/mean/max)=0.4364/0.5305/0.6337 range=0.197367
+[2026-08-08 02:53:42] [thr] logits(min/mean/max)=-0.2559/0.1228/0.5483 range=0.8042 pctl(p5/p50/p95)=-0.1020/0.1251/0.3546
+[2026-08-08 02:53:46] [terminal] phase=search auc=0.5229 sens=0.0595 spec=0.9136 thr*=0.529 std_proxy=0.0090 n_seeds=3 time=348.58s
+[2026-08-08 02:53:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 02:55:42] [thr] mode=hard viable=0/51 best t=0.5350 obj=0.5742 f2=0.3787 sens=0.3438 spec=0.8047 fpr=0.1953 | probs(min/mean/max)=0.4546/0.5173/0.5843 range=0.129633
+[2026-08-08 02:55:42] [thr] logits(min/mean/max)=-0.1820/0.0694/0.3403 range=0.5223 pctl(p5/p50/p95)=-0.1027/0.0686/0.2424
+[2026-08-08 02:57:43] [thr] mode=hard viable=0/51 best t=0.4967 obj=0.5664 f2=0.5873 sens=0.5938 spec=0.5391 fpr=0.4609 | probs(min/mean/max)=0.4132/0.4979/0.5623 range=0.149150
+[2026-08-08 02:57:43] [thr] logits(min/mean/max)=-0.3508/-0.0085/0.2506 range=0.6015 pctl(p5/p50/p95)=-0.1784/-0.0093/0.1544
+[2026-08-08 02:59:47] [thr] mode=hard viable=0/51 best t=0.4875 obj=0.5312 f2=0.6471 sens=0.6875 spec=0.3750 fpr=0.6250 | probs(min/mean/max)=0.4063/0.5047/0.5997 range=0.193363
+[2026-08-08 02:59:47] [thr] logits(min/mean/max)=-0.3792/0.0191/0.4041 range=0.7833 pctl(p5/p50/p95)=-0.2176/0.0229/0.2692
+[2026-08-08 02:59:53] [terminal] phase=search auc=0.5214 sens=0.2416 spec=0.8148 thr*=0.535 std_proxy=0.0137 n_seeds=3 time=366.83s
+[2026-08-08 02:59:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:01:42] [thr] mode=hard viable=0/51 best t=0.4062 obj=0.5273 f2=0.8322 sens=0.9844 spec=0.0703 fpr=0.9297 | probs(min/mean/max)=0.3462/0.4945/0.6461 range=0.299910
+[2026-08-08 03:01:42] [thr] logits(min/mean/max)=-0.6358/-0.0222/0.6020 range=1.2378 pctl(p5/p50/p95)=-0.3782/-0.0191/0.3745
+[2026-08-08 03:03:38] [thr] mode=hard viable=0/51 best t=0.4431 obj=0.5117 f2=0.8322 sens=0.9922 spec=0.0312 fpr=0.9688 | probs(min/mean/max)=0.4167/0.5089/0.6059 range=0.189226
+[2026-08-08 03:03:38] [thr] logits(min/mean/max)=-0.3365/0.0359/0.4300 range=0.7666 pctl(p5/p50/p95)=-0.1772/0.0335/0.2588
+[2026-08-08 03:05:34] [thr] mode=hard viable=0/51 best t=0.5129 obj=0.5312 f2=0.7451 sens=0.8359 spec=0.2266 fpr=0.7734 | probs(min/mean/max)=0.4502/0.5582/0.6593 range=0.209097
+[2026-08-08 03:05:34] [thr] logits(min/mean/max)=-0.1999/0.2357/0.6601 range=0.8600 pctl(p5/p50/p95)=-0.0698/0.2640/0.5145
+[2026-08-08 03:05:38] [terminal] phase=search auc=0.4992 sens=0.9703 spec=0.0494 thr*=0.443 std_proxy=0.0111 n_seeds=3 time=344.89s
+[2026-08-08 03:05:38] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:05:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:05:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:05:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:05:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:05:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:05:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:05:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:05:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:07:51] [thr] mode=hard viable=0/51 best t=0.4646 obj=0.5312 f2=0.6024 sens=0.6250 spec=0.4375 fpr=0.5625 | probs(min/mean/max)=0.4241/0.4711/0.5366 range=0.112476
+[2026-08-08 03:07:51] [thr] logits(min/mean/max)=-0.3059/-0.1160/0.1466 range=0.4525 pctl(p5/p50/p95)=-0.2344/-0.1219/0.0178
+[2026-08-08 03:09:52] [thr] mode=hard viable=0/51 best t=0.5268 obj=0.5352 f2=0.4553 sens=0.4375 spec=0.6328 fpr=0.3672 | probs(min/mean/max)=0.4533/0.5169/0.5527 range=0.099409
+[2026-08-08 03:09:52] [thr] logits(min/mean/max)=-0.1875/0.0678/0.2115 range=0.3990 pctl(p5/p50/p95)=-0.1033/0.0930/0.1681
+[2026-08-08 03:11:54] [thr] mode=hard viable=0/51 best t=0.5173 obj=0.5586 f2=0.5556 sens=0.5547 spec=0.5625 fpr=0.4375 | probs(min/mean/max)=0.4082/0.5104/0.6030 range=0.194801
+[2026-08-08 03:11:54] [thr] logits(min/mean/max)=-0.3713/0.0418/0.4180 range=0.7894 pctl(p5/p50/p95)=-0.2591/0.0680/0.2673
+[2026-08-08 03:11:59] [terminal] phase=search auc=0.5769 sens=0.6543 spec=0.4733 thr*=0.465 std_proxy=0.0438 n_seeds=3 time=362.93s
+[2026-08-08 03:11:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:11:59] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:11:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:11:59] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:11:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:11:59] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:12:00] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:13:55] [thr] mode=hard viable=0/51 best t=0.5147 obj=0.5312 f2=0.4545 sens=0.4375 spec=0.6250 fpr=0.3750 | probs(min/mean/max)=0.4507/0.5091/0.5508 range=0.100040
+[2026-08-08 03:13:55] [thr] logits(min/mean/max)=-0.1978/0.0366/0.2037 range=0.4015 pctl(p5/p50/p95)=-0.0789/0.0393/0.1468
+[2026-08-08 03:15:57] [thr] mode=hard viable=0/51 best t=0.4567 obj=0.5117 f2=0.8366 sens=1.0000 spec=0.0234 fpr=0.9766 | probs(min/mean/max)=0.4479/0.5245/0.5947 range=0.146823
+[2026-08-08 03:15:57] [thr] logits(min/mean/max)=-0.2091/0.0983/0.3836 range=0.5927 pctl(p5/p50/p95)=-0.0934/0.0971/0.3123
+[2026-08-08 03:17:58] [thr] mode=hard viable=0/51 best t=0.5440 obj=0.5078 f2=0.0668 sens=0.0547 spec=0.9609 fpr=0.0391 | probs(min/mean/max)=0.4185/0.4874/0.5611 range=0.142635
+[2026-08-08 03:17:58] [thr] logits(min/mean/max)=-0.3289/-0.0507/0.2458 range=0.5747 pctl(p5/p50/p95)=-0.2421/-0.0581/0.1704
+[2026-08-08 03:18:02] [terminal] phase=search auc=0.5202 sens=0.0372 spec=0.9877 thr*=0.544 std_proxy=0.0188 n_seeds=3 time=362.80s
+[2026-08-08 03:18:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:18:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:18:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:18:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:18:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:18:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4}
+[2026-08-08 03:18:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:19:15] [thr] mode=hard viable=0/51 best t=0.4662 obj=0.5547 f2=0.4523 sens=0.4297 spec=0.6797 fpr=0.3203 | probs(min/mean/max)=0.4126/0.4683/0.5613 range=0.148700
+[2026-08-08 03:19:15] [thr] logits(min/mean/max)=-0.3530/-0.1271/0.2466 range=0.5997 pctl(p5/p50/p95)=-0.2484/-0.1687/0.1497
+[2026-08-08 03:20:31] [thr] mode=hard viable=2/51 best t=0.6296 obj=0.5000 f2=0.5000 sens=0.4766 spec=0.7109 fpr=0.2891 | probs(min/mean/max)=0.2872/0.5691/0.7500 range=0.462756
+[2026-08-08 03:20:31] [thr] logits(min/mean/max)=-0.9090/0.2885/1.0984 range=2.0074 pctl(p5/p50/p95)=-0.6219/0.4019/0.8981
+[2026-08-08 03:21:40] [thr] mode=hard viable=0/51 best t=0.4347 obj=0.5547 f2=0.6745 sens=0.7188 spec=0.3906 fpr=0.6094 | probs(min/mean/max)=0.3497/0.4542/0.5997 range=0.250065
+[2026-08-08 03:21:40] [thr] logits(min/mean/max)=-0.6205/-0.1850/0.4043 range=1.0249 pctl(p5/p50/p95)=-0.4917/-0.1660/0.0633
+[2026-08-08 03:21:42] [terminal] phase=search auc=0.5605 sens=0.4461 spec=0.6708 thr*=0.630 std_proxy=0.0069 n_seeds=3 time=219.22s
+[2026-08-08 03:21:42] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:42] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:43] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:43] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:43] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:43] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:43] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:43] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:44] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:44] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:44] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:44] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:44] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:44] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:44] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:44] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:44] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:44] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:44] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:44] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:45] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:45] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:45] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:45] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:45] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:45] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:45] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:45] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:45] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:45] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:45] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:45] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:46] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:46] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:47] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:47] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:48] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:48] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:48] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:48] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:48] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:48] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:48] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:49] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:49] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:50] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:50] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:51] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:51] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:52] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:52] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:52] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:52] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:52] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:52] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:52] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:52] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:52] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:52] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:52] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:52] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:53] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:53] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:54] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:54] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:55] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:55] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:56] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:56] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:57] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:57] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:58] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:58] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:58] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:58] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:58] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:58] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:58] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:58] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:58] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:58] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:59] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:21:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:59] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:59] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:21:59] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:21:59] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:00] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:00] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:00] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:00] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:00] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:00] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:00] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:00] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:00] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:22:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:01] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:01] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:22:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:01] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:01] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:01] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:01] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:02] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:02] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:02] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:02] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:02] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:02] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:02] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:02] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:02] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:02] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:02] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:02] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:03] [terminal_evaluate][EXCEPTION] ValueError: ops operation RY(1.3414535522460938, wires=[3]) must occur prior to measurements. Please place earlier in the queue.
+[2026-08-08 03:22:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:03] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:03] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:22:04] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:04] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:04] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:04] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:04] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:04] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:04] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:04] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:04] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:04] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:05] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:05] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:05] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:05] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:05] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:05] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:05] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:05] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:05] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:05] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:06] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:06] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:06] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:06] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:06] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:06] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:06] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:06] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:06] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:06] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:06] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:06] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:07] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:07] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {5}
+[2026-08-08 03:22:07] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:07] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:07] [phase] phase=search targets sens/spec/fpr=0.420/0.650/0.300
+[2026-08-08 03:22:07] [terminal_evaluate][EXCEPTION] WireError: Cannot run circuit(s) on lightning.qubit as they contain wires not found on the device: {4, 5}
+[2026-08-08 03:22:45] [thr] mode=hard viable=0/201 best t=0.4264 obj=0.5033 f2=0.8261 sens=0.9855 spec=0.0211 fpr=0.9789 | probs(min/mean/max)=0.4185/0.4606/0.5495 range=0.131028
+[2026-08-08 03:22:45] [thr] logits(min/mean/max)=-0.3289/-0.1582/0.1988 range=0.5277 pctl(p5/p50/p95)=-0.2829/-0.1753/0.0457
+[2026-08-08 03:24:12] [thr] mode=hard viable=0/201 best t=0.5213 obj=0.5428 f2=0.5447 sens=0.5452 spec=0.5403 fpr=0.4597 | probs(min/mean/max)=0.3742/0.5064/0.6173 range=0.243067
+[2026-08-08 03:24:12] [thr] logits(min/mean/max)=-0.5141/0.0255/0.4781 range=0.9922 pctl(p5/p50/p95)=-0.3276/0.0863/0.2873

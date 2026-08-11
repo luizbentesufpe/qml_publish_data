@@ -13,6 +13,7 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 import torch
+import torch as _torch
 
 from refactor_project.data.moons import load_make_moons_pool
 from refactor_project.data.util import (
@@ -65,6 +66,7 @@ def _run_one_seed_make_moons(
     #     torch.cuda.set_device(gpu_id)
     # else:
     #     DEVICE = "cpu"
+    _torch.set_num_threads(1)
     DEVICE = "cpu"  # força CPU para evitar OOMs e interferência entre workers
     set_seeds(seed)  # crítico: deve ser a primeira chamada dentro do worker
 
@@ -103,7 +105,7 @@ def _run_one_seed_make_moons(
     in_dim = int(XtrS.shape[1])  # 2 para Make Moons
 
     # ── Config por nq ─────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS), in_dim=in_dim)
 
     # Make Moons: 2 features — desativa feature bank dinâmico
     cfg_nq.use_patch_bank = False

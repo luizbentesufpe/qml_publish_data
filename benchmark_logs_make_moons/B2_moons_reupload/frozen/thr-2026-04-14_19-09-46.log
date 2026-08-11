@@ -1,0 +1,42 @@
+[2026-04-14 19:09:48] [thr] mode=soft viable=0/201 best t=0.4797 obj=0.3823 f2=0.7120 sens=0.6953 spec=0.8125 fpr=0.1875 | pen(spec/fpr/sens)=0.000/0.087/0.155 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.4560/0.4787/0.5044 range=0.048357
+[2026-04-14 19:09:48] [thr] logits(min/mean/max)=-0.1763/-0.0854/0.0175 range=0.1939 pctl(p5/p50/p95)=-0.1575/-0.0895/0.0022
+[2026-04-14 19:09:51] [thr] mode=soft viable=0/201 best t=0.5444 obj=0.7402 f2=0.8121 sens=0.7969 spec=0.8906 fpr=0.1094 | pen(spec/fpr/sens)=0.000/0.009/0.053 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.2798/0.5094/0.6604 range=0.380601
+[2026-04-14 19:09:51] [thr] logits(min/mean/max)=-0.9453/0.0374/0.6652 range=1.6105 pctl(p5/p50/p95)=-0.7326/0.0402/0.6284
+[2026-04-14 19:09:55] [thr] mode=soft viable=0/201 best t=0.5157 obj=0.8063 f2=0.8360 sens=0.8203 spec=0.9141 fpr=0.0859 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0910/0.4673/0.8426 range=0.751583
+[2026-04-14 19:09:55] [thr] logits(min/mean/max)=-2.3012/-0.1853/1.6777 range=3.9790 pctl(p5/p50/p95)=-1.8982/-0.1100/1.3574
+[2026-04-14 19:09:58] [thr] mode=soft viable=0/201 best t=0.5695 obj=0.8050 f2=0.8347 sens=0.8203 spec=0.9062 fpr=0.0938 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0831/0.5030/0.8870 range=0.803930
+[2026-04-14 19:09:58] [thr] logits(min/mean/max)=-2.4011/-0.0069/2.0606 range=4.4618 pctl(p5/p50/p95)=-1.9362/0.0963/1.7141
+[2026-04-14 19:10:01] [thr] mode=soft viable=0/201 best t=0.5542 obj=0.8050 f2=0.8347 sens=0.8203 spec=0.9062 fpr=0.0938 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0847/0.4932/0.8738 range=0.789026
+[2026-04-14 19:10:01] [thr] logits(min/mean/max)=-2.3797/-0.0583/1.9346 range=4.3143 pctl(p5/p50/p95)=-1.9255/0.0439/1.6022
+[2026-04-14 19:10:05] [thr] mode=soft viable=0/201 best t=0.5415 obj=0.8005 f2=0.8333 sens=0.8203 spec=0.8984 fpr=0.1016 | pen(spec/fpr/sens)=0.000/0.002/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0832/0.4916/0.8734 range=0.790197
+[2026-04-14 19:10:05] [thr] logits(min/mean/max)=-2.3993/-0.0674/1.9315 range=4.3309 pctl(p5/p50/p95)=-1.9381/0.0328/1.6012
+[2026-04-14 19:10:05] [thr] mode=soft viable=0/201 best t=0.5958 obj=0.7958 f2=0.8333 sens=0.8125 spec=0.9375 fpr=0.0625 | pen(spec/fpr/sens)=0.000/0.000/0.037 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.1015/0.4853/0.8738 range=0.772313
+[2026-04-14 19:10:05] [thr] logits(min/mean/max)=-2.1806/-0.1340/1.9352 range=4.1158 pctl(p5/p50/p95)=-2.1382/0.1578/1.4139
+[2026-04-14 19:10:07] [thr] mode=soft viable=0/201 best t=0.5368 obj=0.1748 f2=0.5357 sens=0.4922 spec=0.8984 fpr=0.1016 | pen(spec/fpr/sens)=0.000/0.002/0.358 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.4853/0.5253/0.5781 range=0.092807
+[2026-04-14 19:10:07] [thr] logits(min/mean/max)=-0.0587/0.1016/0.3151 range=0.3738 pctl(p5/p50/p95)=-0.0412/0.0897/0.2738
+[2026-04-14 19:10:11] [thr] mode=soft viable=0/201 best t=0.5534 obj=0.2043 f2=0.5574 sens=0.5156 spec=0.8906 fpr=0.1094 | pen(spec/fpr/sens)=0.000/0.009/0.334 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.2110/0.4686/0.7769 range=0.565948
+[2026-04-14 19:10:11] [thr] logits(min/mean/max)=-1.3190/-0.1377/1.2479 range=2.5669 pctl(p5/p50/p95)=-1.2139/-0.1400/0.9898
+[2026-04-14 19:10:14] [thr] mode=soft viable=0/201 best t=0.5713 obj=0.3996 f2=0.6590 sens=0.6250 spec=0.8828 fpr=0.1172 | pen(spec/fpr/sens)=0.000/0.017/0.225 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.2510/0.4995/0.7634 range=0.512446
+[2026-04-14 19:10:14] [thr] logits(min/mean/max)=-1.0933/-0.0037/1.1717 range=2.2650 pctl(p5/p50/p95)=-0.9457/0.0699/0.9191
+[2026-04-14 19:10:17] [thr] mode=soft viable=0/201 best t=0.5460 obj=0.8050 f2=0.8347 sens=0.8203 spec=0.9062 fpr=0.0938 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.1326/0.4746/0.7450 range=0.612470
+[2026-04-14 19:10:17] [thr] logits(min/mean/max)=-1.8785/-0.1386/1.0723 range=2.9508 pctl(p5/p50/p95)=-1.5896/0.0586/0.9289
+[2026-04-14 19:10:21] [thr] mode=soft viable=0/201 best t=0.5424 obj=0.8565 f2=0.8596 sens=0.8516 spec=0.8984 fpr=0.1016 | pen(spec/fpr/sens)=0.000/0.002/0.000 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0801/0.4937/0.8772 range=0.797027
+[2026-04-14 19:10:21] [thr] logits(min/mean/max)=-2.4406/-0.0704/1.9657 range=4.4064 pctl(p5/p50/p95)=-2.1171/0.1174/1.6911
+[2026-04-14 19:10:25] [thr] mode=soft viable=0/201 best t=0.5282 obj=0.8565 f2=0.8596 sens=0.8516 spec=0.8984 fpr=0.1016 | pen(spec/fpr/sens)=0.000/0.002/0.000 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0801/0.4909/0.8803 range=0.800211
+[2026-04-14 19:10:25] [thr] logits(min/mean/max)=-2.4415/-0.0829/1.9950 range=4.4365 pctl(p5/p50/p95)=-2.1450/0.0803/1.7005
+[2026-04-14 19:10:25] [thr] mode=soft viable=0/201 best t=0.5715 obj=0.7377 f2=0.8065 sens=0.7812 spec=0.9375 fpr=0.0625 | pen(spec/fpr/sens)=0.000/0.000/0.069 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0745/0.4889/0.8826 range=0.808070
+[2026-04-14 19:10:25] [thr] logits(min/mean/max)=-2.5197/-0.1006/2.0169 range=4.5366 pctl(p5/p50/p95)=-2.2184/0.0409/1.5959
+[2026-04-14 19:10:27] [thr] mode=soft viable=0/201 best t=0.4794 obj=0.4462 f2=0.6743 sens=0.6406 spec=0.8906 fpr=0.1094 | pen(spec/fpr/sens)=0.000/0.009/0.209 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.4493/0.4737/0.5030 range=0.053678
+[2026-04-14 19:10:27] [thr] logits(min/mean/max)=-0.2033/-0.1054/0.0121 range=0.2154 pctl(p5/p50/p95)=-0.1901/-0.1096/-0.0074
+[2026-04-14 19:10:30] [thr] mode=soft viable=0/201 best t=0.4812 obj=0.6507 f2=0.8163 sens=0.8125 spec=0.8359 fpr=0.1641 | pen(spec/fpr/sens)=0.000/0.064/0.037 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.2520/0.4676/0.6613 range=0.409262
+[2026-04-14 19:10:30] [thr] logits(min/mean/max)=-1.0878/-0.1399/0.6690 range=1.7569 pctl(p5/p50/p95)=-0.9579/-0.1144/0.5402
+[2026-04-14 19:10:33] [thr] mode=soft viable=0/201 best t=0.5114 obj=0.8063 f2=0.8360 sens=0.8203 spec=0.9141 fpr=0.0859 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.0917/0.4414/0.8031 range=0.711469
+[2026-04-14 19:10:33] [thr] logits(min/mean/max)=-2.2935/-0.3200/1.4060 range=3.6995 pctl(p5/p50/p95)=-2.0954/-0.2182/1.0673
+[2026-04-14 19:10:36] [thr] mode=soft viable=0/201 best t=0.6267 obj=0.8076 f2=0.8373 sens=0.8203 spec=0.9219 fpr=0.0781 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.1165/0.5211/0.8723 range=0.755727
+[2026-04-14 19:10:36] [thr] logits(min/mean/max)=-2.0256/0.0809/1.9212 range=3.9468 pctl(p5/p50/p95)=-1.8184/0.2265/1.5551
+[2026-04-14 19:10:40] [thr] mode=soft viable=0/201 best t=0.5708 obj=0.8076 f2=0.8373 sens=0.8203 spec=0.9219 fpr=0.0781 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.1041/0.4805/0.8391 range=0.734947
+[2026-04-14 19:10:40] [thr] logits(min/mean/max)=-2.1521/-0.1247/1.6514 range=3.8035 pctl(p5/p50/p95)=-1.9521/0.0013/1.2967
+[2026-04-14 19:10:43] [thr] mode=soft viable=0/201 best t=0.5749 obj=0.8076 f2=0.8373 sens=0.8203 spec=0.9219 fpr=0.0781 | pen(spec/fpr/sens)=0.000/0.000/0.030 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.1077/0.4831/0.8377 range=0.729974
+[2026-04-14 19:10:43] [thr] logits(min/mean/max)=-2.1145/-0.1103/1.6410 range=3.7555 pctl(p5/p50/p95)=-1.9136/0.0178/1.2913
+[2026-04-14 19:10:43] [thr] mode=soft viable=0/201 best t=0.5360 obj=0.7905 f2=0.8280 sens=0.8125 spec=0.9062 fpr=0.0938 | pen(spec/fpr/sens)=0.000/0.000/0.037 lam(spec/fpr/sens)=2.00/2.00/1.00 | probs(min/mean/max)=0.1024/0.4886/0.8372 range=0.734781
+[2026-04-14 19:10:43] [thr] logits(min/mean/max)=-2.1705/-0.0722/1.6376 range=3.8081 pctl(p5/p50/p95)=-1.9358/0.0381/1.5132

@@ -37,7 +37,7 @@ HIGGS_SCENARIOS = [
         "overrides": {
             **_HIGGS_BASE,
             "freeze_enc_params": True,
-            "enc_alpha_init": 1.0,     # sobrescreve 0.5 do _HIGGS_BASE
+            "enc_alpha_init": 1.0,  # sobrescreve 0.5 do _HIGGS_BASE
             "use_focal": False,
             "hard_block_budget": False,
             "thr_mode": "hard",
@@ -125,6 +125,66 @@ HIGGS_SCENARIOS = [
             "hard_block_budget": True,
             "thr_mode": "soft",
             "thr_policy": "youden",
+        },
+    },
+    {
+        "name": "higgs_s4_lmax_factor_1p0",
+        "semantics_flag": "ablation",
+        "notes": (
+            "Ablação L_max: factor=1.0 → L_max=max(20, ceil(28*1.0))=28. "
+            "Ponto de controle inferior — L_max = d exatamente, sem folga "
+            "extra para re-uploading (Pérez-Salinas et al. 2019 sugerem "
+            "L_max > d, não L_max = d, para cobertura completa)."
+        ),
+        "overrides": {
+            **_HIGGS_BASE,
+            "freeze_enc_params": False,
+            "use_focal": True,
+            "hard_block_budget": True,
+            "thr_mode": "soft",
+            "thr_policy": "youden",
+            "l_max_adaptive": True,
+            "l_max_factor": 1.0,
+        },
+    },
+    {
+        "name": "higgs_s4_lmax_factor_1p5",
+        "semantics_flag": "ablation",
+        "notes": (
+            "Ablação L_max: factor=1.5 → L_max=max(20, ceil(28*1.5))=42. "
+            "Valor proposto na heurística original (slide 'Decisões a "
+            "tomar') — este é o resultado que, se favorável, vira "
+            "default do framework."
+        ),
+        "overrides": {
+            **_HIGGS_BASE,
+            "freeze_enc_params": False,
+            "use_focal": True,
+            "hard_block_budget": True,
+            "thr_mode": "soft",
+            "thr_policy": "youden",
+            "l_max_adaptive": True,
+            "l_max_factor": 1.5,
+        },
+    },
+    {
+        "name": "higgs_s4_lmax_factor_2p0",
+        "semantics_flag": "ablation",
+        "notes": (
+            "Ablação L_max: factor=2.0 → L_max=max(20, ceil(28*2.0))=56. "
+            "Ponto de controle superior — testa se folga adicional além "
+            "de 1.5 continua ajudando ou já satura (Liu et al., ACM TQC "
+            "2021: expressibilidade satura com profundidade)."
+        ),
+        "overrides": {
+            **_HIGGS_BASE,
+            "freeze_enc_params": False,
+            "use_focal": True,
+            "hard_block_budget": True,
+            "thr_mode": "soft",
+            "thr_policy": "youden",
+            "l_max_adaptive": True,
+            "l_max_factor": 2.0,
         },
     },
 ]

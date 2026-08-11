@@ -3,6 +3,7 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 import torch
+import torch as _torch
 
 from refactor_project.data.banknote import load_banknote_pool
 from refactor_project.data.util import (
@@ -59,6 +60,8 @@ def _run_one_seed_banknote(
     #     torch.cuda.set_device(gpu_id)
     # else:
     #     DEVICE = "cpu"
+    import torch as _torch
+    _torch.set_num_threads(1)
     DEVICE = "cpu"  # força CPU para evitar OOMs e interferência entre workers
     set_seeds(seed)  # crítico: deve ser a primeira chamada dentro do worker
 
@@ -98,7 +101,7 @@ def _run_one_seed_banknote(
     in_dim = int(XtrS.shape[1])  # 4 para Banknote
 
     # ── Config por nq ─────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS), in_dim=in_dim)
 
     # Banknote: 4 features — desativa feature bank dinâmico
     cfg_nq.use_patch_bank = False

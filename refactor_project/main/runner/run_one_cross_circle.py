@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import torch
+import torch as _torch
 
 from refactor_project.data.cross_circle import load_circle_cross_pool_flatten
 from refactor_project.data.util import (
@@ -26,6 +27,7 @@ def _run_one_seed_cross_circle(
     PERCENT_SEARCH: int,
     PERCENT_EVAL: int,
 ) -> dict:
+    _torch.set_num_threads(1)
     DEVICE = "cpu"  # forçado: PennyLane não é multi-GPU-safe em subprocessos
     set_seeds(seed)  # crítico: dentro do worker
 
@@ -56,7 +58,7 @@ def _run_one_seed_cross_circle(
 
     in_dim = int(XtrS.shape[1])
     # ── Config por nq ────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS), in_dim=in_dim)
     cfg_nq.use_patch_bank = False
     cfg_nq.feature_bank_update = "none"
     cfg_nq.feature_bank_size = in_dim

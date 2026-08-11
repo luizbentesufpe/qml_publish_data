@@ -17,8 +17,12 @@ from refactor_project.data.util import (
 )
 from refactor_project.environments.states_encode.state_encoder import sanitize_architecture
 from refactor_project.model.arch_search import run_arch_search_end2end
-from refactor_project.model.arch_train import train_final_model_end2end
+from refactor_project.model.arch_train import (
+    evaluate_final_model_posthoc_noise,
+    train_final_model_end2end,
+)
 from refactor_project.model.math.cost import measure_cost_from_arch
+from refactor_project.model.util.lmax import compute_adaptive_l_max
 from refactor_project.model.util.util import make_cfg_for_qubits
 from refactor_project.util.util import Logger, dump_run_metadata, set_seeds
 
@@ -131,7 +135,16 @@ def _run_one_seed_higgs(
         )
 
     # ── Config por nq ─────────────────────────────────────────────────────
-    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq))
+    cfg_nq = make_cfg_for_qubits(cfg_base, int(nq), n_train=len(XtrS), in_dim=in_dim)
+    _l_max_used = int(cfg_nq.L_max)  # valor efetivamente usado (para log)
+    if cfg_nq.l_max_adaptive:
+        _l_max_used = compute_adaptive_l_max(
+            in_dim=int(in_dim),
+            factor=float(cfg_nq.l_max_factor),
+            floor=int(cfg_nq.L_max),
+            cap=40,
+        )
+        cfg_nq.L_max = _l_max_used  # sobrescreve L_max original
 
     # Higgs: d=28 — feature bank dinâmico DESATIVADO por consistência com
     # os demais datasets do paper (CC/MM/BN/BCW). O agente seleciona
@@ -173,6 +186,10 @@ def _run_one_seed_higgs(
             "percent_search": PERCENT_SEARCH,
             "percent_eval": PERCENT_EVAL,
             "subset_size": int(subset_size),
+            "l_max_adaptive": bool(cfg_nq.l_max_adaptive),
+            "l_max_factor": float(cfg_nq.l_max_factor),
+            "l_max_used": int(_l_max_used),
+            "l_max_basis": "ENC_budget",
             # Metadados específicos do Higgs — facilita análise post-hoc
             # da hipótese "α amplifica high-level sobre low-level"
             "low_level_indices": list(range(0, 21)),
@@ -206,7 +223,7 @@ def _run_one_seed_higgs(
     )
 
     # ── Final holdout ─────────────────────────────────────────────────────
-    auc_ho, sens_ho, thr_ho = train_final_model_end2end(
+    auc_ho, sens_ho, thr_ho, trained_model = train_final_model_end2end(
         arch_mat,
         int(best_nq),
         X_train_all,
@@ -217,21 +234,22 @@ def _run_one_seed_higgs(
         nq_logger,
         device=DEVICE,
         noise=False,
+        return_model=True,
     )
 
     # ── Final holdout (noisy) ─────────────────────────────────────────────
-    auc_with_noise, sens_with_noise, thr_with_noise = train_final_model_end2end(
+    auc_with_noise, sens_with_noise = evaluate_final_model_posthoc_noise(
+        trained_model,
         arch_mat,
         int(best_nq),
-        X_train_all,
-        Y_train_all,
         X_holdout,
         Y_holdout,
         cfg_nq,
         noise_logger,
         device=DEVICE,
-        noise=True,
+        thr_star=thr_ho,
     )
+    thr_with_noise = thr_ho
 
     # ── Lê α/β do logger isolado por seed (sem colisão entre workers) ─────
     _alpha_final: Optional[List[float]] = None
