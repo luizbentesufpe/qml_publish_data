@@ -1,6 +1,0 @@
-[2026-04-14 19:17:38] [FIXED ENC] enc_alpha_raw e enc_beta_raw congelados (treino final)
-[2026-04-14 19:18:58] [SAVED] enc_params_final.pt | alpha_mean=0.5000 alpha_std=0.0000 beta_mean=0.0000
-[2026-04-14 19:18:58] [FIXED ENC] enc_alpha_raw e enc_beta_raw congelados (treino final)
-[2026-04-14 19:20:23] [SAVED] enc_params_final.pt | alpha_mean=0.5000 alpha_std=0.0000 beta_mean=0.0000
-[2026-04-14 19:20:23] [FIXED ENC] enc_alpha_raw e enc_beta_raw congelados (treino final)
-[2026-04-14 19:21:54] [SAVED] enc_params_final.pt | alpha_mean=0.5000 alpha_std=0.0000 beta_mean=0.0000

@@ -1,1 +1,0 @@
-[2026-08-08 00:15:06] [norm] per_feature=True eps=1e-06 clip=0.0 tanh=False X_tr=(2880, 28) X_val=(1920, 28)
