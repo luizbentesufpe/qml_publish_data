@@ -62,7 +62,7 @@ def make_cfg_for_qubits(
             rot_budget=int(cfg.ROT_budget) if cfg.ROT_budget > 0 else None,
             cnot_budget=int(cfg.CNOT_budget) if cfg.CNOT_budget > 0 else None,
         )
-        cfg.L_max = auto.L_max
+        # cfg.L_max = auto.L_max  # reservado para Fase 3
         cfg.budget_penalty = auto.budget_penalty
         cfg.inner_train_subset_size = auto.inner_train_subset_size
 

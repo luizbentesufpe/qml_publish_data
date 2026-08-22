@@ -45,7 +45,7 @@ def run_experiment(name: str, debug: bool):
     print(f"\n[RUN] Experiment: {name} | DEBUG={debug}")
 
     if name == "cross_circle":
-        main_higgs(
+        main_cross_circle(
             DEBUG=debug,
             scenario_filter=None,
             total_core_budget=28,
@@ -53,7 +53,7 @@ def run_experiment(name: str, debug: bool):
         )
 
     elif name == "make_moons":
-        main_higgs(
+        main_make_moons(
             DEBUG=debug,
             scenario_filter=None,
             total_core_budget=28,
@@ -61,7 +61,7 @@ def run_experiment(name: str, debug: bool):
         )
 
     elif name == "banknote":
-        main_higgs(
+        main_banknote(
             DEBUG=debug,
             scenario_filter=None,
             total_core_budget=28,
@@ -69,7 +69,7 @@ def run_experiment(name: str, debug: bool):
         )
 
     elif name == "breast_cancer":
-        main_higgs(
+        main_breast_cancer(
             DEBUG=debug,
             scenario_filter=None,
             total_core_budget=28,

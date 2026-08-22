@@ -305,7 +305,7 @@ cfg: Config,
 logger: Logger,
 device: torch.device | str,
 thr_star: float,):
-    DEVICE = torch.device(torch.device)
+    DEVICE = torch.device(device)
     arch_mat = sanitize_architecture(arch_mat, int(n_qubits)).to(DEVICE)
 
     noisy_model = CQV_End2End(

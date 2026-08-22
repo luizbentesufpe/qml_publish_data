@@ -638,12 +638,9 @@ def main_higgs(
     print(f"[scenarios] rodando {len(scenarios)} cenário(s): {[sc['name'] for sc in scenarios]}")
 
     # ── outer Parallel: cenários simultâneos ─────────────────────────────
-    all_scenarios_results: List[Dict[str, Any]] = Parallel(
-        n_jobs=OUTER_N_JOBS,
-        backend="threading",
-        verbose=10,
-    )(
-        delayed(_run_one_scenario_higgs)(
+    all_scenarios_results: List[Dict[str, Any]] = []
+    for sc in scenarios:
+        result = _run_one_scenario_higgs(
             sc=sc,
             cfg0=cfg0,
             root_out=root_out,
@@ -655,8 +652,7 @@ def main_higgs(
             subset_size=int(subset_size),
             inner_n_jobs=INNER_N_JOBS_CAP,
         )
-        for sc in scenarios
-    )
+        all_scenarios_results.append(result)
 
     # ── Índice agregado ───────────────────────────────────────────────
     agg = {
