@@ -713,6 +713,450 @@ def _plot_alpha_bar_higgs(
     plt.close(fig)
     print(f"[OK] Barplot α (Higgs) salvo: {out_path}")
 
+
+def _plot_alpha_bar_iris(
+    alpha_per_seed: List[Optional[np.ndarray]],
+    out_path: str,
+    title: str = "α convergido — Iris (versicolor vs virginica)",
+    feature_names: Optional[List[str]] = None,
+) -> None:
+    """
+    Barplot do α convergido para as 4 features do Iris (sepal/petal
+    length/width), com erro entre seeds. Mesmo layout de
+    _plot_alpha_bar_breast_cancer (genérico, mas aqui fixo em 4
+    features).
+
+    Layout:
+      - Painel esquerdo : α médio com barra de erro (std entre seeds)
+                          Linha tracejada em α=1.0 (valor de inicialização)
+      - Painel direito  : std(α) entre seeds por feature
+    """
+    if feature_names is None:
+        try:
+            from refactor_project.data.iris import FEATURE_NAMES as _IRIS_FN
+            feature_names = list(_IRIS_FN)
+        except Exception:
+            feature_names = ["sepal_length", "sepal_width", "petal_length", "petal_width"]
+
+    arrays = [
+        np.asarray(a, dtype=np.float32).flatten()[: len(feature_names)]
+        for a in alpha_per_seed
+        if a is not None
+    ]
+    if not arrays:
+        print("[WARN] Nenhum α disponível para barplot Iris.")
+        return
+
+    stacked = np.stack(arrays, axis=0)  # (n_seeds, 4)
+    alpha_mean = stacked.mean(axis=0)
+    alpha_std = stacked.std(axis=0)
+
+    colors = ["#4C72B0", "#DD8452", "#55A868", "#C44E52"]
+    light_colors = ["#9ecae1", "#fdae6b", "#a1d99b", "#fc9272"]
+    x_pos = np.arange(len(feature_names))
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4))
+    fig.suptitle(title, fontsize=13, fontweight="bold")
+
+    ax = axes[0]
+    bars = ax.bar(
+        x_pos, alpha_mean, color=colors, yerr=alpha_std,
+        capsize=6, edgecolor="black", linewidth=0.8,
+    )
+    ax.axhline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
+    ax.set_xticks(x_pos)
+    ax.set_xticklabels(feature_names, rotation=15, ha="right", fontsize=9)
+    ax.set_ylim(0.0, max(float(alpha_mean.max()) * 1.35, 0.8))
+    ax.set_title("α médio (entre seeds)", fontsize=11)
+    ax.set_ylabel("α convergido")
+    ax.legend(fontsize=9)
+    for bar, m, s in zip(bars, alpha_mean, alpha_std):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2.0, float(m) + float(s) + 0.02,
+            f"{m:.3f}±{s:.3f}", ha="center", va="bottom", fontsize=8,
+        )
+
+    ax2 = axes[1]
+    ax2.bar(x_pos, alpha_std, color=light_colors, edgecolor="black", linewidth=0.8)
+    ax2.set_xticks(x_pos)
+    ax2.set_xticklabels(feature_names, rotation=15, ha="right", fontsize=9)
+    ax2.set_title("std(α) entre seeds", fontsize=11)
+    ax2.set_ylabel("std(α)")
+    for i, s in enumerate(alpha_std):
+        ax2.text(i, float(s) + 0.002, f"{s:.3f}", ha="center", va="bottom", fontsize=9)
+
+    plt.tight_layout()
+    plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[OK] Barplot α (Iris) salvo: {out_path}")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOBS — dimensionalidade variável (2 até 32, testes de escalabilidade)
+# ══════════════════════════════════════════════════════════════════════
+
+
+def _plot_alpha_bar_blobs(
+    alpha_per_seed: List[Optional[np.ndarray]],
+    out_path: str,
+    title: str = "α convergido — Blobs",
+    feature_names: Optional[List[str]] = None,
+) -> None:
+    """
+    Barplot do α convergido para Blobs — suporta dimensionalidade
+    variável (usado tanto pelos cenários S0-S4 em 2D quanto pelos
+    cenários de alta dimensionalidade bl_hd_d4/d8/d16/d32).
+
+    Troca automaticamente de layout conforme n_features:
+      - n_features <= 8  : barras verticais (estilo Breast Cancer/Iris)
+      - n_features > 8   : barras horizontais (estilo Higgs), mais
+                            legível quando há muitas features (até 32)
+    """
+    arrays = [np.asarray(a, dtype=np.float32).flatten() for a in alpha_per_seed if a is not None]
+    if not arrays:
+        print("[WARN] Nenhum α disponível para barplot Blobs.")
+        return
+
+    n_features = len(arrays[0])
+    arrays = [a[:n_features] for a in arrays]
+
+    if feature_names is None:
+        try:
+            from refactor_project.data.blobs import _feature_names
+            feature_names = _feature_names(n_features)
+        except Exception:
+            feature_names = [f"x{i}" for i in range(n_features)]
+    if len(feature_names) != n_features:
+        feature_names = [f"x{i}" for i in range(n_features)]
+
+    stacked = np.stack(arrays, axis=0)  # (n_seeds, n_features)
+    alpha_mean = stacked.mean(axis=0)
+    alpha_std = stacked.std(axis=0)
+    n_seeds = stacked.shape[0]
+
+    base_colors = [
+        "#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B3",
+        "#937860", "#DA8BC3", "#8C6D31", "#466592",
+    ]
+    colors = [base_colors[i % len(base_colors)] for i in range(n_features)]
+
+    if n_features <= 8:
+        # ── layout vertical (estilo Breast Cancer/Iris) ────────────────
+        x_pos = np.arange(n_features)
+        figwidth = max(9, 1.6 * n_features)
+        fig, axes = plt.subplots(1, 2, figsize=(figwidth, 4.5))
+        fig.suptitle(f"{title}  (d={n_features})", fontsize=13, fontweight="bold")
+
+        ax = axes[0]
+        bars = ax.bar(
+            x_pos, alpha_mean, color=colors, yerr=alpha_std,
+            capsize=6, edgecolor="black", linewidth=0.8,
+        )
+        ax.axhline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(feature_names, rotation=45, ha="right", fontsize=9)
+        ax.set_ylim(0.0, max(float(alpha_mean.max()) * 1.35, 0.8))
+        ax.set_title(f"α médio  ·  {n_seeds} seeds", fontsize=11)
+        ax.set_ylabel("α convergido")
+        ax.legend(fontsize=9)
+        for bar, m, s in zip(bars, alpha_mean, alpha_std):
+            ax.text(
+                bar.get_x() + bar.get_width() / 2.0, float(m) + float(s) + 0.02,
+                f"{m:.3f}±{s:.3f}", ha="center", va="bottom", fontsize=8,
+            )
+
+        ax2 = axes[1]
+        ax2.bar(x_pos, alpha_std, color=colors, alpha=0.6, edgecolor="black", linewidth=0.8)
+        ax2.set_xticks(x_pos)
+        ax2.set_xticklabels(feature_names, rotation=45, ha="right", fontsize=9)
+        ax2.set_title("std(α) entre seeds", fontsize=11)
+        ax2.set_ylabel("std(α)")
+        for i, s in enumerate(alpha_std):
+            ax2.text(i, float(s) + 0.002, f"{s:.3f}", ha="center", va="bottom", fontsize=8)
+
+    else:
+        # ── layout horizontal (estilo Higgs) — legível até d=32 ────────
+        y_pos = np.arange(n_features)
+        fig, axes = plt.subplots(1, 2, figsize=(12, max(6, 0.3 * n_features)))
+        fig.suptitle(f"{title}  (d={n_features})", fontsize=13, fontweight="bold")
+
+        ax = axes[0]
+        ax.barh(
+            y_pos, alpha_mean, color=colors, xerr=alpha_std,
+            capsize=3, edgecolor="black", linewidth=0.5,
+            error_kw={"elinewidth": 0.8, "alpha": 0.7},
+        )
+        ax.axvline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
+        ax.set_yticks(y_pos)
+        ax.set_yticklabels(feature_names, fontsize=7)
+        ax.invert_yaxis()
+        ax.set_xlabel("α convergido")
+        ax.set_title(f"α médio  ·  {n_seeds} seeds", fontsize=11)
+        ax.legend(fontsize=9)
+
+        ax2 = axes[1]
+        ax2.barh(y_pos, alpha_std, color=colors, alpha=0.6, edgecolor="black", linewidth=0.5)
+        ax2.set_yticks(y_pos)
+        ax2.set_yticklabels(feature_names, fontsize=7)
+        ax2.invert_yaxis()
+        ax2.set_xlabel("std(α)")
+        ax2.set_title(f"std(α) entre seeds  ·  {n_seeds} seeds", fontsize=11)
+
+    plt.tight_layout()
+    plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[OK] Barplot α (Blobs, d={n_features}) salvo: {out_path}")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# CÍRCULOS CONCÊNTRICOS — 2 features
+# ══════════════════════════════════════════════════════════════════════
+
+
+def _plot_alpha_bar_concentric_circles(
+    alpha_per_seed: List[Optional[np.ndarray]],
+    out_path: str,
+    title: str = "α convergido — Círculos Concêntricos (2 features)",
+    feature_names: Optional[List[str]] = None,
+) -> None:
+    """
+    Barplot do α convergido para as 2 features (x0, x1) dos Círculos
+    Concêntricos. Mesmo layout de _plot_alpha_bar_moons — dataset
+    também 2D, mas com fronteira radial em vez de duas luas.
+
+    Como x0 e x1 têm papel simétrico na fronteira radial
+    (x0² + x1² = r²), α próximo entre as duas barras é o resultado
+    esperado; assimetria forte é sinal de overfitting à seed, não de
+    importância real de feature.
+    """
+    if feature_names is None:
+        try:
+            from refactor_project.data.concentric_circles import FEATURE_NAMES as _CC_FN
+            feature_names = list(_CC_FN)
+        except Exception:
+            feature_names = ["x0", "x1"]
+
+    arrays = [np.asarray(a, dtype=np.float32).flatten()[:2] for a in alpha_per_seed if a is not None]
+    if not arrays:
+        print("[WARN] Nenhum α disponível para barplot Círculos Concêntricos.")
+        return
+
+    stacked = np.stack(arrays, axis=0)  # (n_seeds, 2)
+    alpha_mean = stacked.mean(axis=0)
+    alpha_std = stacked.std(axis=0)
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+    fig.suptitle(title, fontsize=13, fontweight="bold")
+
+    ax = axes[0]
+    colors = ["#4C72B0", "#DD8452"]
+    bars = ax.bar(
+        feature_names, alpha_mean, color=colors, yerr=alpha_std,
+        capsize=6, edgecolor="black", linewidth=0.8,
+    )
+    ax.axhline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
+    ax.set_ylim(0.0, max(alpha_mean.max() * 1.3, 0.8))
+    ax.set_title("α médio (entre seeds)", fontsize=11)
+    ax.set_xlabel("Feature")
+    ax.set_ylabel("α convergido")
+    ax.legend(fontsize=9)
+    for bar, m, s in zip(bars, alpha_mean, alpha_std):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2, m + s + 0.02,
+            f"{m:.3f}±{s:.3f}", ha="center", va="bottom", fontsize=9,
+        )
+
+    ax2 = axes[1]
+    ax2.bar(feature_names, alpha_std, color=["#9ecae1", "#fdae6b"], edgecolor="black", linewidth=0.8)
+    ax2.set_title("std(α) entre seeds", fontsize=11)
+    ax2.set_xlabel("Feature")
+    ax2.set_ylabel("std(α)")
+    for i, s in enumerate(alpha_std):
+        ax2.text(i, s + 0.002, f"{s:.3f}", ha="center", va="bottom", fontsize=9)
+
+    plt.tight_layout()
+    plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[OK] Barplot α (Círculos Concêntricos) salvo: {out_path}")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# STRIPES — grid 3x3 (9 features) — barplot + heatmap espacial
+# ══════════════════════════════════════════════════════════════════════
+
+
+def _plot_alpha_bar_stripes(
+    alpha_per_seed: List[Optional[np.ndarray]],
+    out_path: str,
+    title: str = "α convergido — Stripes (grid 3x3)",
+    feature_names: Optional[List[str]] = None,
+) -> None:
+    """
+    Plot do α convergido para as 9 células do grid 3x3 do Stripes.
+
+    Diferente dos demais: além do barplot padrão (painel direito),
+    o painel esquerdo mostra um HEATMAP 3x3 do α médio — mais
+    informativo aqui porque a estrutura espacial (linhas vs. colunas)
+    é o próprio padrão discriminativo do dataset. Um heatmap revela
+    diretamente se o α aprendido reconstrói o contraste
+    horizontal/vertical esperado; um barplot simples "achataria" essa
+    estrutura 2D em uma sequência p00..p22 sem relação visual óbvia.
+
+    Salva PNG em out_path.
+    """
+    if feature_names is None:
+        try:
+            from refactor_project.data.stripes import FEATURE_NAMES as _ST_FN
+            feature_names = list(_ST_FN)
+        except Exception:
+            feature_names = [f"p{r}{c}" for r in range(3) for c in range(3)]
+
+    arrays = [np.asarray(a, dtype=np.float32).flatten()[:9] for a in alpha_per_seed if a is not None]
+    if not arrays:
+        print("[WARN] Nenhum α disponível para barplot Stripes.")
+        return
+
+    stacked = np.stack(arrays, axis=0)  # (n_seeds, 9)
+    alpha_mean = stacked.mean(axis=0)
+    alpha_std = stacked.std(axis=0)
+    n_seeds = stacked.shape[0]
+
+    grid_mean = alpha_mean.reshape(3, 3)
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
+    fig.suptitle(title, fontsize=13, fontweight="bold")
+
+    # ── painel esquerdo: heatmap 3x3 do α médio ────────────────────────
+    ax = axes[0]
+    im = ax.imshow(grid_mean, cmap="viridis", vmin=0.0, vmax=max(float(alpha_mean.max()), 1.0))
+    ax.set_xticks(range(3))
+    ax.set_yticks(range(3))
+    ax.set_xticklabels(["col 0", "col 1", "col 2"])
+    ax.set_yticklabels(["lin 0", "lin 1", "lin 2"])
+    ax.set_title(f"α médio (grid 3x3)  ·  {n_seeds} seeds", fontsize=11)
+    for r in range(3):
+        for c in range(3):
+            ax.text(
+                c, r, f"{grid_mean[r, c]:.2f}",
+                ha="center", va="center",
+                color="white" if grid_mean[r, c] < 0.6 * grid_mean.max() else "black",
+                fontsize=11, fontweight="bold",
+            )
+    fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="α convergido")
+
+    # ── painel direito: barplot padrão + std ────────────────────────────
+    ax2 = axes[1]
+    x_pos = np.arange(9)
+    colors = plt.cm.viridis(alpha_mean / max(float(alpha_mean.max()), 1e-6))
+    bars = ax2.bar(
+        x_pos, alpha_mean, color=colors, yerr=alpha_std,
+        capsize=4, edgecolor="black", linewidth=0.6,
+    )
+    ax2.axhline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
+    ax2.set_xticks(x_pos)
+    ax2.set_xticklabels(feature_names, rotation=45, ha="right", fontsize=8)
+    ax2.set_title("α médio ± std por célula", fontsize=11)
+    ax2.set_ylabel("α convergido")
+    ax2.legend(fontsize=8)
+
+    plt.tight_layout()
+    plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[OK] Barplot/heatmap α (Stripes) salvo: {out_path}")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# MNIST (3 vs 8, PCA) — nº de componentes variável (default 8)
+# ══════════════════════════════════════════════════════════════════════
+
+
+def _plot_alpha_bar_mnist(
+    alpha_per_seed: List[Optional[np.ndarray]],
+    out_path: str,
+    title: str = "α convergido — MNIST (3 vs 8, componentes PCA)",
+    feature_names: Optional[List[str]] = None,
+) -> None:
+    """
+    Barplot do α convergido para os componentes PCA do MNIST
+    binarizado. Mesmo layout genérico de _plot_alpha_bar_breast_cancer
+    (suporta qualquer nº de componentes, default 8).
+
+    Nota de interpretação: diferente dos demais datasets, aqui as
+    "features" (pca_0, pca_1, ...) são ordenadas por variância
+    explicada, não por poder discriminativo entre os dois dígitos —
+    um α alto num componente de índice alto (ex.: pca_6) é
+    informativo justamente por ser inesperado sob essa ordenação.
+    """
+    arrays = [np.asarray(a, dtype=np.float32).flatten() for a in alpha_per_seed if a is not None]
+    if not arrays:
+        print("[WARN] Nenhum α disponível para barplot MNIST.")
+        return
+
+    n_features = len(arrays[0])
+    arrays = [a[:n_features] for a in arrays]
+
+    if feature_names is None:
+        try:
+            from refactor_project.data.mnist import _feature_names
+            feature_names = _feature_names(n_features)
+        except Exception:
+            feature_names = [f"pca_{i}" for i in range(n_features)]
+    if len(feature_names) != n_features:
+        feature_names = [f"pca_{i}" for i in range(n_features)]
+
+    stacked = np.stack(arrays, axis=0)  # (n_seeds, n_features)
+    alpha_mean = stacked.mean(axis=0)
+    alpha_std = stacked.std(axis=0)
+
+    base_colors = [
+        "#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B3",
+        "#937860", "#DA8BC3", "#8C6D31", "#466592",
+    ]
+    colors = [base_colors[i % len(base_colors)] for i in range(n_features)]
+    light_colors_map = {
+        "#4C72B0": "#9ecae1", "#DD8452": "#fdae6b", "#55A868": "#a1d99b",
+        "#C44E52": "#fc9272", "#8172B3": "#c7b9d4", "#937860": "#c8b8a0",
+        "#DA8BC3": "#f1b9d9", "#8C6D31": "#d4c0a0", "#466592": "#a8c2e1",
+    }
+    light_colors = [light_colors_map[c] for c in colors]
+
+    x_pos = np.arange(n_features)
+    figwidth = max(10, 1.4 * n_features)
+    fig, axes = plt.subplots(1, 2, figsize=(figwidth, 4.5))
+    fig.suptitle(title, fontsize=13, fontweight="bold")
+
+    ax = axes[0]
+    bars = ax.bar(
+        x_pos, alpha_mean, color=colors, yerr=alpha_std,
+        capsize=6, edgecolor="black", linewidth=0.8,
+    )
+    ax.axhline(1.0, color="gray", linestyle="--", linewidth=1.0, label="init (α=1.0)")
+    ax.set_xticks(x_pos)
+    ax.set_xticklabels(feature_names, rotation=45, ha="right", fontsize=9)
+    ax.set_ylim(0.0, max(float(alpha_mean.max()) * 1.35, 0.8))
+    ax.set_title("α médio (entre seeds)", fontsize=11)
+    ax.set_ylabel("α convergido")
+    ax.legend(fontsize=9)
+    for bar, m, s in zip(bars, alpha_mean, alpha_std):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2.0, float(m) + float(s) + 0.02,
+            f"{m:.3f}±{s:.3f}", ha="center", va="bottom", fontsize=8,
+        )
+
+    ax2 = axes[1]
+    ax2.bar(x_pos, alpha_std, color=light_colors, edgecolor="black", linewidth=0.8)
+    ax2.set_xticks(x_pos)
+    ax2.set_xticklabels(feature_names, rotation=45, ha="right", fontsize=9)
+    ax2.set_title("std(α) entre seeds", fontsize=11)
+    ax2.set_ylabel("std(α)")
+    for i, s in enumerate(alpha_std):
+        ax2.text(i, float(s) + 0.002, f"{s:.3f}", ha="center", va="bottom", fontsize=8)
+
+    plt.tight_layout()
+    plt.savefig(str(out_path), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"[OK] Barplot α (MNIST) salvo: {out_path}")
+
     
 class RunningStd:
     def __init__(self):
